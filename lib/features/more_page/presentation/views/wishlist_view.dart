@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/widgets/app_bar3.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/wishlist_body.dart';
-
-import '../../../../core/shred_widgets/app_bar3.dart';
 
 class WishListView extends StatefulWidget {
   final AnimationController animationController;

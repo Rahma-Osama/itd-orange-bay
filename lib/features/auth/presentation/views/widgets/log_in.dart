@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/features/home/program/presentation/views/book_view.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/utilities/styles.dart';
-import '../../../../program/presentation/views/book_view.dart';
+import '../../../../../core/theme/styles.dart';
 import '../signup_view.dart';
-import 'auth_sign_card.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -42,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   // keyboardType: TextInputType.emailAddress,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                 ),
                 const SizedBox(
@@ -67,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   keyboardType: TextInputType.visiblePassword,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                   obscureText: !isPasswordVisible,
                 ),
@@ -89,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Container(
                   width: double.infinity,
                   height: 50,
-                  color: MAIN_ORANGE,
+                  color: AppColors.MAIN_ORANGE,
                   child:  MaterialButton(
                     onPressed: ()
                     {
@@ -128,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                       child:  Text(
                         'SIGN UP ',
-                        style: Styles.TextStyle14.copyWith(color: MAIN_ORANGE),
+                        style: Styles.TextStyle14.copyWith(color: AppColors.MAIN_ORANGE),
                       ),
                     ),
                   ],

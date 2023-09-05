@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
-
-import '../../../../../constants.dart';
-import '../../../../../core/shred_widgets/custom_button.dart';
-import '../../../../../core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
+import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
+import '../../../../../core/theme/styles.dart';
 
 class PayBody extends StatelessWidget {
   const PayBody({Key? key}) : super(key: key);
@@ -127,17 +126,17 @@ class PayBody extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: CustomButton(
               width: double.infinity,
-              backgroundColor: MAIN_ORANGE,
+              backgroundColor: AppColors.MAIN_ORANGE,
               text: 'Confirm',
               func: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomeLayout()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomeView()));
               },
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: CustomButton(
-              textColor: MAIN_ORANGE,
+              textColor: AppColors.MAIN_ORANGE,
               backgroundColor: Colors.white,
               text: 'Back',
               func: (){

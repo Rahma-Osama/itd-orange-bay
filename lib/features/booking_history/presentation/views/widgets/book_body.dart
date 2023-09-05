@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/past_body.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/upComing_body.dart';
-import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/past.dart';
 
 
-import '../../../../../constants.dart';
+import 'package:orange_bay_new/data/constants.dart';
 
 
 
@@ -40,7 +41,7 @@ class _BookBodyState extends State<BookBody> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius:  BorderRadius.circular(5),
-                        color: bookText[index] ? MAIN_ORANGE : Colors.white,
+                        color: bookText[index] ? AppColors.MAIN_ORANGE : Colors.white,
                       ),
                       alignment: Alignment.center,
                       width: MediaQuery.of(context).size.width * .45,

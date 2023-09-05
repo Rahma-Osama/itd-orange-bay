@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/profile_body.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/security_body.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/shred_widgets/custom_button.dart';
+import 'package:orange_bay_new/data/constants.dart';
 
 
 class HeaderText extends StatefulWidget {
@@ -36,7 +37,7 @@ class _HeaderTextState extends State<HeaderText> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius:  BorderRadius.circular(5),
-                        color: profileText[index] ? MAIN_ORANGE : Colors.white,
+                        color: profileText[index] ? AppColors.MAIN_ORANGE : Colors.white,
                       ),
                       alignment: Alignment.center,
                       width: MediaQuery.of(context).size.width * .45,
@@ -58,7 +59,7 @@ class _HeaderTextState extends State<HeaderText> {
         Padding(
           padding: const EdgeInsets.all(30),
           child: CustomButton(
-            backgroundColor: MAIN_ORANGE,
+            backgroundColor: AppColors.MAIN_ORANGE,
             text: 'Update',
             func: (){
               // Navigator.push(context, MaterialPageRoute(builder: (context)=> BookView()));

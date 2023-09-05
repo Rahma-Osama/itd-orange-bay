@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
-import 'package:orange_bay_new/features/program/presentation/views/book_view.dart';
-
-import '../../../../../constants.dart';
-import '../../../../../core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import '../../../../../core/theme/styles.dart';
 import '../login_view.dart';
-import 'log_in.dart';
 
 
 class SignupScreen extends StatefulWidget {
@@ -35,9 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
                  SizedBox(
                   height: MediaQuery.of(context).size.height/40,
                 ),
-                // const SizedBox(
-                //   height: 40.0,
-                // ),
+
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Fullname',
@@ -45,7 +39,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   keyboardType: TextInputType.text,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                 ),
                 const SizedBox(
@@ -59,7 +53,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                 ),
                 const SizedBox(
@@ -74,7 +68,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                 ),
                 const SizedBox(
@@ -88,7 +82,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                 ),
                 const SizedBox(
@@ -113,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   keyboardType: TextInputType.visiblePassword,
                   onFieldSubmitted: (value){
-                    print(value);
+                    debugPrint(value);
                   },
                   obscureText: !isPasswordVisible,
                 ),
@@ -123,7 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 Container(
                   width: double.infinity,
                   height: 50,
-                  color: MAIN_ORANGE,
+                  color: AppColors.MAIN_ORANGE,
                   child:  MaterialButton(
                     onPressed: ()
                     {
@@ -162,7 +156,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       },
                       child:  Text(
                         'Log In ',
-                        style: Styles.TextStyle14.copyWith(color: MAIN_ORANGE),
+                        style: Styles.TextStyle14.copyWith(color: AppColors.MAIN_ORANGE),
                       ),
                     ),
                   ],

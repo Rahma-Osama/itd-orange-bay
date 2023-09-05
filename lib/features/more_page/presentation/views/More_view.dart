@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
-import 'package:orange_bay_new/core/utilities/widgets/animation.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/bottomtop_move_animation.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/more_item_builder.dart';
 class MoreView extends StatefulWidget {
   final AnimationController animationController;
@@ -43,7 +43,7 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
                       index: index,
                     ),
                 separatorBuilder: (context, index) => Divider(
-                      color: GREY,
+                      color: AppColors.GREY,
                     ),
                 itemCount: 5
             ),

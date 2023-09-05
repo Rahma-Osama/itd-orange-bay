@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/utilities/assets.dart';
 
-import '../../../../../constants.dart';
+import 'package:orange_bay_new/data/constants.dart';
+import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
 
 class GalleryBody extends StatefulWidget {
   const GalleryBody({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _GalleryBodyState extends State<GalleryBody> {
                                 ? BorderRadius.circular(10)
                                 : BorderRadius.circular(0),
                             color: photoTypeIsselected[index]
-                                ? MAIN_ORANGE
+                                ? AppColors.MAIN_ORANGE
                                 : Colors.white,
                           ),
                           alignment: Alignment.center,
@@ -53,19 +54,17 @@ class _GalleryBodyState extends State<GalleryBody> {
           ),
           Expanded(
             child: GridView.builder(
-                itemCount: AssetData.gallery.length,
+                itemCount: AssetsData.gallery.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   mainAxisSpacing: MediaQuery.of(context).size.height / 40,
                   crossAxisSpacing: MediaQuery.of(context).size.height / 40,
                   childAspectRatio: .9,
                   crossAxisCount: 2,
                 ),
-                itemBuilder: (context, index) => Container(
-                      child: Image.asset(
-                        AssetData.gallery[index],
-                        fit: BoxFit.cover,
-                      ),
-                    )),
+                itemBuilder: (context, index) => Image.asset(
+                  AssetsData.gallery[index],
+                  fit: BoxFit.cover,
+                )),
           )
         ],
       ),

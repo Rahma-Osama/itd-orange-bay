@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
-import 'package:orange_bay_new/core/utilities/styles.dart';
+import 'package:orange_bay_new/data/constants.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 
 class ProgramContainer extends StatelessWidget {
   bool whishScreen = false;
@@ -63,23 +64,21 @@ class ProgramContainer extends StatelessWidget {
                       "Go Island",
                       style: Styles.TextStyle16,
                     ),
-                    Container(
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: MAIN_ORANGE,
-                          ),
-                          Text(
-                            "4.7",
-                            style: Styles.TextStyle12,
-                          ),
-                          Text(
-                            '(92)',
-                            style: Styles.TextStyle12.copyWith(color: GREY),
-                          )
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: AppColors.MAIN_ORANGE,
+                        ),
+                        Text(
+                          "4.7",
+                          style: Styles.TextStyle12,
+                        ),
+                        Text(
+                          '(92)',
+                          style: Styles.TextStyle12.copyWith(color: AppColors.GREY),
+                        )
+                      ],
                     )
                   ],
                 ),

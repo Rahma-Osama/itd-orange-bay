@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/profile_view.dart';
 
 import '../wishlist_view.dart';
 class MoreItemBuilder extends StatefulWidget {
-  final index;
+  final int index;
   final AnimationController animationController;
    const MoreItemBuilder({Key? key,required this.index, required this.animationController}) : super(key: key);
 
@@ -18,8 +18,8 @@ class _MoreItemBuilderState extends State<MoreItemBuilder> with TickerProviderSt
   @override
   void initState() {
     _animationController =
-        AnimationController(duration: Duration(milliseconds: 400), vsync: this);
-    WidgetsBinding.instance!.addPostFrameCallback((_) => _startLoadScreen());
+        AnimationController(duration: const Duration(milliseconds: 400), vsync: this);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _startLoadScreen());
     super.initState();
   }
 
@@ -52,8 +52,8 @@ class _MoreItemBuilderState extends State<MoreItemBuilder> with TickerProviderSt
        child : Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(headers[widget.index],style: TextStyle(color: widget.index==4?Colors.red: BLACK),),
-            Icon(Icons.arrow_forward_ios,color: GREY,)
+            Text(headers[widget.index],style: TextStyle(color: widget.index==4?Colors.red:AppColors.BLACK),),
+            Icon(Icons.arrow_forward_ios,color: AppColors.GREY,)
           ],
 
         )

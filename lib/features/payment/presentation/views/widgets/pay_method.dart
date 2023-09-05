@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
-import 'package:orange_bay_new/core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 
 class PayMethod extends StatelessWidget {
 
@@ -19,7 +19,7 @@ class PayMethod extends StatelessWidget {
           height: 50,
           decoration:  BoxDecoration(
             border: Border.all(
-              color: isSelected ? MAIN_ORANGE : const Color(0xFF707070),
+              color: isSelected ? AppColors.MAIN_ORANGE : const Color(0xFF707070),
               width: 1,
             ),
             color: Colors.white,

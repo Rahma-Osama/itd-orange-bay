@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/shred_widgets/custom_button.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
+import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/container_body.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/upcomingButton.dart';
-
-
-import '../../../../../constants.dart';
-
-import 'container.dart';
 
 class UpcomingBody extends StatelessWidget {
   const UpcomingBody({Key? key}) : super(key: key);
@@ -37,8 +34,8 @@ class UpcomingBody extends StatelessWidget {
                child: Row(
                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                  children: [
-                   upcomingButton(label: "Edit",bgcolor:  MAIN_ORANGE,borderColor: MAIN_ORANGE,txtcolor: Colors.white, context: context),
-                   upcomingButton(label: "Print",bgcolor: Colors.white,borderColor: MAIN_ORANGE,txtcolor: MAIN_ORANGE, context: context),
+                   upcomingButton(label: "Edit",bgcolor:  AppColors.MAIN_ORANGE,borderColor: AppColors.MAIN_ORANGE,txtcolor: Colors.white, context: context),
+                   upcomingButton(label: "Print",bgcolor: Colors.white,borderColor: AppColors.MAIN_ORANGE,txtcolor: AppColors.MAIN_ORANGE, context: context),
                    upcomingButton(label: "Cancel",bgcolor: const Color(0xFFE72C2C),borderColor: const Color(0xFFE72C2C),txtcolor: Colors.white, context: context),
 
                  ],
@@ -74,7 +71,7 @@ class UpcomingBody extends StatelessWidget {
                       children: [
                         Expanded(
                           child: CustomButton(
-                            backgroundColor: MAIN_ORANGE,
+                            backgroundColor: AppColors.MAIN_ORANGE,
                             text: 'Edit',
                             func: (){},
                           ),
@@ -82,7 +79,7 @@ class UpcomingBody extends StatelessWidget {
                         Expanded(
                           child: CustomButton(
                             backgroundColor: Colors.white,
-                            textColor: MAIN_ORANGE,
+                            textColor: AppColors.MAIN_ORANGE,
                             text: 'Print',
                             func: (){},
                           ),

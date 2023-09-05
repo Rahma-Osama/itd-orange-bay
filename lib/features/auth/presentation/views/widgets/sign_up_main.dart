@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utilities/assets.dart';
-import 'auth_card.dart';
+import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'auth_sign_card.dart';
 
 class SignUPMain extends StatefulWidget {
@@ -18,12 +16,12 @@ class _SignUPMainState extends State<SignUPMain> {
     return Container(
       decoration:  const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AssetData.kBackGround),
+          image: AssetImage(AssetsData.kBackGround),
           fit: BoxFit.fitWidth,
         ),
       ),
       child: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: deviceSize.height,
           width: deviceSize.width,
           child: Column(

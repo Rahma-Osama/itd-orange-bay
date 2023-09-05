@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
+import 'package:orange_bay_new/features/home/program/presentation/views/book_view.dart';
 
-
-import '../../../../../constants.dart';
-
-import '../../../../program/presentation/views/book_view.dart';
 import 'log_in.dart';
-import 'log_in_pass.dart';
-import 'login_text.dart';
+
 
 class AuthCard extends StatefulWidget {
   const AuthCard({Key? key}) : super(key: key);
@@ -23,7 +18,7 @@ enum AuthMode {
 class _AuthCardState extends State<AuthCard> with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey();
  AuthMode _authMode = AuthMode.Login;
- Map< String , String > _authData = {
+ final Map< String , String > _authData = {
    'email' : '',
    'password' : '',
  };
@@ -106,60 +101,10 @@ class _AuthCardState extends State<AuthCard> with SingleTickerProviderStateMixin
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeIn,
         height: 500,
-        // height: _authMode == AuthMode.Signup ? 400 : 260,
-        // constraints: BoxConstraints(
-        //   maxHeight: _authMode == AuthMode.Signup ? 400 : 260
+
         width: deviceSize.width*.85,
-        // padding: EdgeInsets.all(30),
         child: const LoginScreen(),
 
-        // child: Form(
-        //   key: _formKey,
-        //   child: SingleChildScrollView(
-        //     child: Column(
-        //       children: [
-        //         LogInEmail(),
-        //         SizedBox(height: 20,),
-        //         LogInPass(),
-        //         SizedBox(height: 20,),
-        //         AnimatedContainer(
-        //           constraints: BoxConstraints(
-        //             maxHeight: _authMode == AuthMode.Signup ? 120 : 0,
-        //             minHeight:  _authMode == AuthMode.Signup ? 60 : 0,
-        //           ),
-        //             duration: Duration(milliseconds: 300),
-        //           curve: Curves.easeIn,
-        //           child: FadeTransition(
-        //             opacity: _opacityAnimation,
-        //             child: SlideTransition(
-        //               position: _slideAnimation,
-        //               child: SignUpBody(),
-        //             ),
-        //           ),
-        //         ),
-        //         SizedBox(
-        //           height: 20,
-        //         ),
-        //         if(_isLoading)CircularProgressIndicator(),
-        //         CustomButton(
-        //           func: submit,
-        //           backgroundColor: MAIN_ORANGE,
-        //           textColor: Colors.white,
-        //           text: (_authMode == AuthMode.Login ? 'LOGIN' : 'SignUp'),
-        //         ),
-        //        ElevatedButton(
-        //            onPressed: _switchAuthMode,
-        //            child: Text('${_authMode == AuthMode.Login ? 'SignUp' : 'LOGIN'} INSTEAD'),
-        //           style: ElevatedButton.styleFrom(
-        //            backgroundColor: MAIN_ORANGE,
-        //            padding: EdgeInsets.symmetric(horizontal: 30 , vertical: 8),
-        //            // minimumSize: Size(150, 50),
-        //          ),
-        //        ),
-        //       ],
-        //     ),
-        //   ),
-        // ),
       ),
     );
   }

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/signup_screen.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
+import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
 
-import 'log_in.dart';
-import 'log_in_pass.dart';
-import 'login_text.dart';
 
 class AuthCardSign extends StatefulWidget {
   const AuthCardSign({Key? key}) : super(key: key);
@@ -68,11 +65,9 @@ class _AuthCardSignState extends State<AuthCardSign> with SingleTickerProviderSt
     try{
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const HomeLayout()), // Replace NewPage with the desired destination page
+        MaterialPageRoute(builder: (context) => const HomeView()), // Replace NewPage with the desired destination page
       );
-    } catch(error){
-
-    }
+    } catch(error){}
     setState(() {
       _isLoading = false;
     });

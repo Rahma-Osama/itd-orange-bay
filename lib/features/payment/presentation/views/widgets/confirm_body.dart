@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
+import 'package:orange_bay_new/core/widgets/default_text.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/pay_view.dart';
+import 'package:orange_bay_new/features/payment/presentation/views/widgets/check_button.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/widgets/pay_method.dart';
 
-import '../../../../../core/shred_widgets/custom_button.dart';
-import '../../../../../core/shred_widgets/default_text.dart';
-import '../../../../../core/utilities/styles.dart';
-import 'check_buttom.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 
 class ConfirmBody extends StatelessWidget {
   const ConfirmBody({Key? key}) : super(key: key);
@@ -117,7 +117,7 @@ class ConfirmBody extends StatelessWidget {
                    ),
 
                    const SizedBox(height: 14,),
-                   const CheckButtom(
+                   const CheckButton(
                      text: 'Save card for future payment',
                    ),
                  ],
@@ -129,7 +129,7 @@ class ConfirmBody extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: CustomButton(
                   width: double.infinity,
-                  backgroundColor: MAIN_ORANGE,
+                  backgroundColor: AppColors.MAIN_ORANGE,
                   text: 'Confirm',
                   func: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=> const PayView()));
@@ -139,7 +139,7 @@ class ConfirmBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15),
               child: CustomButton(
-                textColor: MAIN_ORANGE,
+                textColor: AppColors.MAIN_ORANGE,
                 backgroundColor: Colors.white,
                 text: 'Back',
                 func: (){

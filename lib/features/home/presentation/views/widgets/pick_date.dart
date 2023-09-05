@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:orange_bay_new/constants.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
 class PickDate extends StatefulWidget {
   const PickDate({Key? key}) : super(key: key);
 
@@ -9,7 +9,7 @@ class PickDate extends StatefulWidget {
 }
 
 class _PickDateState extends State<PickDate> {
-  TextEditingController _fromDateController = TextEditingController();
+  final TextEditingController _fromDateController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -46,7 +46,7 @@ class _PickDateState extends State<PickDate> {
                 borderSide: BorderSide.none,
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: MAIN_ORANGE),
+                borderSide: BorderSide(color: AppColors.MAIN_ORANGE),
               ),
               contentPadding: const EdgeInsets.symmetric(
                   vertical: 0, horizontal: 16),

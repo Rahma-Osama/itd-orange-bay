@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
+import 'package:orange_bay_new/core/widgets/default_text.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/login_text.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/confirm_view.dart';
+import 'package:orange_bay_new/features/payment/presentation/views/widgets/check_button.dart';
 
-
-import '../../../../../constants.dart';
-import '../../../../../core/shred_widgets/custom_button.dart';
-import '../../../../../core/shred_widgets/default_text.dart';
-import 'check_buttom.dart';
 
 class UserBody extends StatefulWidget {
   const UserBody({Key? key}) : super(key: key);
@@ -110,13 +109,13 @@ class _UserBodyState extends State<UserBody> {
               ],
             ),
             const SizedBox(height: 24,),
-            const CheckButtom(
+            const CheckButton(
               text: 'I Accept Terms And Conditions and Cancellation policy \n Read Terms and conditions',
             ),
             Padding(
               padding: const EdgeInsets.all(15),
               child: CustomButton(
-                backgroundColor: MAIN_ORANGE,
+                backgroundColor: AppColors.MAIN_ORANGE,
                 text: 'Pay',
                 func: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> const ConfirmView()));
@@ -127,7 +126,7 @@ class _UserBodyState extends State<UserBody> {
             Padding(
               padding: const EdgeInsets.all(8),
               child: CustomButton(
-                textColor: MAIN_ORANGE,
+                textColor: AppColors.MAIN_ORANGE,
                 backgroundColor: Colors.white,
                 text: 'Back',
                 func: (){

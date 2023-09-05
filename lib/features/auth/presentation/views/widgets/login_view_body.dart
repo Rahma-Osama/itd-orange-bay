@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../../../core/utilities/assets.dart';
+import '../../../../../core/constants/assets_data.dart';
 import 'auth_card.dart';
 
 class LogInBody extends StatefulWidget {
@@ -18,7 +18,7 @@ class _LogInBodyState extends State<LogInBody> {
     return Container(
       decoration:  const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AssetData.kBackGround),
+          image: AssetImage(AssetsData.kBackGround),
           fit: BoxFit.fitWidth,
         ),
       ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
-import 'package:orange_bay_new/core/utilities/assets.dart';
-import 'package:orange_bay_new/core/utilities/styles.dart';
+import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 class ActivityItem extends StatelessWidget {
-  final index;
+  final int index;
   ActivityItem({Key? key , required this.index}) : super(key: key);
 
   @override
@@ -17,14 +17,14 @@ class ActivityItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(AssetData.activites[index],height: MediaQuery.of(context).size.height/7,fit: BoxFit.cover,),
+            Image.asset(AssetsData.activites[index],height: MediaQuery.of(context).size.height/7,fit: BoxFit.cover,),
             Padding(
               padding: const EdgeInsets.all( 8.0),
               child: Text(activitiesLabels[index],style: Styles.TextStyle14.copyWith(fontWeight: FontWeight.w400),),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text('From 150 EGB',style: Styles.TextStyle12.copyWith(color: GREY),),
+              child: Text('From 150 EGB',style: Styles.TextStyle12.copyWith(color: AppColors.GREY),),
             )
           ],
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/shred_widgets/profile_text.dart';
+import 'package:orange_bay_new/core/widgets/default_text_profile.dart';
 
 class ContainerProfile extends StatelessWidget {
   final String text;

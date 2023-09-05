@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
 
-import '../../../../../core/shred_widgets/custom_button.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -15,9 +15,8 @@ class _SearchState extends State<Search> {
   Widget build(BuildContext context) {
     return CustomButton(
       width: double.infinity,
-      backgroundColor: MAIN_ORANGE,
+      backgroundColor: AppColors.MAIN_ORANGE,
       text: 'Search',
-      // isChecked: _isChecked,
       func: () {},
     );
   }

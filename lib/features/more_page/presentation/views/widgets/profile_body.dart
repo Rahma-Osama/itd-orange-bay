@@ -1,14 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/shred_widgets/custom_button.dart';
-import 'package:orange_bay_new/core/shred_widgets/default_text.dart';
-import 'package:orange_bay_new/core/shred_widgets/profile_text.dart';
-import 'package:orange_bay_new/features/more_page/presentation/views/profile_view.dart';
-import 'package:orange_bay_new/features/more_page/presentation/views/widgets/header.dart';
-import 'package:orange_bay_new/features/more_page/presentation/views/widgets/security_body.dart';
-
-import '../../../../../constants.dart';
-import '../../../../../core/utilities/styles.dart';
-import '../security_view.dart';
 import 'container_text.dart';
 
 class ProfileBody extends StatefulWidget {

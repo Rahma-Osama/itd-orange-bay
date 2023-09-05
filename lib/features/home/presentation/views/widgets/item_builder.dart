@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/constants.dart';
-
-import '../../../../../core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 
 class ItemBuilder extends StatelessWidget {
   final AnimationController animationController;
   final Animation<double> animation;
 
-  ItemBuilder(
+  const ItemBuilder(
       {Key? key, required this.animationController, required this.animation})
       : super(key: key);
 
@@ -58,23 +57,21 @@ class ItemBuilder extends StatelessWidget {
                         "Go Island",
                         style: Styles.TextStyle16,
                       ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.star,
-                              color: MAIN_ORANGE,
-                            ),
-                            Text(
-                              "4.7",
-                              style: Styles.TextStyle12,
-                            ),
-                            Text(
-                              '(92)',
-                              style: Styles.TextStyle12.copyWith(color: GREY),
-                            )
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: AppColors.MAIN_ORANGE,
+                          ),
+                          Text(
+                            "4.7",
+                            style: Styles.TextStyle12,
+                          ),
+                          Text(
+                            '(92)',
+                            style: Styles.TextStyle12.copyWith(color: AppColors.GREY),
+                          )
+                        ],
                       )
                     ],
                   ),
