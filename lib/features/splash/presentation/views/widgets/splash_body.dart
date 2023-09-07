@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/features/onboarding/onboarding.dart';
 
-
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
 
@@ -12,6 +11,7 @@ class SplashBody extends StatefulWidget {
 
 class _SplashBodyState extends State<SplashBody> {
   bool _showContent = false;
+
   @override
   void initState() {
     super.initState();
@@ -24,16 +24,16 @@ class _SplashBodyState extends State<SplashBody> {
     });
   }
 
-  // Function to navigate to the next screen
   void navigateToNextScreen() {
     Future.delayed(const Duration(seconds: 6), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const OnBoarding()), // Replace with the appropriate screen
+        MaterialPageRoute(
+            builder: (context) =>
+                const OnBoarding()), // Replace with the appropriate screen
       );
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,8 @@ class _SplashBodyState extends State<SplashBody> {
         SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Image.asset('assets/images/IMG_6497-_11_.png', fit: BoxFit.cover),
+          child:
+              Image.asset('assets/images/IMG_6497-_11_.png', fit: BoxFit.cover),
         ),
         Column(
           children: [
@@ -52,16 +53,14 @@ class _SplashBodyState extends State<SplashBody> {
             ),
             Center(
               child: AnimatedContainer(
-                duration: const Duration(seconds: 1), // Animation duration
-                curve: Curves.easeInOut, // Animation curve
-                width: _showContent ? 180 : 0, // Set desired initial and final width
+                duration: const Duration(seconds: 1),
+                curve: Curves.easeInOut,
+                width: _showContent ? 180 : 0,
+                // Set desired initial and final width
                 height: _showContent ? 180 : 0,
                 child: Image.asset(AssetsData.logo),
               ),
             ),
-            // const SizedBox(
-            //   height: 8,
-            // ),
             Visibility(
               visible: _showContent,
               child: Column(
@@ -72,7 +71,10 @@ class _SplashBodyState extends State<SplashBody> {
                     child: const Text(
                       "Welcome to Orange Bay",
                       textAlign: TextAlign.left,
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700,color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white),
                     ),
                   ),
                   const SizedBox(
@@ -82,15 +84,16 @@ class _SplashBodyState extends State<SplashBody> {
                     opacity: _showContent ? 1.0 : 0.0, // Animate opacity
                     duration: const Duration(milliseconds: 420),
                     child: const Text(
-                        ("Planning your next journey with us "),
-                        textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 16,color: Colors.white , fontWeight: FontWeight.w800,
-                            shadows: [
-                          Shadow(color: Colors.grey,
-                            offset: Offset(.1,.1)
-                          )
+                      ("Planning your next journey with us "),
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w800,
+                        shadows: [
+                          Shadow(color: Colors.grey, offset: Offset(.1, .1))
                         ],
-                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -106,4 +109,3 @@ class _SplashBodyState extends State<SplashBody> {
     );
   }
 }
-
