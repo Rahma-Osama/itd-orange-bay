@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 
-
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
 

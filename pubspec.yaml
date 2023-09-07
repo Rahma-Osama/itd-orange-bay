@@ -50,6 +50,7 @@ dependencies:
   supercharged:
   wave_transition:
   flutter_launcher_icons:
+  intl:
 
 
 flutter_launcher_icons:

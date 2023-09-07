@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
+
 class PickDate extends StatefulWidget {
   const PickDate({Key? key}) : super(key: key);
 
@@ -10,10 +11,11 @@ class PickDate extends StatefulWidget {
 
 class _PickDateState extends State<PickDate> {
   final TextEditingController _fromDateController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       child: Container(
         width: double.infinity,
         height: 55,
@@ -38,9 +40,8 @@ class _PickDateState extends State<PickDate> {
                 });
               }
             },
-            decoration:  InputDecoration(
+            decoration: InputDecoration(
               hintText: 'when would you come?',
-
               prefixIcon: const Icon(Icons.calendar_today_rounded),
               enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide.none,
@@ -48,14 +49,12 @@ class _PickDateState extends State<PickDate> {
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: AppColors.MAIN_ORANGE),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                  vertical: 0, horizontal: 16),
-
+              contentPadding:
+                  const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
             ),
           ),
         ),
       ),
     );
-
   }
 }

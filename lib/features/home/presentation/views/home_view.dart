@@ -5,10 +5,7 @@ import 'package:orange_bay_new/core/widgets/new_appbar.dart';
 import 'package:orange_bay_new/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
 import 'package:orange_bay_new/features/home/presentation/manager/layout_cubit/layout_states.dart';
 
-
-
-
-class HomeView extends StatefulWidget  {
+class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
   @override
@@ -16,15 +13,12 @@ class HomeView extends StatefulWidget  {
 }
 
 class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
-  late LayoutCubit _layoutCubit;
   late AnimationController _animationController;
+
   @override
   void initState() {
     super.initState();
-    _layoutCubit = LayoutCubit(vsync: this); // Pass vsync to LayoutCubit
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
-      // _layoutCubit._startLoadScreen();
-    });
+    WidgetsBinding.instance.addPostFrameCallback((_) {});
   }
 
   @override
@@ -32,6 +26,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
     _animationController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -45,7 +40,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             return SafeArea(
               child: Scaffold(
                 backgroundColor: Colors.grey[100],
-                appBar:  AppBarNew(),
+                appBar: const AppBarNew(),
                 bottomNavigationBar: Container(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   decoration: BoxDecoration(

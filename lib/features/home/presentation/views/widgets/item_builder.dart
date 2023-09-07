@@ -69,7 +69,8 @@ class ItemBuilder extends StatelessWidget {
                           ),
                           Text(
                             '(92)',
-                            style: Styles.textStyle12.copyWith(color: AppColors.GREY),
+                            style: Styles.textStyle12
+                                .copyWith(color: AppColors.GREY),
                           )
                         ],
                       )
@@ -83,8 +84,8 @@ class ItemBuilder extends StatelessWidget {
                     children: [
                       Text(
                         "Starting from ",
-                        style: Styles.textStyle12.copyWith(
-                            fontWeight: FontWeight.w400),
+                        style: Styles.textStyle12
+                            .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
                         "1000 EGP per person",
@@ -99,8 +100,8 @@ class ItemBuilder extends StatelessWidget {
                     children: [
                       Text(
                         "Starting from ",
-                        style: Styles.textStyle12.copyWith(
-                            fontWeight: FontWeight.w400),
+                        style: Styles.textStyle12
+                            .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
                         "700 EGP per child",

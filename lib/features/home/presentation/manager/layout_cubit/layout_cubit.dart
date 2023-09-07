@@ -1,29 +1,19 @@
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/home_body.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/More_view.dart';
-
-
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/book_body.dart';
 import 'package:orange_bay_new/features/services/presentation/views/Services_view.dart';
 import 'layout_states.dart';
 
-class LayoutCubit extends Cubit<LayoutStates>  {
+class LayoutCubit extends Cubit<LayoutStates> {
   late AnimationController _animationController;
   int bottomNavBarIndex = 0;
 
   LayoutCubit({required TickerProvider vsync}) : super(IntialState()) {
-    _animationController =
-        AnimationController(duration: const Duration(milliseconds: 400), vsync: vsync);
+    _animationController = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: vsync);
   }
-
-  void _startLoadScreen() async {
-    await Future.delayed(const Duration(milliseconds: 480));
-    _animationController.forward();
-  }
-
-
 
   changeIndex(index) {
     bottomNavBarIndex = index;
@@ -32,14 +22,13 @@ class LayoutCubit extends Cubit<LayoutStates>  {
   }
 
   List<Widget> get screens => [
-   HomeBody(
-     animationController: _animationController,
-   ),
-    const BookBody(),
-    const ServicesView(),
-    MoreView(
-      animationController: _animationController,
-    ),
-
-  ];
+        HomeBody(
+          animationController: _animationController,
+        ),
+        const BookBody(),
+        const ServicesView(),
+        MoreView(
+          animationController: _animationController,
+        ),
+      ];
 }

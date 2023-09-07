@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/data/constants.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/styles.dart';
 
 class ProgramContainer extends StatelessWidget {
-  bool whishScreen = false;
+  final bool whishScreen;
   final AnimationController animationController;
   final Animation<double> animation;
 
-  ProgramContainer(
+  const ProgramContainer(
       {Key? key,
       this.whishScreen = false,
       required this.animationController,
@@ -76,7 +75,8 @@ class ProgramContainer extends StatelessWidget {
                         ),
                         Text(
                           '(92)',
-                          style: Styles.textStyle12.copyWith(color: AppColors.GREY),
+                          style: Styles.textStyle12
+                              .copyWith(color: AppColors.GREY),
                         )
                       ],
                     )
@@ -84,13 +84,14 @@ class ProgramContainer extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                 child: Row(
                   children: [
                     Text(
                       "Starting from ",
-                      style: Styles.textStyle12.copyWith(
-                          fontWeight: FontWeight.w400),
+                      style: Styles.textStyle12
+                          .copyWith(fontWeight: FontWeight.w400),
                     ),
                     Text(
                       "1000 EGP per person",
@@ -105,8 +106,8 @@ class ProgramContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Starting from ",
-                      style: Styles.textStyle12.copyWith(
-                          fontWeight: FontWeight.w400),
+                      style: Styles.textStyle12
+                          .copyWith(fontWeight: FontWeight.w400),
                     ),
                     Text(
                       "700 EGP per child",
