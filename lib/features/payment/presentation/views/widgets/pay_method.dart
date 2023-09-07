@@ -70,7 +70,7 @@ class PayMethod extends StatelessWidget {
             child: Center(
               child: Text(
                 'Cash',
-                style: Styles.TextStyle16.copyWith(color: Colors.black),
+                style: Styles.textStyle16.copyWith(color: Colors.black),
               ),
             ),
           ),

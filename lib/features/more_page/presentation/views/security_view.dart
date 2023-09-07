@@ -11,7 +11,7 @@ class SecurityView extends StatelessWidget {
     return SafeArea(
       child:  Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: const AppBarButtom3(text: 'My Profile',),
+        appBar: const AppBarButton3(text: 'My Profile',),
         body: const SecurityBody(),
       ),
     );

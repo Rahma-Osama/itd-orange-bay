@@ -3,8 +3,7 @@ import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/drop_down_button.dart';
 
-
-CustomAppBar({context}) {
+customAppBar({context}) {
   return AppBar(
     backgroundColor: Colors.transparent,
     elevation: 0,

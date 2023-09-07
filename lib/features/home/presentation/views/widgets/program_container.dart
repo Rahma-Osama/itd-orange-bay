@@ -62,7 +62,7 @@ class ProgramContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Go Island",
-                      style: Styles.TextStyle16,
+                      style: Styles.textStyle16,
                     ),
                     Row(
                       children: [
@@ -72,11 +72,11 @@ class ProgramContainer extends StatelessWidget {
                         ),
                         Text(
                           "4.7",
-                          style: Styles.TextStyle12,
+                          style: Styles.textStyle12,
                         ),
                         Text(
                           '(92)',
-                          style: Styles.TextStyle12.copyWith(color: AppColors.GREY),
+                          style: Styles.textStyle12.copyWith(color: AppColors.GREY),
                         )
                       ],
                     )
@@ -89,12 +89,12 @@ class ProgramContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Starting from ",
-                      style: Styles.TextStyle12.copyWith(
+                      style: Styles.textStyle12.copyWith(
                           fontWeight: FontWeight.w400),
                     ),
                     Text(
                       "1000 EGP per person",
-                      style: Styles.TextStyle14,
+                      style: Styles.textStyle14,
                     )
                   ],
                 ),
@@ -105,12 +105,12 @@ class ProgramContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Starting from ",
-                      style: Styles.TextStyle12.copyWith(
+                      style: Styles.textStyle12.copyWith(
                           fontWeight: FontWeight.w400),
                     ),
                     Text(
                       "700 EGP per child",
-                      style: Styles.TextStyle14,
+                      style: Styles.textStyle14,
                     )
                   ],
                 ),

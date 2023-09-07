@@ -15,7 +15,7 @@ class _VideosViewState extends State<VideosView> {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.grey[100],
-          appBar: const AppBarButtom3(text: 'Videos',) ,
+          appBar: const AppBarButton3(text: 'Videos',) ,
           body: Container()
       ),
     );

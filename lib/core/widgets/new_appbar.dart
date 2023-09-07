@@ -3,10 +3,11 @@ import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/drop_down_button.dart';
 
 import 'package:orange_bay_new/core/constants/assets_data.dart';
-List<String> list = <String>['ُEG','Dollar'];
+
+List<String> list = <String>['ُEG', 'Dollar'];
+
 class AppBarNew extends StatefulWidget implements PreferredSizeWidget {
-   AppBarNew({Key? key}) : super(key: key);
-  String dropdownValue = list.first;
+  const AppBarNew({Key? key}) : super(key: key);
 
   @override
   State<AppBarNew> createState() => _AppBarNewState();
@@ -14,32 +15,30 @@ class AppBarNew extends StatefulWidget implements PreferredSizeWidget {
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-
 }
 
 class _AppBarNewState extends State<AppBarNew> {
-
-
+  String dropdownValue = list.first;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      flexibleSpace:
-      Row(
+      flexibleSpace: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 8.0 , left: 8.0),
+            padding: const EdgeInsets.only(top: 8.0, left: 8.0),
             child: Image.asset(
               AssetsData.logo,
               height: MediaQuery.of(context).size.height / 20,
               width: MediaQuery.of(context).size.width / 4,
-
             ),
           ),
-          SizedBox(width: MediaQuery.of(context).size.width/12,),
+          SizedBox(
+            width: MediaQuery.of(context).size.width / 12,
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
@@ -47,54 +46,57 @@ class _AppBarNewState extends State<AppBarNew> {
                 horizontal: MediaQuery.of(context).size.width / 60,
                 vertical: 0, // Adjust this value to align vertically as needed
               ),
-           decoration: BoxDecoration(
-         color: Colors.white,
-         borderRadius: BorderRadius.circular(
-            MediaQuery.of(context).size.width / 50),),
-           child: DropdownButton<String>(
-              value: widget.dropdownValue,
-              icon: const Icon(Icons.keyboard_arrow_down_outlined),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(
+                    MediaQuery.of(context).size.width / 50),
+              ),
+              child: DropdownButton<String>(
+                value: dropdownValue,
+                icon: const Icon(Icons.keyboard_arrow_down_outlined),
 
-              // style: const TextStyle(color: Colors.deepPurple),
-              underline: const SizedBox(),
-              onChanged: (String? value) {
-                // This is called when the user selects an item.
-                setState(() {
-                  widget.dropdownValue = value!;
-                });
-              },
-              items: list.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value,style: TextStyle(color: AppColors.BLACK),),
-                );
-              }).toList(),
+                // style: const TextStyle(color: Colors.deepPurple),
+                underline: const SizedBox(),
+                onChanged: (String? value) {
+                  // This is called when the user selects an item.
+                  setState(() {
+                    dropdownValue = value!;
+                  });
+                },
+                items: list.map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(
+                      value,
+                      style: TextStyle(color: AppColors.BLACK),
+                    ),
+                  );
+                }).toList(),
+              ),
             ),
-          ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: Container(
               padding: const EdgeInsets.symmetric(
-                // horizontal: MediaQuery.of(context).size.width / 60,
                 vertical: 0, // Adjust this value to align vertically as needed
               ),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(
-                        MediaQuery.of(context).size.width / 50)),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.language,
-                      color: AppColors.MAIN_ORANGE,
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    const CustomDropdownButton()
-                  ],
-                ),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(
+                      MediaQuery.of(context).size.width / 50)),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.language,
+                    color: AppColors.MAIN_ORANGE,
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  const CustomDropdownButton()
+                ],
+              ),
             ),
           ),
           Padding(

@@ -23,7 +23,7 @@ class ConfirmBody extends StatelessWidget {
               padding: EdgeInsets.all(15.0),
               child: Center(child: Image(image: AssetImage('assets/images/step2.png' ,)  )),
             ),
-            Text('Choose payment method' , style: Styles.TextStyle18,),
+            Text('Choose payment method' , style: Styles.textStyle18,),
             const PayMethod(),
            Container(
              decoration:  BoxDecoration(
@@ -48,7 +48,7 @@ class ConfirmBody extends StatelessWidget {
                  children: [
                    Text(
                      'Credit Card',
-                     style: Styles.TextStyle14.copyWith(color: Colors.black),
+                     style: Styles.textStyle14.copyWith(color: Colors.black),
                    ),
                    const SizedBox(height: 8,),
                    defaultText(
@@ -58,7 +58,7 @@ class ConfirmBody extends StatelessWidget {
 
                    Text(
                      'Name on card',
-                     style: Styles.TextStyle14.copyWith(color: Colors.black),
+                     style: Styles.textStyle14.copyWith(color: Colors.black),
                    ),
                    const SizedBox(height: 8,),
                    defaultText(
@@ -73,7 +73,7 @@ class ConfirmBody extends StatelessWidget {
                            children: [
                              Text(
                                'Expire date',
-                               style: Styles.TextStyle14.copyWith(color: Colors.black),
+                               style: Styles.textStyle14.copyWith(color: Colors.black),
                              ),
                              const SizedBox(height: 5,),
                              SizedBox(
@@ -96,7 +96,7 @@ class ConfirmBody extends StatelessWidget {
                            children: [
                              Text(
                                'CVV',
-                               style: Styles.TextStyle14.copyWith(color: Colors.black),
+                               style: Styles.textStyle14.copyWith(color: Colors.black),
                              ),
                              const SizedBox(height: 5,),
                              SizedBox(

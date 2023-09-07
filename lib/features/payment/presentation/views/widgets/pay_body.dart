@@ -42,7 +42,7 @@ class PayBody extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Text(
                       'Classic Program',
-                    style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
+                    style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
                   ),
                   const SizedBox(height: 5,),
                   const Text(
@@ -58,30 +58,30 @@ class PayBody extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Date' , style: Styles.TextStyleNormal14,),
-                      Text('2/3/2022 at 18:00' , style: Styles.TextStyleNormal14,),
+                      Text('Date' , style: Styles.textStyleNormal14,),
+                      Text('2/3/2022 at 18:00' , style: Styles.textStyleNormal14,),
                     ],
                   ),
                   const SizedBox(height: 10,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Adults x2' , style: Styles.TextStyleNormal14,),
-                      Text('750 EGP', style: Styles.TextStyleNormal14,),
+                      Text('Adults x2' , style: Styles.textStyleNormal14,),
+                      Text('750 EGP', style: Styles.textStyleNormal14,),
                     ],
                   ),
                   const SizedBox(height: 10,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Children x1' ,  style: Styles.TextStyleNormal14,),
-                      Text('Free' , style: Styles.TextStyleNormal14,),
+                      Text('Children x1' ,  style: Styles.textStyleNormal14,),
+                      Text('Free' , style: Styles.textStyleNormal14,),
                     ],
                   ),
                   const SizedBox(height: 10,),
                   Text(
                     'Additional Services',
-                    style: Styles.TextStyle14.copyWith(fontWeight: FontWeight.w600),
+                    style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(height: 10,),
                   Row(
@@ -89,12 +89,12 @@ class PayBody extends StatelessWidget {
                     children: [
                       Text(
                         'Boot X2',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
                         '500 EGP',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                       ),
                     ],
                   ),
@@ -108,12 +108,12 @@ class PayBody extends StatelessWidget {
                       children: [
                         Text(
                           'Total',
-                          style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                         ),
                         const SizedBox(width: 35),
                         Text(
                           '750 EGP',
-                          style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                         ),
                       ],
                     ),

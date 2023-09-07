@@ -22,7 +22,7 @@ class ContainerBody extends StatelessWidget {
               children: [
                 Text(
                   'Classic Program',
-                  style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
+                  style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
                 ),
                 const SizedBox(height: 5,),
                 const Text(
@@ -40,23 +40,23 @@ class ContainerBody extends StatelessWidget {
                   children: [
                     Text(
                       'Date',
-                      style: Styles.TextStyleNormal14,
+                      style: Styles.textStyleNormal14,
                     ),
                     Text(
                       '2/3/2022 at 18:00',
-                      style: Styles.TextStyleNormal14,
+                      style: Styles.textStyleNormal14,
                     ),
                   ],
                 ),
                 const SizedBox(height: 10,),
                 Text(
                   'Adult x2',
-                  style: Styles.TextStyleNormal14,
+                  style: Styles.textStyleNormal14,
                 ),
                 const SizedBox(height: 10,),
                 Text(
                   'Children x1',
-                  style: Styles.TextStyleNormal14,
+                  style: Styles.textStyleNormal14,
                 ),
                 const SizedBox(height: 10,),
                 Row(
@@ -64,12 +64,12 @@ class ContainerBody extends StatelessWidget {
                   children: [
                     Text(
                       'Program Status',
-                      style: Styles.TextStyleNormal14,
+                      style: Styles.textStyleNormal14,
                     ),
                     const SizedBox(width: 35),
                     Text(
                       'Paid',
-                      style: Styles.TextStyleNormal14.copyWith(color: const Color(0xFFCF0F0F),),
+                      style: Styles.textStyleNormal14.copyWith(color: const Color(0xFFCF0F0F),),
                     ),
                   ],
                 ),
@@ -83,12 +83,12 @@ class ContainerBody extends StatelessWidget {
                     children: [
                       Text(
                         'Total',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
                         '750 EGP',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
                       ),
                     ],
                   ),

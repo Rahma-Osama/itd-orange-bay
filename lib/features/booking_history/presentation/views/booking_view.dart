@@ -10,7 +10,7 @@ class BookingView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: CustomAppBar(context: context),
+        appBar: customAppBar(context: context),
         body: const BookBody(),
       ),
     );

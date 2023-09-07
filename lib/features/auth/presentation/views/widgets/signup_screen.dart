@@ -27,7 +27,7 @@ class _SignupScreenState extends State<SignupScreen> {
               children: [
                 Text(
                     'Register' ,
-                    style: Styles.TextStyle16.copyWith(color: Colors.black)),
+                    style: Styles.textStyle16.copyWith(color: Colors.black)),
                  SizedBox(
                   height: MediaQuery.of(context).size.height/40,
                 ),
@@ -143,7 +143,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:  [
                     Text('Already have an account ?',
-                      style: Styles.TextStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                     TextButton(
                       onPressed: (){
@@ -156,7 +156,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       },
                       child:  Text(
                         'Log In ',
-                        style: Styles.TextStyle14.copyWith(color: AppColors.MAIN_ORANGE),
+                        style: Styles.textStyle14.copyWith(color: AppColors.MAIN_ORANGE),
                       ),
                     ),
                   ],

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'back_ground.dart';
 import 'list_images.dart';
 
 class SliderImg extends StatefulWidget {
@@ -14,10 +12,8 @@ class SliderImg extends StatefulWidget {
 
 class _SliderImgState extends State<SliderImg> {
   String selectedImage = 'assets/images/img_1.png';
-  // bool showImages = true;
   @override
   Widget build(BuildContext context) {
-    // Get the screen width
     double screenWidth = MediaQuery.of(context).size.width;
 
     // Calculate the left position based on screen width
@@ -25,7 +21,6 @@ class _SliderImgState extends State<SliderImg> {
 
     // Calculate the top position based on screen width
     double topPosition = screenWidth >= 600 ? 300 : 180;
-//150
     // Calculate the container width based on screen width
     double containerWidth = screenWidth >= 600 ? 400 : screenWidth - 40;
 
@@ -46,7 +41,6 @@ class _SliderImgState extends State<SliderImg> {
           ),
           child: Stack(
             children: [
-              // BackGround(imagePath: selectedImage),
               ListImages(
                 onImageTap: (imagePath) {
                   setState(() {

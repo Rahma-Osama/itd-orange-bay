@@ -20,11 +20,11 @@ class ActivitiesContainr extends StatelessWidget {
             Image.asset(AssetsData.activites[index],height: MediaQuery.of(context).size.height/4.5,fit: BoxFit.cover,),
            Padding(
              padding: const EdgeInsets.all(8.0),
-             child: Text(activitiesLabels[index],style: Styles.TextStyle14.copyWith(fontWeight: FontWeight.w400),),
+             child: Text(activitiesLabels[index],style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w400),),
            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('From 150 EGB',style: Styles.TextStyle12.copyWith(color: AppColors.GREY),),
+              child: Text('From 150 EGB',style: Styles.textStyle12.copyWith(color: AppColors.GREY),),
             )
           ],
         ),

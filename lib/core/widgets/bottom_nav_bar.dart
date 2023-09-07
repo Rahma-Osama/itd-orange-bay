@@ -6,7 +6,6 @@ import 'package:orange_bay_new/features/home/presentation/manager/layout_cubit/l
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
@@ -17,11 +16,9 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
-
-    return BlocConsumer<LayoutCubit,LayoutStates>(
-      builder: (context,state) {
+    return BlocConsumer<LayoutCubit, LayoutStates>(
+      builder: (context, state) {
         return SalomonBottomBar(
-
           backgroundColor: Colors.white,
           currentIndex: BlocProvider.of<LayoutCubit>(context).bottomNavBarIndex,
           onTap: (i) => BlocProvider.of<LayoutCubit>(context).changeIndex(i),
@@ -31,17 +28,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
               title: const Text("Home"),
               selectedColor: AppColors.MAIN_ORANGE,
             ),
-
             SalomonBottomBarItem(
               icon: const Icon(Icons.calendar_today_rounded),
               title: const Text("Booking History"),
-              selectedColor: AppColors.MAIN_ORANGE,        ),
-
+              selectedColor: AppColors.MAIN_ORANGE,
+            ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.fact_check_outlined),
               title: const Text("Services"),
-              selectedColor: AppColors.MAIN_ORANGE,        ),
-
+              selectedColor: AppColors.MAIN_ORANGE,
+            ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.more_horiz),
               title: const Text("More"),
@@ -49,7 +45,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
           ],
         );
-      }, listener: (BuildContext context, LayoutStates state) {  },
+      },
+      listener: (BuildContext context, LayoutStates state) {},
     );
   }
 }

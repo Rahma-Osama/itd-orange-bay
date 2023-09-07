@@ -34,7 +34,7 @@ class _WishListViewState extends State<WishListView> with TickerProviderStateMix
     return SafeArea(
       child:  Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: const AppBarButtom3(text: 'WishList',),
+        appBar: const AppBarButton3(text: 'WishList',),
         body: WishListBody(
           animationController: tabAnimationController,
         )

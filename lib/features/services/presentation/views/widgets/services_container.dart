@@ -27,9 +27,9 @@ final int index;
             Expanded(child: Image.asset(AssetsData.services[index])),
             Padding(
               padding: EdgeInsets.all(MediaQuery.of(context).size.height/160),
-              child: Text(servicesHeaders[index],style: Styles.TextStyle14.copyWith(fontWeight: FontWeight.w500),),
+              child: Text(servicesHeaders[index],style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w500),),
             ),
-            Text(servicesData[index],style: Styles.TextStyle12.copyWith(fontWeight: FontWeight.w400,color: AppColors.GREY),)
+            Text(servicesData[index],style: Styles.textStyle12.copyWith(fontWeight: FontWeight.w400,color: AppColors.GREY),)
           ],
         ),
       ),

@@ -32,7 +32,7 @@ class _CheckButtonState extends State<CheckButton> {
         Expanded(
           child: Text(
             widget.text,
-            style: Styles.TextStyle14.copyWith(color: Colors.black),
+            style: Styles.textStyle14.copyWith(color: Colors.black),
             softWrap: true,
             overflow: TextOverflow.visible,
           ),

@@ -51,19 +51,19 @@ class _UserBodyState extends State<UserBody> {
                   children: [
                     Text(
                         'Add user data',
-                      style: Styles.TextStyle18,
+                      style: Styles.textStyle18,
                     ),
                     const SizedBox(height: 12,),
                     Text(
                       'Email Address',
-                      style: Styles.TextStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(height: 8,),
                     const LogInEmail(),
                     const SizedBox(height: 15,),
                     Text(
                       'Full Name',
-                      style: Styles.TextStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(height: 8,),
                 defaultText(
@@ -73,7 +73,7 @@ class _UserBodyState extends State<UserBody> {
                     const SizedBox(height: 15,),
                     Text(
                       'Phone Number',
-                      style: Styles.TextStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(height: 8,),
                     defaultText(
@@ -83,7 +83,7 @@ class _UserBodyState extends State<UserBody> {
                     const SizedBox(height: 15,),
                     Text(
                       'Your Request',
-                      style: Styles.TextStyle14.copyWith(color: Colors.black),
+                      style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(height: 8,),
                     defaultText(
@@ -100,11 +100,11 @@ class _UserBodyState extends State<UserBody> {
               children: [
                 Text(
                   'Total',
-                  style: Styles.TextStyle20.copyWith(color: Colors.black),
+                  style: Styles.textStyle20.copyWith(color: Colors.black),
                 ),
                 Text(
                   '2,550 EGP',
-                  style: Styles.TextStyle20.copyWith(color: Colors.black),
+                  style: Styles.textStyle20.copyWith(color: Colors.black),
                 ),
               ],
             ),

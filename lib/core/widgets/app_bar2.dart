@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 
-class AppBarButtom extends StatefulWidget  implements PreferredSizeWidget {
-  const AppBarButtom({Key? key}) : super(key: key);
+class AppBarButton extends StatefulWidget implements PreferredSizeWidget {
+  const AppBarButton({Key? key}) : super(key: key);
 
   @override
-  State<AppBarButtom> createState() => _AppBarButtomState();
+  State<AppBarButton> createState() => _AppBarButtonState();
 
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-class _AppBarButtomState extends State<AppBarButtom> {
+class _AppBarButtonState extends State<AppBarButton> {
   bool isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: SizedBox(),
+      leading: const SizedBox(),
       elevation: 0,
       backgroundColor: Colors.transparent,
       flexibleSpace: Padding(
@@ -30,17 +31,18 @@ class _AppBarButtomState extends State<AppBarButtom> {
                   width: 40,
                   height: 40,
                   decoration: ShapeDecoration(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                      shadows: const [
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                    shadows: const [
                       BoxShadow(
-                      color: Color(0x4CA7AEC1),
-                  blurRadius: 80,
-                  offset: Offset(0, 4),
-                  spreadRadius: 0,
+                        color: Color(0x4CA7AEC1),
+                        blurRadius: 80,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
                       ),
-                  ],
-                ),
+                    ],
+                  ),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_new,
@@ -50,8 +52,7 @@ class _AppBarButtomState extends State<AppBarButtom> {
                     ),
                     onPressed: () {
                       Navigator.pop(
-                          context
-                      ); // Replace with the desired navigation action
+                          context); // Replace with the desired navigation action
                     },
                   ),
                 ),
@@ -65,7 +66,8 @@ class _AppBarButtomState extends State<AppBarButtom> {
                   height: 40,
                   decoration: ShapeDecoration(
                     color: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                     shadows: const [
                       BoxShadow(
                         color: Color(0x4CA7AEC1),
@@ -76,7 +78,7 @@ class _AppBarButtomState extends State<AppBarButtom> {
                     ],
                   ),
                   child: IconButton(
-                    icon:  Icon(
+                    icon: Icon(
                       isFavorite
                           ? Icons.favorite_rounded
                           : Icons.favorite_border_rounded,
@@ -86,7 +88,7 @@ class _AppBarButtomState extends State<AppBarButtom> {
                     onPressed: () {
                       setState(() {
                         isFavorite = !isFavorite; // Toggle the favorite state
-                      });// Replace with the desired navigation action
+                      }); // Replace with the desired navigation action
                     },
                   ),
                 ),

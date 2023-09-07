@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 
 import '../theme/styles.dart';
 
-class AppBarButtom3 extends StatefulWidget  implements PreferredSizeWidget {
-  const AppBarButtom3({Key? key, required this.text}) : super(key: key);
+class AppBarButton3 extends StatefulWidget implements PreferredSizeWidget {
+  const AppBarButton3({Key? key, required this.text}) : super(key: key);
   final String text;
 
   @override
-  State<AppBarButtom3> createState() => _AppBarButtom3State();
+  State<AppBarButton3> createState() => _AppBarButton3State();
 
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-class _AppBarButtom3State extends State<AppBarButtom3> {
+class _AppBarButton3State extends State<AppBarButton3> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: SizedBox(),
+      leading: const SizedBox(),
       elevation: 0,
       backgroundColor: Colors.transparent,
       flexibleSpace: Padding(
@@ -32,7 +32,8 @@ class _AppBarButtom3State extends State<AppBarButtom3> {
                 height: 40,
                 decoration: ShapeDecoration(
                   color: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
                   shadows: const [
                     BoxShadow(
                       color: Color(0x4CA7AEC1),
@@ -51,8 +52,7 @@ class _AppBarButtom3State extends State<AppBarButtom3> {
                   ),
                   onPressed: () {
                     Navigator.pop(
-                        context
-                    ); // Replace with the desired navigation action
+                        context); // Replace with the desired navigation action
                   },
                 ),
               ),
@@ -61,7 +61,8 @@ class _AppBarButtom3State extends State<AppBarButtom3> {
               child: Center(
                 child: Text(
                   widget.text,
-                  style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                  style: Styles.textStyle16.copyWith(
+                      fontWeight: FontWeight.w600, color: Colors.black),
                   textAlign: TextAlign.center,
                 ),
               ),

@@ -15,7 +15,7 @@ class _RestViewState extends State<RestView> {
     return SafeArea(
               child: Scaffold(
                 backgroundColor: Colors.grey[100],
-                appBar: const AppBarButtom3(text: 'Restaurants',) ,
+                appBar: const AppBarButton3(text: 'Restaurants',) ,
                   body: const RestBody()
               ),
             );

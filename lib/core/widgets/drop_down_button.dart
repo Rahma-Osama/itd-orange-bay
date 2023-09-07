@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
-
-const List<String> list=<String>['english','العربيه'];
-
+const List<String> list = <String>['english', 'العربيه'];
 
 class CustomDropdownButton extends StatefulWidget {
-
   const CustomDropdownButton({super.key});
 
   @override
@@ -33,7 +30,10 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
       items: list.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
-          child: Text(value,style: TextStyle(color: AppColors.BLACK),),
+          child: Text(
+            value,
+            style: TextStyle(color: AppColors.BLACK),
+          ),
         );
       }).toList(),
     );

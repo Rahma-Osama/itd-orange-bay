@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                 Text('Log in' , style: Styles.TextStyle16.copyWith(color: Colors.black)),
+                 Text('Log in' , style: Styles.textStyle16.copyWith(color: Colors.black)),
                 const SizedBox(
                   height: 40.0,
                 ),
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:  [
                      Text('Don\'t have an account?',
-                        style: Styles.TextStyle14.copyWith(color: Colors.black),
+                        style: Styles.textStyle14.copyWith(color: Colors.black),
                       ),
                     TextButton(
                       onPressed: (){
@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                       child:  Text(
                         'SIGN UP ',
-                        style: Styles.TextStyle14.copyWith(color: AppColors.MAIN_ORANGE),
+                        style: Styles.textStyle14.copyWith(color: AppColors.MAIN_ORANGE),
                       ),
                     ),
                   ],

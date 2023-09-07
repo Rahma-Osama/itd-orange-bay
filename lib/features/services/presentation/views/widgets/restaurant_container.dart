@@ -33,7 +33,7 @@ class RestContainer extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Dolphin Restaurant',
-                          style: Styles.TextStyle16.copyWith(color: AppColors.BLACK,fontWeight: FontWeight.w700),
+                          style: Styles.textStyle16.copyWith(color: AppColors.BLACK,fontWeight: FontWeight.w700),
                         ),
                       ),
                       Row(
@@ -45,11 +45,11 @@ class RestContainer extends StatelessWidget {
                           Text(
                             "4.7",
                             style:
-                            Styles.TextStyle12.copyWith(color: AppColors.MAIN_ORANGE),
+                            Styles.textStyle12.copyWith(color: AppColors.MAIN_ORANGE),
                           ),
                           Text(
                             '(92)',
-                            style: Styles.TextStyle12.copyWith(color: AppColors.GREY),
+                            style: Styles.textStyle12.copyWith(color: AppColors.GREY),
                           )
                         ],
                       ),
@@ -72,7 +72,7 @@ class RestContainer extends StatelessWidget {
 
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Text("Dolphin Resturant is located on the ground floor to your right hand side once you enter the island. This restaurant consists of a buffet style dining experience. ",
-                      style: Styles.TextStyle12.copyWith(color: AppColors.GREY,fontWeight: FontWeight.w400),
+                      style: Styles.textStyle12.copyWith(color: AppColors.GREY,fontWeight: FontWeight.w400),
                     ),
                   ),
                   Row(
@@ -83,7 +83,7 @@ class RestContainer extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           fontSize: 14
                       ),),
-                      Text("[Map]",style: Styles.TextStyle14.copyWith(color: const Color(0XFF007489),fontWeight: FontWeight.w400,))
+                      Text("[Map]",style: Styles.textStyle14.copyWith(color: const Color(0XFF007489),fontWeight: FontWeight.w400,))
                     ],
                   )
 
