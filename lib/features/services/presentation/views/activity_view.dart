@@ -9,7 +9,9 @@ class ActivityView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        appBar: AppBarButton3(text: 'Activities',),
+        appBar: AppBarButton3(
+          text: 'Activities',
+        ),
         body: ActivityBody(),
       ),
     );

@@ -62,9 +62,9 @@ class _GalleryBodyState extends State<GalleryBody> {
                   crossAxisCount: 2,
                 ),
                 itemBuilder: (context, index) => Image.asset(
-                  AssetsData.gallery[index],
-                  fit: BoxFit.cover,
-                )),
+                      AssetsData.gallery[index],
+                      fit: BoxFit.cover,
+                    )),
           )
         ],
       ),

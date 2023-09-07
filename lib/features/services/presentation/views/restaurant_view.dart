@@ -13,12 +13,12 @@ class _RestViewState extends State<RestView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-              child: Scaffold(
-                backgroundColor: Colors.grey[100],
-                appBar: const AppBarButton3(text: 'Restaurants',) ,
-                  body: const RestBody()
-              ),
-            );
-
+      child: Scaffold(
+          backgroundColor: Colors.grey[100],
+          appBar: const AppBarButton3(
+            text: 'Restaurants',
+          ),
+          body: const RestBody()),
+    );
   }
 }
