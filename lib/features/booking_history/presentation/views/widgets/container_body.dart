@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/styles.dart';
 
 class ContainerBody extends StatelessWidget {
-  const ContainerBody({Key? key }) : super(key: key);
+  const ContainerBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +22,12 @@ class ContainerBody extends StatelessWidget {
               children: [
                 Text(
                   'Classic Program',
-                  style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
+                  style: Styles.textStyle16.copyWith(
+                      fontWeight: FontWeight.w700, color: Colors.black),
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(
+                  height: 5,
+                ),
                 const Text(
                   'Cancellation Deadline: 10/3/2022',
                   style: TextStyle(
@@ -34,7 +37,9 @@ class ContainerBody extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -48,17 +53,23 @@ class ContainerBody extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Text(
                   'Adult x2',
                   style: Styles.textStyleNormal14,
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Text(
                   'Children x1',
                   style: Styles.textStyleNormal14,
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -69,13 +80,19 @@ class ContainerBody extends StatelessWidget {
                     const SizedBox(width: 35),
                     Text(
                       'Paid',
-                      style: Styles.textStyleNormal14.copyWith(color: const Color(0xFFCF0F0F),),
+                      style: Styles.textStyleNormal14.copyWith(
+                        color: const Color(0xFFCF0F0F),
+                      ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Divider(),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
@@ -83,12 +100,14 @@ class ContainerBody extends StatelessWidget {
                     children: [
                       Text(
                         'Total',
-                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(
+                            fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
                         '750 EGP',
-                        style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: Styles.textStyle16.copyWith(
+                            fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                     ],
                   ),
@@ -96,7 +115,6 @@ class ContainerBody extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
     );

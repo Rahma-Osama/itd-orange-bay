@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/past_body.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/upComing_body.dart';
-
-
 import 'package:orange_bay_new/data/constants.dart';
-
-
 
 class BookBody extends StatefulWidget {
   const BookBody({Key? key}) : super(key: key);
@@ -16,8 +12,6 @@ class BookBody extends StatefulWidget {
 }
 
 class _BookBodyState extends State<BookBody> {
-
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -32,34 +26,36 @@ class _BookBodyState extends State<BookBody> {
                   itemCount: 2,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        bookText = [false, false];
-                        bookText[index] = true;
-                      });
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius:  BorderRadius.circular(5),
-                        color: bookText[index] ? AppColors.MAIN_ORANGE : Colors.white,
-                      ),
-                      alignment: Alignment.center,
-                      width: MediaQuery.of(context).size.width * .45,
-                      child: Text(
-                        bookDetails[index],
-                        style: TextStyle(
+                        onTap: () {
+                          setState(() {
+                            bookText = [false, false];
+                            bookText[index] = true;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
                             color: bookText[index]
-                                ? Colors.white
-                                : Colors.black),
-                      ),
-                    ),
-                  )),
+                                ? AppColors.MAIN_ORANGE
+                                : Colors.white,
+                          ),
+                          alignment: Alignment.center,
+                          width: MediaQuery.of(context).size.width * .45,
+                          child: Text(
+                            bookDetails[index],
+                            style: TextStyle(
+                                color: bookText[index]
+                                    ? Colors.white
+                                    : Colors.black),
+                          ),
+                        ),
+                      )),
             ),
             bookText[0]
-                ?  const PastBody()
+                ? const PastBody()
                 : bookText[1]
-                ? const UpcomingBody()
-                : const SizedBox(),
+                    ? const UpcomingBody()
+                    : const SizedBox(),
           ],
         ),
       ),

@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/container_body.dart';
 
-
 class PastBody extends StatelessWidget {
   const PastBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
           Container(
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
@@ -28,11 +27,10 @@ class PastBody extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(
-                horizontal:3,
-                vertical: MediaQuery.of(context).size.height/50
-            ),
+                horizontal: 3,
+                vertical: MediaQuery.of(context).size.height / 50),
             child: Container(
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
