@@ -12,16 +12,18 @@ class _SecurityBodyState extends State<SecurityBody> {
   bool isPasswordVisible2 = false;
   bool isPasswordVisible3 = false;
   bool isPasswordVisible4 = false;
+
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
         children: [
           ContainerProfile(
             type: TextInputType.text,
             text: 'Current Password',
-            suffix: isPasswordVisible2 ? Icons.visibility : Icons.visibility_off,
+            suffix:
+                isPasswordVisible2 ? Icons.visibility : Icons.visibility_off,
             pressed: () {
               setState(() {
                 isPasswordVisible2 = !isPasswordVisible2;
@@ -33,27 +35,27 @@ class _SecurityBodyState extends State<SecurityBody> {
           ContainerProfile(
             type: TextInputType.text,
             text: 'New Password',
-            suffix: isPasswordVisible3 ? Icons.visibility : Icons.visibility_off,
+            suffix:
+                isPasswordVisible3 ? Icons.visibility : Icons.visibility_off,
             pressed: () {
               setState(() {
                 isPasswordVisible3 = !isPasswordVisible3;
               });
             },
-           isObscure: !isPasswordVisible3,
+            isObscure: !isPasswordVisible3,
           ),
           ContainerProfile(
             type: TextInputType.text,
             text: 'Confirm Password',
-            suffix: isPasswordVisible4 ? Icons.visibility : Icons.visibility_off,
+            suffix:
+                isPasswordVisible4 ? Icons.visibility : Icons.visibility_off,
             pressed: () {
               setState(() {
                 isPasswordVisible4 = !isPasswordVisible4;
               });
             },
-           isObscure: !isPasswordVisible4,
+            isObscure: !isPasswordVisible4,
           ),
-
-
         ],
       ),
     );

@@ -11,28 +11,27 @@ class ProfileBody extends StatefulWidget {
 class _ProfileBodyState extends State<ProfileBody> {
   @override
   Widget build(BuildContext context) {
-    return  const Padding(
+    return const Padding(
       padding: EdgeInsets.all(10.0),
       child: SingleChildScrollView(
         child: Column(
           children: [
-             ContainerProfile(
+            ContainerProfile(
               type: TextInputType.text,
               text: 'First Name',
             ),
-             ContainerProfile(
+            ContainerProfile(
               type: TextInputType.text,
               text: 'Last Name',
             ),
-             ContainerProfile(
+            ContainerProfile(
               type: TextInputType.emailAddress,
               text: 'Email Address',
             ),
-             ContainerProfile(
+            ContainerProfile(
               type: TextInputType.number,
               text: 'Phone Number',
             ),
-
           ],
         ),
       ),

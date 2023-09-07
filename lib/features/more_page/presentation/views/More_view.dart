@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/bottomtop_move_animation.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/more_item_builder.dart';
+
 class MoreView extends StatefulWidget {
   final AnimationController animationController;
-  const MoreView({Key? key, required this.animationController}) : super(key: key);
+
+  const MoreView({Key? key, required this.animationController})
+      : super(key: key);
 
   @override
   State<MoreView> createState() => _MoreViewState();
@@ -12,11 +15,12 @@ class MoreView extends StatefulWidget {
 
 class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
   late AnimationController tabAnimationController;
+
   @override
   void initState() {
-    tabAnimationController =
-        AnimationController(duration: const Duration(milliseconds: 400), vsync: this);
-    tabAnimationController..forward();
+    tabAnimationController = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: this);
+    tabAnimationController.forward();
     widget.animationController.forward();
 
     super.initState();
@@ -27,26 +31,26 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
     tabAnimationController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
-    return  BottomTopMoveAnimationView(
+    return BottomTopMoveAnimationView(
       animationController: widget.animationController,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
-            color: Colors.white,
-            height: MediaQuery.of(context).size.height * .45,
-            padding: const EdgeInsets.all(18),
-            child: ListView.separated(
-                itemBuilder: (context, index) => MoreItemBuilder(
-                  animationController: tabAnimationController,
-                      index: index,
-                    ),
-                separatorBuilder: (context, index) => Divider(
-                      color: AppColors.GREY,
-                    ),
-                itemCount: 5
-            ),
+          color: Colors.white,
+          height: MediaQuery.of(context).size.height * .45,
+          padding: const EdgeInsets.all(18),
+          child: ListView.separated(
+              itemBuilder: (context, index) => MoreItemBuilder(
+                    animationController: tabAnimationController,
+                    index: index,
+                  ),
+              separatorBuilder: (context, index) => Divider(
+                    color: AppColors.GREY,
+                  ),
+              itemCount: 5),
         ),
       ),
     );

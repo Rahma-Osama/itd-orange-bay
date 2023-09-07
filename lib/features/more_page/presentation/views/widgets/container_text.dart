@@ -7,7 +7,15 @@ class ContainerProfile extends StatelessWidget {
   final IconData? suffix;
   final Function()? pressed;
   final bool? isObscure;
-    const ContainerProfile({Key? key, required this.text, required this.type, this.suffix, this.pressed, this.isObscure  }) : super(key: key);
+
+  const ContainerProfile(
+      {Key? key,
+      required this.text,
+      required this.type,
+      this.suffix,
+      this.pressed,
+      this.isObscure})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
