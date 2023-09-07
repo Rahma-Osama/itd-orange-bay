@@ -7,7 +7,6 @@ import 'package:orange_bay_new/features/auth/presentation/views/widgets/login_te
 import 'package:orange_bay_new/features/payment/presentation/views/confirm_view.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/widgets/check_button.dart';
 
-
 class UserBody extends StatefulWidget {
   const UserBody({Key? key}) : super(key: key);
 
@@ -25,11 +24,14 @@ class _UserBodyState extends State<UserBody> {
           children: [
             const Padding(
               padding: EdgeInsets.all(15.0),
-              child: Image(image: AssetImage('assets/images/step1.png' ,) ),
+              child: Image(
+                  image: AssetImage(
+                'assets/images/step1.png',
+              )),
             ),
             // StepperScreen(),
             Container(
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
@@ -42,50 +44,65 @@ class _UserBodyState extends State<UserBody> {
                 ],
               ),
               child: Padding(
-                padding:  EdgeInsets.symmetric(
-                  horizontal:20,
-                  vertical: MediaQuery.of(context).size.height/90
-              ),
+                padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: MediaQuery.of(context).size.height / 90),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                        'Add user data',
+                      'Add user data',
                       style: Styles.textStyle18,
                     ),
-                    const SizedBox(height: 12,),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     Text(
                       'Email Address',
                       style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
-                    const SizedBox(height: 8,),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     const LogInEmail(),
-                    const SizedBox(height: 15,),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     Text(
                       'Full Name',
                       style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
-                    const SizedBox(height: 8,),
-                defaultText(
-                  type: TextInputType.text,
-                  hint: 'Enter Your full name',
-                ),
-                    const SizedBox(height: 15,),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    defaultText(
+                      type: TextInputType.text,
+                      hint: 'Enter Your full name',
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     Text(
                       'Phone Number',
                       style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
-                    const SizedBox(height: 8,),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     defaultText(
                       type: TextInputType.phone,
                       hint: 'Enter Your phone',
                     ),
-                    const SizedBox(height: 15,),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     Text(
                       'Your Request',
                       style: Styles.textStyle14.copyWith(color: Colors.black),
                     ),
-                    const SizedBox(height: 8,),
+                    const SizedBox(
+                      height: 8,
+                    ),
                     defaultText(
                       type: TextInputType.text,
                       hint: 'Enter Your request',
@@ -94,7 +111,9 @@ class _UserBodyState extends State<UserBody> {
                 ),
               ),
             ),
-            const SizedBox(height: 24,),
+            const SizedBox(
+              height: 24,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -108,19 +127,25 @@ class _UserBodyState extends State<UserBody> {
                 ),
               ],
             ),
-            const SizedBox(height: 24,),
+            const SizedBox(
+              height: 24,
+            ),
             const CheckButton(
-              text: 'I Accept Terms And Conditions and Cancellation policy \n Read Terms and conditions',
+              text:
+                  'I Accept Terms And Conditions and Cancellation policy \n Read Terms and conditions',
             ),
             Padding(
               padding: const EdgeInsets.all(15),
               child: CustomButton(
                 backgroundColor: AppColors.MAIN_ORANGE,
                 text: 'Pay',
-                func: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const ConfirmView()));
+                func: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ConfirmView()));
                 },
-                width:double.infinity,
+                width: double.infinity,
               ),
             ),
             Padding(
@@ -129,16 +154,15 @@ class _UserBodyState extends State<UserBody> {
                 textColor: AppColors.MAIN_ORANGE,
                 backgroundColor: Colors.white,
                 text: 'Back',
-                func: (){
+                func: () {
                   Navigator.pop(context);
                 },
-                width:double.infinity,
+                width: double.infinity,
               ),
             ),
           ],
         ),
       ),
-
     );
   }
 }
