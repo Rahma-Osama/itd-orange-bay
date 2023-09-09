@@ -23,7 +23,7 @@ class _LogInBodyState extends State<LogInBody> {
         ),
       ),
       child: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: deviceSize.height,
           width: deviceSize.width,
           child: Column(
