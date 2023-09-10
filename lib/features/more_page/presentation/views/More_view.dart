@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/widgets/bottomtop_move_animation.dart';
+import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/more_item_builder.dart';
 
 class MoreView extends StatefulWidget {

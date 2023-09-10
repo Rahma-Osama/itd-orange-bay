@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/data/constants.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/core/widgets/app_bar2.dart';
 import 'package:orange_bay_new/core/widgets/back_ground.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
@@ -57,7 +57,7 @@ class _ProBodyState extends State<ProBody> {
               children: [
                 Text(
                   'Go Island Program',
-                  style: Styles.textStyle18,
+                  style: TextStyles.textStyle18,
                 ),
                 Row(
                   children: [
@@ -67,12 +67,13 @@ class _ProBodyState extends State<ProBody> {
                     ),
                     Text(
                       "4.7",
-                      style: Styles.textStyle12
+                      style: TextStyles.textStyle12
                           .copyWith(color: AppColors.MAIN_ORANGE),
                     ),
                     Text(
                       '(92)',
-                      style: Styles.textStyle12.copyWith(color: AppColors.GREY),
+                      style: TextStyles.textStyle12
+                          .copyWith(color: AppColors.GREY),
                     )
                   ],
                 ),

@@ -6,7 +6,7 @@ class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
 
   @override
-  _SplashBodyState createState() => _SplashBodyState();
+  State<SplashBody> createState() => _SplashBodyState();
 }
 
 class _SplashBodyState extends State<SplashBody> {
@@ -15,7 +15,6 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   void initState() {
     super.initState();
-    // Call the function to navigate after 3 seconds
     navigateToNextScreen();
     Future.delayed(const Duration(seconds: 2), () {
       setState(() {
@@ -28,9 +27,7 @@ class _SplashBodyState extends State<SplashBody> {
     Future.delayed(const Duration(seconds: 6), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-            builder: (context) =>
-                const OnBoarding()), // Replace with the appropriate screen
+        MaterialPageRoute(builder: (context) => const OnBoarding()),
       );
     });
   }

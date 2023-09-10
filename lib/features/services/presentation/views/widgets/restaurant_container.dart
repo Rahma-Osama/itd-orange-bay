@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
-import '../../../../../core/theme/styles.dart';
+import '../../../../../core/theme/text_styles.dart';
 
 class RestContainer extends StatelessWidget {
   final int index;
@@ -36,7 +36,7 @@ class RestContainer extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Dolphin Restaurant',
-                          style: Styles.textStyle16.copyWith(
+                          style: TextStyles.textStyle16.copyWith(
                               color: AppColors.BLACK,
                               fontWeight: FontWeight.w700),
                         ),
@@ -49,12 +49,12 @@ class RestContainer extends StatelessWidget {
                           ),
                           Text(
                             "4.7",
-                            style: Styles.textStyle12
+                            style: TextStyles.textStyle12
                                 .copyWith(color: AppColors.MAIN_ORANGE),
                           ),
                           Text(
                             '(92)',
-                            style: Styles.textStyle12
+                            style: TextStyles.textStyle12
                                 .copyWith(color: AppColors.GREY),
                           )
                         ],
@@ -90,7 +90,7 @@ class RestContainer extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
                       "Dolphin Restaurant is located on the ground floor to your right hand side once you enter the island. This restaurant consists of a buffet style dining experience. ",
-                      style: Styles.textStyle12.copyWith(
+                      style: TextStyles.textStyle12.copyWith(
                           color: AppColors.GREY, fontWeight: FontWeight.w400),
                     ),
                   ),
@@ -105,7 +105,7 @@ class RestContainer extends StatelessWidget {
                             fontSize: 14),
                       ),
                       Text("[Map]",
-                          style: Styles.textStyle14.copyWith(
+                          style: TextStyles.textStyle14.copyWith(
                             color: const Color(0XFF007489),
                             fontWeight: FontWeight.w400,
                           ))

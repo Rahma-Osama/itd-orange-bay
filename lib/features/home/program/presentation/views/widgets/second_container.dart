@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_date.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_time.dart';
 
@@ -36,7 +36,7 @@ class _SecondContainerState extends State<SecondContainer> {
             children: [
               Text(
                 'When are you going?',
-                style: Styles.textStyle14.copyWith(
+                style: TextStyles.textStyle14.copyWith(
                   fontWeight: FontWeight.w400,
                 ),
               ),
@@ -51,13 +51,14 @@ class _SecondContainerState extends State<SecondContainer> {
               const SizedBox(height: 24),
               Text(
                 'How many tickets?',
-                style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+                style: TextStyles.textStyle14
+                    .copyWith(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 24),
               Row(
                 children: [
                   Text('Adult (age 12-99)',
-                      style: Styles.textStyle14.copyWith(
+                      style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
                   m2Expanded(context, 'count1'),
                 ],
@@ -67,7 +68,7 @@ class _SecondContainerState extends State<SecondContainer> {
               ),
               Text(
                 '210.00 EGP',
-                style: Styles.textStyle14.copyWith(
+                style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
               ),
@@ -75,7 +76,7 @@ class _SecondContainerState extends State<SecondContainer> {
               Row(
                 children: [
                   Text('Child (age 5-11)',
-                      style: Styles.textStyle14.copyWith(
+                      style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
                   m2Expanded(context, 'count2'),
                 ],
@@ -85,7 +86,7 @@ class _SecondContainerState extends State<SecondContainer> {
               ),
               Text(
                 '53.00 EGP',
-                style: Styles.textStyle14.copyWith(
+                style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
               ),
@@ -98,7 +99,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   ),
                   Text(
                     'Children under 4 are free',
-                    style: Styles.textStyle14
+                    style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w400),
                   ),
                 ],
@@ -113,7 +114,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   Flexible(
                     child: Text(
                       'For a full refund, cancel at least 24 hours in advance of the start date of the experience.',
-                      style: Styles.textStyle14
+                      style: TextStyles.textStyle14
                           .copyWith(fontWeight: FontWeight.w400),
                       softWrap: true,
                       overflow: TextOverflow.visible,
@@ -130,7 +131,8 @@ class _SecondContainerState extends State<SecondContainer> {
               ),
               Text(
                 'Additional Services',
-                style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+                style: TextStyles.textStyle14
+                    .copyWith(fontWeight: FontWeight.w600),
               ),
               const SizedBox(
                 height: 10,
@@ -139,7 +141,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 children: [
                   Text(
                     'Boat (250 EGP)',
-                    style: Styles.textStyle14
+                    style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
                   m2Expanded(context, 'count3'),
@@ -153,7 +155,7 @@ class _SecondContainerState extends State<SecondContainer> {
               ),
               Text(
                 'Boat cruise with a snorkeling stop',
-                style: Styles.textStyle14.copyWith(
+                style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
               ),
@@ -213,7 +215,7 @@ class _SecondContainerState extends State<SecondContainer> {
           const SizedBox(width: 10.0),
           Text(
             '$count',
-            style: Styles.textStyle18,
+            style: TextStyles.textStyle18,
           ),
           const SizedBox(width: 10.0),
           SizedBox(

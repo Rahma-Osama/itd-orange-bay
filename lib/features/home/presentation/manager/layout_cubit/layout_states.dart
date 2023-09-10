@@ -1,3 +1,5 @@
-abstract class LayoutStates{}
-class IntialState extends LayoutStates{}
-class ChangeBottomNavBaerItem extends LayoutStates{}
+abstract class LayoutStates {}
+
+class InitialState extends LayoutStates {}
+
+class ChangeBottomNavBaerItem extends LayoutStates {}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/past_body.dart';
-import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/upComing_body.dart';
+import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/up_coming_body.dart';
 import 'package:orange_bay_new/data/constants.dart';
 
 class BookBody extends StatefulWidget {

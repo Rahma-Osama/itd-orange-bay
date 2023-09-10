@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:timeline_list/timeline_model.dart';
 
 customTimelineModel({required time, required event}) {
@@ -9,11 +9,11 @@ customTimelineModel({required time, required event}) {
         children: [
           Text(
             time,
-            style: Styles.textStyle14,
+            style: TextStyles.textStyle14,
           ),
           Text(
             event,
-            style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w400),
+            style: TextStyles.textStyle14.copyWith(fontWeight: FontWeight.w400),
           )
         ],
       ),

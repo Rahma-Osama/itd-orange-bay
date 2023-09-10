@@ -13,7 +13,6 @@ class AppBarNew extends StatefulWidget implements PreferredSizeWidget {
   State<AppBarNew> createState() => _AppBarNewState();
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 

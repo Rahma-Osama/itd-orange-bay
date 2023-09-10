@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/features/auth/presentation/views/signup_view.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/book_view.dart';
-
-import '../../../../../core/theme/styles.dart';
-import '../signup_view.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -27,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Log in',
-                  style: Styles.textStyle16.copyWith(color: Colors.black)),
+                  style: TextStyles.textStyle16.copyWith(color: Colors.black)),
               const SizedBox(
                 height: 40.0,
               ),
@@ -115,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Text(
                     'Don\'t have an account?',
-                    style: Styles.textStyle14.copyWith(color: Colors.black),
+                    style: TextStyles.textStyle14.copyWith(color: Colors.black),
                   ),
                   TextButton(
                     onPressed: () {
@@ -128,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       'SIGN UP ',
-                      style: Styles.textStyle14
+                      style: TextStyles.textStyle14
                           .copyWith(color: AppColors.MAIN_ORANGE),
                     ),
                   ),

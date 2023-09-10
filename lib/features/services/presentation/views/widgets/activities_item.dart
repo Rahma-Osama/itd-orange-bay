@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class ActivityItem extends StatelessWidget {
   final int index;
@@ -29,14 +29,15 @@ class ActivityItem extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 activitiesLabels[index],
-                style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w400),
+                style: TextStyles.textStyle14
+                    .copyWith(fontWeight: FontWeight.w400),
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
                 'From 150 EGB',
-                style: Styles.textStyle12.copyWith(color: AppColors.GREY),
+                style: TextStyles.textStyle12.copyWith(color: AppColors.GREY),
               ),
             )
           ],

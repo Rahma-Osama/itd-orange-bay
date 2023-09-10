@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/widgets/bottomtop_move_animation.dart';
+import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/program_container.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/program_view.dart';
 import 'package:page_transition/page_transition.dart';

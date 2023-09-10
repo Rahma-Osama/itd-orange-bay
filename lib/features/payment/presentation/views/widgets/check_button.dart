@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class CheckButton extends StatefulWidget {
   final String text;
@@ -29,7 +29,7 @@ class _CheckButtonState extends State<CheckButton> {
         Expanded(
           child: Text(
             widget.text,
-            style: Styles.textStyle14.copyWith(color: Colors.black),
+            style: TextStyles.textStyle14.copyWith(color: Colors.black),
             softWrap: true,
             overflow: TextOverflow.visible,
           ),

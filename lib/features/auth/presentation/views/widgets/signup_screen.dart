@@ -1,44 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import '../../../../../core/theme/styles.dart';
+import '../../../../../core/theme/text_styles.dart';
 import '../login_view.dart';
 
-
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
+
 var emailController = TextEditingController();
 var passwordController = TextEditingController();
 bool isPasswordVisible = false;
-class _SignupScreenState extends State<SignupScreen> {
+
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-      Padding(
-        padding:  const EdgeInsets.all(20.0), //this number is standard at all at will make padding to make it in center
+      body: Padding(
+        padding: const EdgeInsets.all(
+            20.0), //this number is standard at all at will make padding to make it in center
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                    'Register' ,
-                    style: Styles.textStyle16.copyWith(color: Colors.black)),
-                 SizedBox(
-                  height: MediaQuery.of(context).size.height/40,
+                Text('Register',
+                    style:
+                        TextStyles.textStyle16.copyWith(color: Colors.black)),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 40,
                 ),
-
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Fullname',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.text,
-                  onFieldSubmitted: (value){
+                  onFieldSubmitted: (value) {
                     debugPrint(value);
                   },
                 ),
@@ -48,11 +48,13 @@ class _SignupScreenState extends State<SignupScreen> {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'Username',
-                    prefixIcon: Icon(Icons.person,),
+                    prefixIcon: Icon(
+                      Icons.person,
+                    ),
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
+                  onFieldSubmitted: (value) {
                     debugPrint(value);
                   },
                 ),
@@ -63,11 +65,13 @@ class _SignupScreenState extends State<SignupScreen> {
                   controller: emailController,
                   decoration: const InputDecoration(
                     labelText: 'E-mail',
-                    prefixIcon: Icon(Icons.email,),
+                    prefixIcon: Icon(
+                      Icons.email,
+                    ),
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
+                  onFieldSubmitted: (value) {
                     debugPrint(value);
                   },
                 ),
@@ -77,11 +81,13 @@ class _SignupScreenState extends State<SignupScreen> {
                 TextFormField(
                   decoration: const InputDecoration(
                     labelText: 'PhoneNumber',
-                    prefixIcon: Icon(Icons.phone_android,),
+                    prefixIcon: Icon(
+                      Icons.phone_android,
+                    ),
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
+                  onFieldSubmitted: (value) {
                     debugPrint(value);
                   },
                 ),
@@ -92,7 +98,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   controller: passwordController,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    prefixIcon: const Icon(Icons.lock,),
+                    prefixIcon: const Icon(
+                      Icons.lock,
+                    ),
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -100,13 +108,15 @@ class _SignupScreenState extends State<SignupScreen> {
                         });
                       },
                       icon: Icon(
-                        isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                        isPasswordVisible
+                            ? Icons.visibility
+                            : Icons.visibility_off,
                       ),
                     ),
                     border: const OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.visiblePassword,
-                  onFieldSubmitted: (value){
+                  onFieldSubmitted: (value) {
                     debugPrint(value);
                   },
                   obscureText: !isPasswordVisible,
@@ -118,9 +128,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: double.infinity,
                   height: 50,
                   color: AppColors.MAIN_ORANGE,
-                  child:  MaterialButton(
-                    onPressed: ()
-                    {
+                  child: MaterialButton(
+                    onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -141,12 +150,14 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:  [
-                    Text('Already have an account ?',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                  children: [
+                    Text(
+                      'Already have an account ?',
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     TextButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -154,9 +165,10 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         );
                       },
-                      child:  Text(
+                      child: Text(
                         'Log In ',
-                        style: Styles.textStyle14.copyWith(color: AppColors.MAIN_ORANGE),
+                        style: TextStyles.textStyle14
+                            .copyWith(color: AppColors.MAIN_ORANGE),
                       ),
                     ),
                   ],

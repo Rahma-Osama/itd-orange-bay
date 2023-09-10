@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 Widget defaultTextPro({
   TextEditingController? controller,
@@ -24,7 +24,7 @@ Widget defaultTextPro({
       decoration: InputDecoration(
         labelText: label,
         hintText: hint,
-        hintStyle: Styles.textStyleNormal14,
+        hintStyle: TextStyles.textStyleNormal14,
         prefixIcon: Icon(prefix),
         suffixIcon: suffix != null
             ? IconButton(

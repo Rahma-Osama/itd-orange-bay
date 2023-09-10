@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class SummaryContainer extends StatelessWidget {
   const SummaryContainer({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class SummaryContainer extends StatelessWidget {
           children: [
             Text(
               'Summary',
-              style: Styles.textStyle16
+              style: TextStyles.textStyle16
                   .copyWith(fontWeight: FontWeight.w600, color: Colors.black),
             ),
             const SizedBox(
@@ -33,13 +33,13 @@ class SummaryContainer extends StatelessWidget {
               children: [
                 Text(
                   'Adult x2',
-                  style: Styles.textStyle14.copyWith(
+                  style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Text(
                   '750 EGP',
-                  style: Styles.textStyle14.copyWith(
+                  style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -51,13 +51,13 @@ class SummaryContainer extends StatelessWidget {
               children: [
                 Text(
                   'Children x1',
-                  style: Styles.textStyle14.copyWith(
+                  style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
                 Text('Free',
-                    style: Styles.textStyle14.copyWith(
+                    style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
               ],
@@ -74,13 +74,13 @@ class SummaryContainer extends StatelessWidget {
               children: [
                 Text(
                   'Total',
-                  style: Styles.textStyle16.copyWith(
+                  style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),
                 const SizedBox(width: 35),
                 Text(
                   '750 EGP',
-                  style: Styles.textStyle16.copyWith(
+                  style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),
               ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class ItemBuilder extends StatelessWidget {
   final AnimationController animationController;
@@ -55,7 +55,7 @@ class ItemBuilder extends StatelessWidget {
                     children: [
                       Text(
                         "Go Island",
-                        style: Styles.textStyle16,
+                        style: TextStyles.textStyle16,
                       ),
                       Row(
                         children: [
@@ -65,11 +65,11 @@ class ItemBuilder extends StatelessWidget {
                           ),
                           Text(
                             "4.7",
-                            style: Styles.textStyle12,
+                            style: TextStyles.textStyle12,
                           ),
                           Text(
                             '(92)',
-                            style: Styles.textStyle12
+                            style: TextStyles.textStyle12
                                 .copyWith(color: AppColors.GREY),
                           )
                         ],
@@ -84,12 +84,12 @@ class ItemBuilder extends StatelessWidget {
                     children: [
                       Text(
                         "Starting from ",
-                        style: Styles.textStyle12
+                        style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
                         "1000 EGP per person",
-                        style: Styles.textStyle14,
+                        style: TextStyles.textStyle14,
                       )
                     ],
                   ),
@@ -100,12 +100,12 @@ class ItemBuilder extends StatelessWidget {
                     children: [
                       Text(
                         "Starting from ",
-                        style: Styles.textStyle12
+                        style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
                         "700 EGP per child",
-                        style: Styles.textStyle14,
+                        style: TextStyles.textStyle14,
                       )
                     ],
                   ),

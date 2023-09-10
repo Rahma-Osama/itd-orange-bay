@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme/styles.dart';
+import '../theme/text_styles.dart';
 
 class AppBarButton3 extends StatefulWidget implements PreferredSizeWidget {
   const AppBarButton3({Key? key, required this.text}) : super(key: key);
@@ -10,7 +10,6 @@ class AppBarButton3 extends StatefulWidget implements PreferredSizeWidget {
   State<AppBarButton3> createState() => _AppBarButton3State();
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
@@ -61,7 +60,7 @@ class _AppBarButton3State extends State<AppBarButton3> {
               child: Center(
                 child: Text(
                   widget.text,
-                  style: Styles.textStyle16.copyWith(
+                  style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                   textAlign: TextAlign.center,
                 ),

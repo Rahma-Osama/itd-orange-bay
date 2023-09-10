@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class PayBody extends StatelessWidget {
   const PayBody({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class PayBody extends StatelessWidget {
                   ),
                   Text(
                     'Classic Program',
-                    style: Styles.textStyle16.copyWith(
+                    style: TextStyles.textStyle16.copyWith(
                         fontWeight: FontWeight.w700, color: Colors.black),
                   ),
                   const SizedBox(
@@ -72,11 +72,11 @@ class PayBody extends StatelessWidget {
                     children: [
                       Text(
                         'Date',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                       Text(
                         '2/3/2022 at 18:00',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                     ],
                   ),
@@ -88,11 +88,11 @@ class PayBody extends StatelessWidget {
                     children: [
                       Text(
                         'Adults x2',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                       Text(
                         '750 EGP',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                     ],
                   ),
@@ -104,11 +104,11 @@ class PayBody extends StatelessWidget {
                     children: [
                       Text(
                         'Children x1',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                       Text(
                         'Free',
-                        style: Styles.textStyleNormal14,
+                        style: TextStyles.textStyleNormal14,
                       ),
                     ],
                   ),
@@ -117,7 +117,7 @@ class PayBody extends StatelessWidget {
                   ),
                   Text(
                     'Additional Services',
-                    style: Styles.textStyle14
+                    style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
@@ -128,13 +128,13 @@ class PayBody extends StatelessWidget {
                     children: [
                       Text(
                         'Boot X2',
-                        style: Styles.textStyle16.copyWith(
+                        style: TextStyles.textStyle16.copyWith(
                             fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
                         '500 EGP',
-                        style: Styles.textStyle16.copyWith(
+                        style: TextStyles.textStyle16.copyWith(
                             fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                     ],
@@ -153,13 +153,13 @@ class PayBody extends StatelessWidget {
                       children: [
                         Text(
                           'Total',
-                          style: Styles.textStyle16.copyWith(
+                          style: TextStyles.textStyle16.copyWith(
                               fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                         const SizedBox(width: 35),
                         Text(
                           '750 EGP',
-                          style: Styles.textStyle16.copyWith(
+                          style: TextStyles.textStyle16.copyWith(
                               fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                       ],

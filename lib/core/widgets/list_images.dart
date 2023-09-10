@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/services/presentation/views/gallery_view.dart';
 
 class ListImages extends StatelessWidget {
@@ -53,7 +53,7 @@ class ListImages extends StatelessWidget {
                 child: Center(
                   child: Text(
                     '+12',
-                    style: Styles.textStyle20,
+                    style: TextStyles.textStyle20,
                   ),
                 ),
               ),

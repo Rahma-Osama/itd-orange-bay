@@ -3,7 +3,6 @@ import 'package:orange_bay_new/features/home/program/presentation/views/book_vie
 
 import 'log_in.dart';
 
-
 class AuthCard extends StatefulWidget {
   const AuthCard({Key? key}) : super(key: key);
 
@@ -12,81 +11,82 @@ class AuthCard extends StatefulWidget {
 }
 
 enum AuthMode {
-  Login , Signup
+  login,
+  signUp,
 }
 
-class _AuthCardState extends State<AuthCard> with SingleTickerProviderStateMixin {
+class _AuthCardState extends State<AuthCard>
+    with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey();
- AuthMode _authMode = AuthMode.Login;
- // final Map< String , String > _authData = {
- //   'email' : '',
- //   'password' : '',
- // };
+  AuthMode _authMode = AuthMode.login;
 
- var _isLoading = false;
+  bool _isLoading = false;
 
   late AnimationController _controller;
- late Animation<Offset> _slideAnimation;
- late Animation<double> _opacityAnimation;
+  late Animation<Offset> _slideAnimation;
+  late Animation<double> _opacityAnimation;
 
- @override
-  void initState(){
-   super.initState();
-   _controller = AnimationController(vsync: this , duration: const Duration(milliseconds: 300,),
-   );
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        milliseconds: 300,
+      ),
+    );
     _slideAnimation = Tween<Offset>(
       begin: const Offset(0, -0.15),
       end: const Offset(0, 0),
-    ).animate(
-        CurvedAnimation(
-            parent: _controller,
-            curve: Curves.fastOutSlowIn,
-        ));
-   _opacityAnimation = Tween<double>(
-     begin: 0.0,
-     end: 1.0,
-   ).animate(
-       CurvedAnimation(
-         parent: _controller,
-         curve: Curves.easeIn,
-       ));
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.fastOutSlowIn,
+    ));
+    _opacityAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeIn,
+    ));
   }
-  @override
-  void dispose(){
-   super.dispose();
-   _controller.dispose();
-  }
-  Future<void> submit () async {
-   if(!_formKey.currentState!.validate()){
-     return;
-   }
-   setState(() {
-     _isLoading = true;
-   });
-   try{
-     Navigator.push(
-       context,
-       MaterialPageRoute(builder: (context) => const BookView()), // Replace NewPage with the desired destination page
-     );
-   } catch(error){
 
-   }
-   setState(() {
-     _isLoading = false;
-   });
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
-  void _switchAuthMode(){
-   if(_authMode == AuthMode.Login){
-     setState(() {
-       _authMode = AuthMode.Signup;
-     });
-     _controller.forward();
-   } else {
-     setState(() {
-       _authMode = AuthMode.Login;
-     });
-     _controller.reverse();
-   }
+
+  Future<void> submit() async {
+    if (!_formKey.currentState!.validate()) {
+      return;
+    }
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const BookView()),
+      );
+    } catch (error) {}
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
+  void _switchAuthMode() {
+    if (_authMode == AuthMode.login) {
+      setState(() {
+        _authMode = AuthMode.signUp;
+      });
+      _controller.forward();
+    } else {
+      setState(() {
+        _authMode = AuthMode.login;
+      });
+      _controller.reverse();
+    }
   }
 
   @override
@@ -101,10 +101,8 @@ class _AuthCardState extends State<AuthCard> with SingleTickerProviderStateMixin
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeIn,
         height: 500,
-
-        width: deviceSize.width*.85,
+        width: deviceSize.width * .85,
         child: const LoginScreen(),
-
       ),
     );
   }

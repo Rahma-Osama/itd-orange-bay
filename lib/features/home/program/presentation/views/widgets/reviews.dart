@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class Reviews extends StatefulWidget {
   const Reviews({Key? key}) : super(key: key);
@@ -25,13 +25,13 @@ class _ReviewsState extends State<Reviews> {
             children: [
               Text(
                 "Add a review",
-                style: Styles.textStyle14,
+                style: TextStyles.textStyle14,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
                   "Be the first to review",
-                  style: Styles.textStyle12.copyWith(color: AppColors.GREY),
+                  style: TextStyles.textStyle12.copyWith(color: AppColors.GREY),
                 ),
               ),
               Container(
@@ -42,8 +42,8 @@ class _ReviewsState extends State<Reviews> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("share your thoughts",
-                        style:
-                            Styles.textStyle16.copyWith(color: AppColors.GREY)),
+                        style: TextStyles.textStyle16
+                            .copyWith(color: AppColors.GREY)),
                     Icon(
                       Icons.emoji_emotions_outlined,
                       color: AppColors.GREY,
@@ -84,15 +84,16 @@ class _ReviewsState extends State<Reviews> {
                                       children: [
                                         Text(
                                           "Samantha Payne",
-                                          style: Styles.textStyle14,
+                                          style: TextStyles.textStyle14,
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.symmetric(
                                               vertical: 4),
                                           child: Text(
                                             "@Sam.Payne90",
-                                            style: Styles.textStyle12.copyWith(
-                                                color: AppColors.GREY),
+                                            style: TextStyles.textStyle12
+                                                .copyWith(
+                                                    color: AppColors.GREY),
                                           ),
                                         ),
                                       ],
@@ -118,7 +119,7 @@ class _ReviewsState extends State<Reviews> {
                                   const EdgeInsets.symmetric(vertical: 8.0),
                               child: Text(
                                 "“The staff went above and beyond to ensure we had a comfortable stay and were kind enough to pack breakfast for us as we checked out really early in the morning. All little things, but truly unforgettable experience.”",
-                                style: Styles.textStyle14.copyWith(
+                                style: TextStyles.textStyle14.copyWith(
                                     color: AppColors.GREY,
                                     fontWeight: FontWeight.w400),
                                 maxLines:
@@ -138,7 +139,7 @@ class _ReviewsState extends State<Reviews> {
                                     isMore[index].toString() == 'true'
                                         ? "Show less"
                                         : "Show more",
-                                    style: Styles.textStyle12
+                                    style: TextStyles.textStyle12
                                         .copyWith(color: AppColors.MAIN_ORANGE),
                                   ),
                                   Icon(
@@ -156,7 +157,7 @@ class _ReviewsState extends State<Reviews> {
                                   const EdgeInsets.symmetric(vertical: 8.0),
                               child: Text(
                                 "23 Nov 2022",
-                                style: Styles.textStyle12
+                                style: TextStyles.textStyle12
                                     .copyWith(color: AppColors.GREY),
                               ),
                             )

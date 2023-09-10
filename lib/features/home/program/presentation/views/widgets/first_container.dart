@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class FirstContainer extends StatelessWidget {
   const FirstContainer({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class FirstContainer extends StatelessWidget {
               children: [
                 Text(
                   'Overview',
-                  style: Styles.textStyle14,
+                  style: TextStyles.textStyle14,
                 ),
                 const SizedBox(height: 16),
                 Row(
@@ -58,7 +58,7 @@ class FirstContainer extends StatelessWidget {
                         ),
                         Text(
                           '12 Hours',
-                          style: Styles.textStyle14
+                          style: TextStyles.textStyle14
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ],
@@ -97,7 +97,7 @@ class FirstContainer extends StatelessWidget {
                         ),
                         Text(
                           'Country, city',
-                          style: Styles.textStyle14
+                          style: TextStyles.textStyle14
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
                       ],

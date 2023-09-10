@@ -5,7 +5,7 @@ import 'package:orange_bay_new/core/widgets/default_text.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/pay_view.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/widgets/check_button.dart';
 import 'package:orange_bay_new/features/payment/presentation/views/widgets/pay_method.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class ConfirmBody extends StatelessWidget {
   const ConfirmBody({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class ConfirmBody extends StatelessWidget {
             ),
             Text(
               'Choose payment method',
-              style: Styles.textStyle18,
+              style: TextStyles.textStyle18,
             ),
             const PayMethod(),
             Container(
@@ -53,7 +53,8 @@ class ConfirmBody extends StatelessWidget {
                   children: [
                     Text(
                       'Credit Card',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -66,7 +67,8 @@ class ConfirmBody extends StatelessWidget {
                     ),
                     Text(
                       'Name on card',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -85,7 +87,7 @@ class ConfirmBody extends StatelessWidget {
                             children: [
                               Text(
                                 'Expire date',
-                                style: Styles.textStyle14
+                                style: TextStyles.textStyle14
                                     .copyWith(color: Colors.black),
                               ),
                               const SizedBox(
@@ -111,7 +113,7 @@ class ConfirmBody extends StatelessWidget {
                             children: [
                               Text(
                                 'CVV',
-                                style: Styles.textStyle14
+                                style: TextStyles.textStyle14
                                     .copyWith(color: Colors.black),
                               ),
                               const SizedBox(

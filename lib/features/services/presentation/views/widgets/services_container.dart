@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/services/presentation/views/activity_view.dart';
 import 'package:orange_bay_new/features/services/presentation/views/restaurant_view.dart';
 import 'package:orange_bay_new/features/services/presentation/views/videos_view.dart';
@@ -28,12 +28,13 @@ class ServicesContainer extends StatelessWidget {
               padding: EdgeInsets.all(MediaQuery.of(context).size.height / 160),
               child: Text(
                 servicesHeaders[index],
-                style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w500),
+                style: TextStyles.textStyle14
+                    .copyWith(fontWeight: FontWeight.w500),
               ),
             ),
             Text(
               servicesData[index],
-              style: Styles.textStyle12
+              style: TextStyles.textStyle12
                   .copyWith(fontWeight: FontWeight.w400, color: AppColors.GREY),
             )
           ],

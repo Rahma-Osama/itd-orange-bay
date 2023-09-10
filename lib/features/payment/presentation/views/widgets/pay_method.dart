@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class PayMethod extends StatelessWidget {
   const PayMethod({
@@ -76,7 +76,7 @@ class PayMethod extends StatelessWidget {
             child: Center(
               child: Text(
                 'Cash',
-                style: Styles.textStyle16.copyWith(color: Colors.black),
+                style: TextStyles.textStyle16.copyWith(color: Colors.black),
               ),
             ),
           ),

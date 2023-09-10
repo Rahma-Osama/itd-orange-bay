@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import 'package:orange_bay_new/core/theme/styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 import 'package:orange_bay_new/core/widgets/default_text.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/login_text.dart';
@@ -52,14 +52,15 @@ class _UserBodyState extends State<UserBody> {
                   children: [
                     Text(
                       'Add user data',
-                      style: Styles.textStyle18,
+                      style: TextStyles.textStyle18,
                     ),
                     const SizedBox(
                       height: 12,
                     ),
                     Text(
                       'Email Address',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -70,7 +71,8 @@ class _UserBodyState extends State<UserBody> {
                     ),
                     Text(
                       'Full Name',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -84,7 +86,8 @@ class _UserBodyState extends State<UserBody> {
                     ),
                     Text(
                       'Phone Number',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -98,7 +101,8 @@ class _UserBodyState extends State<UserBody> {
                     ),
                     Text(
                       'Your Request',
-                      style: Styles.textStyle14.copyWith(color: Colors.black),
+                      style:
+                          TextStyles.textStyle14.copyWith(color: Colors.black),
                     ),
                     const SizedBox(
                       height: 8,
@@ -119,11 +123,11 @@ class _UserBodyState extends State<UserBody> {
               children: [
                 Text(
                   'Total',
-                  style: Styles.textStyle20.copyWith(color: Colors.black),
+                  style: TextStyles.textStyle20.copyWith(color: Colors.black),
                 ),
                 Text(
                   '2,550 EGP',
-                  style: Styles.textStyle20.copyWith(color: Colors.black),
+                  style: TextStyles.textStyle20.copyWith(color: Colors.black),
                 ),
               ],
             ),
