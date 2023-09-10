@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/widgets/app_bar3.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/security_body.dart';
-
-import '../../../../core/shred_widgets/app_bar3.dart';
 
 class SecurityView extends StatelessWidget {
   const SecurityView({Key? key}) : super(key: key);
@@ -9,9 +8,11 @@ class SecurityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:  Scaffold(
+      child: Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: const AppBarButtom3(text: 'My Profile',),
+        appBar: const AppBarButton3(
+          text: 'My Profile',
+        ),
         body: const SecurityBody(),
       ),
     );

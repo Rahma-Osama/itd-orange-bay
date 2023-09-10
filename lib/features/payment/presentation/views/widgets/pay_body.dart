@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
-
-import '../../../../../constants.dart';
-import '../../../../../core/shred_widgets/custom_button.dart';
-import '../../../../../core/utilities/styles.dart';
+import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/core/widgets/custom_button.dart';
+import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class PayBody extends StatelessWidget {
   const PayBody({Key? key}) : super(key: key);
@@ -16,10 +15,14 @@ class PayBody extends StatelessWidget {
         children: [
           const Padding(
             padding: EdgeInsets.all(15.0),
-            child: Center(child: Image(image: AssetImage('assets/images/step3.png' ,)  )),
+            child: Center(
+                child: Image(
+                    image: AssetImage(
+              'assets/images/step3.png',
+            ))),
           ),
           Container(
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
@@ -32,22 +35,28 @@ class PayBody extends StatelessWidget {
               ],
             ),
             child: Padding(
-              padding:  EdgeInsets.symmetric(
-                  horizontal:20,
-                  vertical: MediaQuery.of(context).size.height/90
-              ),
+              padding: EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: MediaQuery.of(context).size.height / 90),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Center(child: Image(image: AssetImage('assets/images/pngegg (81).png'))),
-                  const SizedBox(height: 20,),
-                  Text(
-                      'Classic Program',
-                    style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w700,color: Colors.black),
+                  const Center(
+                      child: Image(
+                          image: AssetImage('assets/images/pngegg (81).png'))),
+                  const SizedBox(
+                    height: 20,
                   ),
-                  const SizedBox(height: 5,),
+                  Text(
+                    'Classic Program',
+                    style: TextStyles.textStyle16.copyWith(
+                        fontWeight: FontWeight.w700, color: Colors.black),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
                   const Text(
-                      'Cancellation Deadline: 10/3/2023',
+                    'Cancellation Deadline: 10/3/2023',
                     style: TextStyle(
                       color: Color(0xFFE20D0D),
                       fontSize: 13.37,
@@ -55,53 +64,88 @@ class PayBody extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Date' , style: Styles.TextStyleNormal14,),
-                      Text('2/3/2022 at 18:00' , style: Styles.TextStyleNormal14,),
+                      Text(
+                        'Date',
+                        style: TextStyles.textStyleNormal14,
+                      ),
+                      Text(
+                        '2/3/2022 at 18:00',
+                        style: TextStyles.textStyleNormal14,
+                      ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Adults x2' , style: Styles.TextStyleNormal14,),
-                      Text('750 EGP', style: Styles.TextStyleNormal14,),
+                      Text(
+                        'Adults x2',
+                        style: TextStyles.textStyleNormal14,
+                      ),
+                      Text(
+                        '750 EGP',
+                        style: TextStyles.textStyleNormal14,
+                      ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Children x1' ,  style: Styles.TextStyleNormal14,),
-                      Text('Free' , style: Styles.TextStyleNormal14,),
+                      Text(
+                        'Children x1',
+                        style: TextStyles.textStyleNormal14,
+                      ),
+                      Text(
+                        'Free',
+                        style: TextStyles.textStyleNormal14,
+                      ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     'Additional Services',
-                    style: Styles.TextStyle14.copyWith(fontWeight: FontWeight.w600),
+                    style: TextStyles.textStyle14
+                        .copyWith(fontWeight: FontWeight.w600),
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Boot X2',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: TextStyles.textStyle16.copyWith(
+                            fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
                         '500 EGP',
-                        style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                        style: TextStyles.textStyle16.copyWith(
+                            fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   const Divider(),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
@@ -109,12 +153,14 @@ class PayBody extends StatelessWidget {
                       children: [
                         Text(
                           'Total',
-                          style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                          style: TextStyles.textStyle16.copyWith(
+                              fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                         const SizedBox(width: 35),
                         Text(
                           '750 EGP',
-                          style: Styles.TextStyle16.copyWith(fontWeight: FontWeight.w600 , color: Colors.black),
+                          style: TextStyles.textStyle16.copyWith(
+                              fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                       ],
                     ),
@@ -127,23 +173,24 @@ class PayBody extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: CustomButton(
               width: double.infinity,
-              backgroundColor: MAIN_ORANGE,
+              backgroundColor: AppColors.MAIN_ORANGE,
               text: 'Confirm',
-              func: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomeLayout()));
+              func: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomeView()));
               },
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: CustomButton(
-              textColor: MAIN_ORANGE,
+              textColor: AppColors.MAIN_ORANGE,
               backgroundColor: Colors.white,
               text: 'Back',
-              func: (){
+              func: () {
                 Navigator.pop(context);
               },
-              width:double.infinity,
+              width: double.infinity,
             ),
           ),
         ],

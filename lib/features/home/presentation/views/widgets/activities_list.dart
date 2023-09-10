@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'activities_container.dart';
+
 class Activities extends StatefulWidget {
   const Activities({Key? key}) : super(key: key);
-
 
   @override
   State<Activities> createState() => _ActivitiesState();

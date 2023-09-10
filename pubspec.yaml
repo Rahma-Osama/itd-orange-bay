@@ -50,6 +50,8 @@ dependencies:
   supercharged:
   wave_transition:
   flutter_launcher_icons:
+  intl:
+  flutter_localization: ^0.1.13
 
 
 flutter_launcher_icons:
@@ -78,6 +80,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   assets:

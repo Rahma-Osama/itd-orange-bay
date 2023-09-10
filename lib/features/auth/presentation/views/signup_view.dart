@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/widgets/app_bar.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/sign_up_main.dart';
 
-import '../../../../core/shred_widgets/app_bar.dart';
 
 
 
@@ -20,7 +20,7 @@ class _SignUpViewState extends State<SignUpView> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(context: context) ,
+        appBar: customAppBar(context: context) ,
         body: const SignUPMain(),
       ),
     );

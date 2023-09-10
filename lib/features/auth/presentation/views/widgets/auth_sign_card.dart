@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/signup_screen.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_layout.dart';
-
-import 'log_in.dart';
-import 'log_in_pass.dart';
-import 'login_text.dart';
+import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
 
 class AuthCardSign extends StatefulWidget {
   const AuthCardSign({Key? key}) : super(key: key);
@@ -13,16 +9,15 @@ class AuthCardSign extends StatefulWidget {
   State<AuthCardSign> createState() => _AuthCardSignState();
 }
 
-enum AuthMode {
-  Login , Signup
-}
+enum AuthMode { login, signUp }
 
-class _AuthCardSignState extends State<AuthCardSign> with SingleTickerProviderStateMixin {
+class _AuthCardSignState extends State<AuthCardSign>
+    with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey();
-  AuthMode _authMode = AuthMode.Login;
-  Map< String , String > _authData = {
-    'email' : '',
-    'password' : '',
+  AuthMode _authMode = AuthMode.login;
+  final Map<String, String> _authData = {
+    'email': '',
+    'password': '',
   };
 
   var _isLoading = false;
@@ -32,60 +27,65 @@ class _AuthCardSignState extends State<AuthCardSign> with SingleTickerProviderSt
   late Animation<double> _opacityAnimation;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this , duration: const Duration(milliseconds: 300,),
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        milliseconds: 300,
+      ),
     );
     _slideAnimation = Tween<Offset>(
       begin: const Offset(0, -0.15),
       end: const Offset(0, 0),
-    ).animate(
-        CurvedAnimation(
-          parent: _controller,
-          curve: Curves.fastOutSlowIn,
-        ));
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.fastOutSlowIn,
+    ));
     _opacityAnimation = Tween<double>(
       begin: 0.0,
       end: 1.0,
-    ).animate(
-        CurvedAnimation(
-          parent: _controller,
-          curve: Curves.easeIn,
-        ));
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeIn,
+    ));
   }
+
   @override
-  void dispose(){
+  void dispose() {
     super.dispose();
     _controller.dispose();
   }
-  Future<void> submit () async {
-    if(!_formKey.currentState!.validate()){
+
+  Future<void> submit() async {
+    if (!_formKey.currentState!.validate()) {
       return;
     }
     setState(() {
       _isLoading = true;
     });
-    try{
+    try {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const HomeLayout()), // Replace NewPage with the desired destination page
+        MaterialPageRoute(
+            builder: (context) =>
+                const HomeView()), // Replace NewPage with the desired destination page
       );
-    } catch(error){
-
-    }
+    } catch (error) {}
     setState(() {
       _isLoading = false;
     });
   }
-  void _switchAuthMode(){
-    if(_authMode == AuthMode.Login){
+
+  void _switchAuthMode() {
+    if (_authMode == AuthMode.login) {
       setState(() {
-        _authMode = AuthMode.Signup;
+        _authMode = AuthMode.signUp;
       });
       _controller.forward();
     } else {
       setState(() {
-        _authMode = AuthMode.Login;
+        _authMode = AuthMode.login;
       });
       _controller.reverse();
     }
@@ -103,59 +103,8 @@ class _AuthCardSignState extends State<AuthCardSign> with SingleTickerProviderSt
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeIn,
         height: 500,
-        // height: _authMode == AuthMode.Signup ? 400 : 260,
-        // constraints: BoxConstraints(
-        //   maxHeight: _authMode == AuthMode.Signup ? 400 : 260
-        width: deviceSize.width*.85,
-        // padding: EdgeInsets.all(30),
-        child: const SignupScreen(),
-        // child: Form(
-        //   key: _formKey,
-        //   child: SingleChildScrollView(
-        //     child: Column(
-        //       children: [
-        //         LogInEmail(),
-        //         SizedBox(height: 20,),
-        //         LogInPass(),
-        //         SizedBox(height: 20,),
-        //         AnimatedContainer(
-        //           constraints: BoxConstraints(
-        //             maxHeight: _authMode == AuthMode.Signup ? 120 : 0,
-        //             minHeight:  _authMode == AuthMode.Signup ? 60 : 0,
-        //           ),
-        //             duration: Duration(milliseconds: 300),
-        //           curve: Curves.easeIn,
-        //           child: FadeTransition(
-        //             opacity: _opacityAnimation,
-        //             child: SlideTransition(
-        //               position: _slideAnimation,
-        //               child: SignUpBody(),
-        //             ),
-        //           ),
-        //         ),
-        //         SizedBox(
-        //           height: 20,
-        //         ),
-        //         if(_isLoading)CircularProgressIndicator(),
-        //         CustomButton(
-        //           func: submit,
-        //           backgroundColor: MAIN_ORANGE,
-        //           textColor: Colors.white,
-        //           text: (_authMode == AuthMode.Login ? 'LOGIN' : 'SignUp'),
-        //         ),
-        //        ElevatedButton(
-        //            onPressed: _switchAuthMode,
-        //            child: Text('${_authMode == AuthMode.Login ? 'SignUp' : 'LOGIN'} INSTEAD'),
-        //           style: ElevatedButton.styleFrom(
-        //            backgroundColor: MAIN_ORANGE,
-        //            padding: EdgeInsets.symmetric(horizontal: 30 , vertical: 8),
-        //            // minimumSize: Size(150, 50),
-        //          ),
-        //        ),
-        //       ],
-        //     ),
-        //   ),
-        // ),
+        width: deviceSize.width * .85,
+        child: const SignUpScreen(),
       ),
     );
   }

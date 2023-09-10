@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/widgets/default_text.dart';
 
-import '../../../../../core/shred_widgets/default_text.dart';
 
 
 class LogInEmail extends StatefulWidget {

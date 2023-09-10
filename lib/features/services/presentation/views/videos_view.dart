@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/shred_widgets/app_bar3.dart';
-
+import 'package:orange_bay_new/core/widgets/app_bar3.dart';
 
 class VideosView extends StatefulWidget {
   const VideosView({Key? key}) : super(key: key);
@@ -15,10 +14,10 @@ class _VideosViewState extends State<VideosView> {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.grey[100],
-          appBar: const AppBarButtom3(text: 'Videos',) ,
-          body: Container()
-      ),
+          appBar: const AppBarButton3(
+            text: 'Videos',
+          ),
+          body: Container()),
     );
-
   }
 }
