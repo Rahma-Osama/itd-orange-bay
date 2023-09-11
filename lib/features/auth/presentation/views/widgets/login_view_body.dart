@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-
-import '../../../../../core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'auth_card.dart';
 
 class LogInBody extends StatefulWidget {
@@ -16,7 +14,7 @@ class _LogInBodyState extends State<LogInBody> {
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Container(
-      decoration:  const BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AssetsData.kBackGround),
           fit: BoxFit.fitWidth,
@@ -32,7 +30,7 @@ class _LogInBodyState extends State<LogInBody> {
             children: [
               Flexible(
                 flex: deviceSize.width > 600 ? 2 : 1,
-                  child: const AuthCard(),
+                child: const AuthCard(),
               ),
             ],
           ),

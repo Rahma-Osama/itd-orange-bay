@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/widgets/signup_screen.dart';
 
-
 class AuthCardSign extends StatefulWidget {
   const AuthCardSign({Key? key}) : super(key: key);
 
@@ -15,12 +14,7 @@ class _AuthCardSignState extends State<AuthCardSign>
     with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey();
 
-
-
-
-
   late AnimationController _controller;
-
 
   @override
   void initState() {
@@ -31,7 +25,6 @@ class _AuthCardSignState extends State<AuthCardSign>
         milliseconds: 300,
       ),
     );
-
   }
 
   @override
@@ -40,15 +33,11 @@ class _AuthCardSignState extends State<AuthCardSign>
     _controller.dispose();
   }
 
-  Future<void> submit() async {
+  void submit() {
     if (!_formKey.currentState!.validate()) {
       return;
     }
-
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {

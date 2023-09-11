@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-
 import 'log_in.dart';
 
 class AuthCard extends StatefulWidget {
@@ -10,18 +8,13 @@ class AuthCard extends StatefulWidget {
   State<AuthCard> createState() => _AuthCardState();
 }
 
-enum AuthMode {
-  login,
-  signUp,
-}
+enum AuthMode { login, signUp }
 
 class _AuthCardState extends State<AuthCard>
     with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey();
 
   late AnimationController _controller;
-
-
 
   @override
   void initState() {
@@ -32,7 +25,6 @@ class _AuthCardState extends State<AuthCard>
         milliseconds: 300,
       ),
     );
-
   }
 
   @override
@@ -41,28 +33,11 @@ class _AuthCardState extends State<AuthCard>
     _controller.dispose();
   }
 
-  Future<void> submit() async {
+  void submit() {
     if (!_formKey.currentState!.validate()) {
       return;
     }
-
-
-
   }
-
-  // void _switchAuthMode() {
-  //   if (_authMode == AuthMode.login) {
-  //     setState(() {
-  //       _authMode = AuthMode.signUp;
-  //     });
-  //     _controller.forward();
-  //   } else {
-  //     setState(() {
-  //       _authMode = AuthMode.login;
-  //     });
-  //     _controller.reverse();
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {

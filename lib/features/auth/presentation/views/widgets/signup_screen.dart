@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-import '../../../../../core/theme/text_styles.dart';
-import '../login_view.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/features/auth/presentation/views/login_view.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
