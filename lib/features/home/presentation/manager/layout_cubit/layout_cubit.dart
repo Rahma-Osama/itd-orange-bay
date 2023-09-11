@@ -15,7 +15,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
         duration: const Duration(milliseconds: 400), vsync: vsync);
   }
 
-  changeIndex(index) {
+  void changeIndex(int index) {
     bottomNavBarIndex = index;
     emit(ChangeBottomNavBarItem());
   }
