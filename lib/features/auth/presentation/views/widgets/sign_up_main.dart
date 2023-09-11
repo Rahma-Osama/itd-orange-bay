@@ -14,7 +14,7 @@ class _SignUPMainState extends State<SignUPMain> {
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Container(
-      decoration:  const BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(AssetsData.kBackGround),
           fit: BoxFit.fitWidth,
