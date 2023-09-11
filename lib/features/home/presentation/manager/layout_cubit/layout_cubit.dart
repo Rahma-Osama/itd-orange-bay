@@ -17,8 +17,7 @@ class LayoutCubit extends Cubit<LayoutStates> {
 
   changeIndex(index) {
     bottomNavBarIndex = index;
-    debugPrint(index);
-    emit(ChangeBottomNavBaerItem());
+    emit(ChangeBottomNavBarItem());
   }
 
   List<Widget> get screens => [
