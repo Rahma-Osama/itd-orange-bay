@@ -67,7 +67,7 @@ class _AppBarNewState extends State<AppBarNew> {
                     value: value,
                     child: Text(
                       value,
-                      style: TextStyle(color: AppColors.BLACK),
+                      style: TextStyle(color: AppColors.eerieBlack),
                     ),
                   );
                 }).toList(),
@@ -88,7 +88,7 @@ class _AppBarNewState extends State<AppBarNew> {
                 children: [
                   Icon(
                     Icons.language,
-                    color: AppColors.MAIN_ORANGE,
+                    color: AppColors.deepOrange,
                   ),
                   const SizedBox(
                     width: 4,
@@ -113,7 +113,7 @@ class _AppBarNewState extends State<AppBarNew> {
                       alignment: Alignment.center,
                       child: Icon(
                         Icons.notifications_none_outlined,
-                        color: AppColors.BLACK,
+                        color: AppColors.eerieBlack,
                       )),
                   Positioned(
                       top: MediaQuery.of(context).size.height / 50,

@@ -38,7 +38,7 @@ class _GalleryBodyState extends State<GalleryBody> {
                                 ? BorderRadius.circular(10)
                                 : BorderRadius.circular(0),
                             color: photoTypeIsselected[index]
-                                ? AppColors.MAIN_ORANGE
+                                ? AppColors.deepOrange
                                 : Colors.white,
                           ),
                           alignment: Alignment.center,

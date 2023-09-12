@@ -23,7 +23,7 @@ class _BookBodyState extends State<BookBody> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomButton(
-              backgroundColor: AppColors.MAIN_ORANGE,
+              backgroundColor: AppColors.deepOrange,
               text: 'Pay Now',
               func: () {
                 Navigator.push(context,

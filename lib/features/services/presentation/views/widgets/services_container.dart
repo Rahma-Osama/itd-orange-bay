@@ -34,8 +34,8 @@ class ServicesContainer extends StatelessWidget {
             ),
             Text(
               servicesData[index],
-              style: TextStyles.textStyle12
-                  .copyWith(fontWeight: FontWeight.w400, color: AppColors.GREY),
+              style: TextStyles.textStyle12.copyWith(
+                  fontWeight: FontWeight.w400, color: AppColors.spanishGray),
             )
           ],
         ),

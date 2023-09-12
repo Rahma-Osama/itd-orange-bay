@@ -31,7 +31,7 @@ Widget defaultTextPro({
                 onPressed: pressed,
                 icon: Icon(
                   suffix,
-                  color: AppColors.MAIN_ORANGE,
+                  color: AppColors.deepOrange,
                 ),
               )
             : null,

@@ -19,7 +19,7 @@ class PayMethod extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
               border: Border.all(
-                color: AppColors.MAIN_ORANGE,
+                color: AppColors.deepOrange,
                 width: 1,
               ),
               color: Colors.white,

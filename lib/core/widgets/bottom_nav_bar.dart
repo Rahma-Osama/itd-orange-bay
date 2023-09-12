@@ -26,22 +26,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
             SalomonBottomBarItem(
               icon: const Icon(Icons.home),
               title: const Text("Home"),
-              selectedColor: AppColors.MAIN_ORANGE,
+              selectedColor: AppColors.deepOrange,
             ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.calendar_today_rounded),
               title: const Text("Booking History"),
-              selectedColor: AppColors.MAIN_ORANGE,
+              selectedColor: AppColors.deepOrange,
             ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.fact_check_outlined),
               title: const Text("Services"),
-              selectedColor: AppColors.MAIN_ORANGE,
+              selectedColor: AppColors.deepOrange,
             ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.more_horiz),
               title: const Text("More"),
-              selectedColor: AppColors.MAIN_ORANGE,
+              selectedColor: AppColors.deepOrange,
             ),
           ],
         );
