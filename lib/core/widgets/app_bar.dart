@@ -27,7 +27,7 @@ customAppBar({context}) {
               children: [
                 Icon(
                   Icons.language,
-                  color: AppColors.MAIN_ORANGE,
+                  color: AppColors.deepOrange,
                 ),
                 const SizedBox(
                   width: 4,
@@ -51,7 +51,7 @@ customAppBar({context}) {
                   alignment: Alignment.center,
                   child: Icon(
                     Icons.notifications_none_outlined,
-                    color: AppColors.BLACK,
+                    color: AppColors.eerieBlack,
                   )),
               Positioned(
                   top: MediaQuery.of(context).size.height / 50,

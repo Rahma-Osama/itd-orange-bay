@@ -14,7 +14,7 @@ class _SearchState extends State<Search> {
   Widget build(BuildContext context) {
     return CustomButton(
       width: double.infinity,
-      backgroundColor: AppColors.MAIN_ORANGE,
+      backgroundColor: AppColors.deepOrange,
       text: 'Search',
       func: () {},
     );

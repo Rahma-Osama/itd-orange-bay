@@ -21,6 +21,6 @@ customTimelineModel({required time, required event}) {
       iconBackground: Colors.white,
       icon: Icon(
         Icons.trip_origin,
-        color: AppColors.MAIN_ORANGE,
+        color: AppColors.deepOrange,
       ));
 }

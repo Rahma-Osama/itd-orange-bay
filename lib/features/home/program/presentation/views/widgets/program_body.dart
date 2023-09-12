@@ -63,17 +63,17 @@ class _ProBodyState extends State<ProBody> {
                   children: [
                     Icon(
                       Icons.star,
-                      color: AppColors.MAIN_ORANGE,
+                      color: AppColors.deepOrange,
                     ),
                     Text(
                       "4.7",
                       style: TextStyles.textStyle12
-                          .copyWith(color: AppColors.MAIN_ORANGE),
+                          .copyWith(color: AppColors.deepOrange),
                     ),
                     Text(
                       '(92)',
                       style: TextStyles.textStyle12
-                          .copyWith(color: AppColors.GREY),
+                          .copyWith(color: AppColors.spanishGray),
                     )
                   ],
                 ),
@@ -102,7 +102,7 @@ class _ProBodyState extends State<ProBody> {
                                 ? BorderRadius.circular(10)
                                 : BorderRadius.circular(0),
                             color: programDetailsIsSelected[index]
-                                ? AppColors.MAIN_ORANGE
+                                ? AppColors.deepOrange
                                 : Colors.white,
                           ),
                           alignment: Alignment.center,
@@ -124,7 +124,7 @@ class _ProBodyState extends State<ProBody> {
           Padding(
             padding: const EdgeInsets.all(8),
             child: CustomButton(
-              backgroundColor: AppColors.MAIN_ORANGE,
+              backgroundColor: AppColors.deepOrange,
               text: 'Book Now',
               func: () {
                 Navigator.push(context,
