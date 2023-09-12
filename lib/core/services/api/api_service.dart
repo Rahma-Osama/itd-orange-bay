@@ -16,20 +16,24 @@ class ApiService {
     }
   }
 
-  Future<dynamic> get({
+  Future<dynamic> _get({
     required String endPoint,
     Map<String, dynamic>? body,
     Map<String, dynamic>? query,
   }) async {
     try {
-      Response response = await _dio.get(endPoint);
+      Response response = await _dio.get(
+        endPoint,
+        data: body,
+        queryParameters: query,
+      );
       return response.data;
     } on DioException catch (error) {
       throw ServerError.handleNetworkErrorType(error);
     }
   }
 
-  Future<dynamic> post({
+  Future<dynamic> _post({
     required String endPoint,
     Map<String, dynamic>? body,
     Map<String, dynamic>? query,
@@ -46,7 +50,7 @@ class ApiService {
     }
   }
 
-  Future<dynamic> put({
+  Future<dynamic> _put({
     required String endPoint,
     Map<String, dynamic>? body,
     Map<String, dynamic>? query,
@@ -63,7 +67,7 @@ class ApiService {
     }
   }
 
-  Future<dynamic> delete({
+  Future<dynamic> _delete({
     required String endPoint,
     Map<String, dynamic>? body,
     Map<String, dynamic>? query,
