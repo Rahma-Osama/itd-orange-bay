@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:orange_bay_new/core/services/api_errors.dart';
+import 'package:orange_bay_new/core/services/api/api_errors.dart';
 import 'package:provider/provider.dart';
 
 class ApiService {

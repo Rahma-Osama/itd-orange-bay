@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:orange_bay_new/core/services/network_exception_handler.dart';
+import 'package:orange_bay_new/core/services/api/network_exception_handler.dart';
 
 abstract class Failure {
   final DioExceptionType exceptionType;
