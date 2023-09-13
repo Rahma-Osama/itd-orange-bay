@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/features/onboarding/onboarding.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -35,6 +37,7 @@ class _SplashBodyState extends State<SplashBody> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return Stack(
       children: <Widget>[
         SizedBox(
@@ -67,7 +70,7 @@ class _SplashBodyState extends State<SplashBody> {
                     opacity: _showContent ? 1.0 : 0.0, // Animate opacity
                     duration: const Duration(milliseconds: 420),
                     child: Text(
-                      AppLocalizations.of(context)!.splashWelcome,
+                      locale.splashWelcome,
                       textAlign: TextAlign.left,
                       style: const TextStyle(
                           fontSize: 24,
@@ -82,7 +85,7 @@ class _SplashBodyState extends State<SplashBody> {
                     opacity: _showContent ? 1.0 : 0.0, // Animate opacity
                     duration: const Duration(milliseconds: 420),
                     child: Text(
-                      (AppLocalizations.of(context)!.splashDesc),
+                      (locale.splashDesc),
                       textAlign: TextAlign.left,
                       style: const TextStyle(
                         fontSize: 16,
