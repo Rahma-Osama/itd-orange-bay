@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
@@ -24,19 +24,18 @@ class OnBoarding extends StatelessWidget {
               child: RichText(
                 text: TextSpan(
                   children: [
-                    const TextSpan(
-                      text: "Explore\n",
-                      style: TextStyle(
-                        // color: ColorConstant.bluegray900,
+                     TextSpan(
+                      text: "${AppLocalizations.of(context)!.explore}\n",
+                      style: const TextStyle(
                         fontSize: 38,
                         fontFamily: 'SF UI Display',
                         fontWeight: FontWeight.w300,
                         height: 1.32,
                       ),
                     ),
-                    const TextSpan(
-                      text: "The Beautiful\n",
-                      style: TextStyle(
+                     TextSpan(
+                      text: "${AppLocalizations.of(context)!.beautiful}\n",
+                      style: const TextStyle(
                         // color: ColorConstant.gray900,
                         fontSize: 38,
                         fontFamily: 'SF UI Display',
@@ -45,7 +44,7 @@ class OnBoarding extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: "With Us",
+                      text: "${AppLocalizations.of(context)!.withUs}\n",
                       style: TextStyle(
                         // color: ColorConstant.gray900,
                         fontSize: 38,
