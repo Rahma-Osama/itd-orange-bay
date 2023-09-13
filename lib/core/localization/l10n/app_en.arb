@@ -1,0 +1,17 @@
+{
+  "language" : "English",
+  "@language": {
+    "description" : "the current language"
+  },
+  "splashWelcome" : "Welcome To Orange Bay",
+  "splashDesc" : "Planning your next journey with us",
+
+  "explore" : "Explore",
+  "beautiful" : "The Beautiful",
+  "withUs" : "With Us",
+
+  "ourPrograms" : "Our Programs",
+  "@ourPrograms" : {
+    "description" : "programs"
+  }
+}
