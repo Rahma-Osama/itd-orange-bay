@@ -27,7 +27,6 @@ class _AppBarNewState extends State<AppBarNew> {
     return ChangeNotifierProvider<LocaleProvider>(
         create: (context) => LocaleProvider(),
         builder: (context,child) {
-          final provider = Provider.of<LocaleProvider>(context);
           return AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,

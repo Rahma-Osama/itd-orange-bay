@@ -32,12 +32,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             locale: Provider.of<LocaleProvider>(context).locale,
             supportedLocales: L10n.supportedLocales,
-            localizationsDelegates: const [
-              AppLocalizations.delegate,
-              GlobalMaterialLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
-              GlobalWidgetsLocalizations.delegate,
-            ],
+            localizationsDelegates: L10n.localizationsDelegates,
             home: const SplashScreen(),
           );
         });
