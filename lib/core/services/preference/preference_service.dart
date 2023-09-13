@@ -7,7 +7,7 @@ class PreferenceService extends ChangeNotifier {
   Locale get locale => Locale(_locale);
 
   void setLocale(String langCode) {
-    if (!L10n.supportedLocales.contains(locale)) return;
+    if (!L10n.supportedLocales.contains(Locale(langCode))) return;
     _locale = langCode;
     notifyListeners();
   }
