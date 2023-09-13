@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/provider/locale_provider.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:provider/provider.dart';
 
 const List<String> list = <String>['english', 'العربيه'];
 
@@ -15,27 +17,33 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
 
   @override
   Widget build(BuildContext context) {
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.keyboard_arrow_down_outlined),
-
-      // style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
+    return ChangeNotifierProvider<LocaleProvider>(
+        create: (context) => LocaleProvider(),
+        builder: (context, child) {
+          final provider = Provider.of<LocaleProvider>(context);
+          return DropdownButton<String>(
+            value: dropdownValue,
+            icon: const Icon(Icons.keyboard_arrow_down_outlined),
+            underline: Container(),
+            onChanged: (String? value) {
+              setState(() {
+                dropdownValue = value!;
+                value == "english"
+                    ? provider.setLocale(const Locale('en'))
+                    : provider.setLocale(const Locale('ar'));
+                debugPrint(provider.locale.languageCode);
+              });
+            },
+            items: list.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(
+                  value,
+                  style: TextStyle(color: AppColors.BLACK),
+                ),
+              );
+            }).toList(),
+          );
         });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(
-            value,
-            style: TextStyle(color: AppColors.BLACK),
-          ),
-        );
-      }).toList(),
-    );
   }
 }
