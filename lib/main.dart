@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     return Consumer<PreferenceService>(
       builder: (context, preference, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: preference.isEn()?"Orange Bay":"أورانج باي",
         locale: preference.locale,
         supportedLocales: L10n.supportedLocales,
         localizationsDelegates: L10n.localizationsDelegates,
