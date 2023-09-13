@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/localization/provider/locale_provider.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/drop_down_button.dart';
 
@@ -24,8 +24,8 @@ class _AppBarNewState extends State<AppBarNew> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<LocaleProvider>(
-        create: (context) => LocaleProvider(),
+    return ChangeNotifierProvider<PreferenceService>(
+        create: (context) => PreferenceService(),
         builder: (context,child) {
           return AppBar(
           backgroundColor: Colors.transparent,

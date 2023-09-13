@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/localization/provider/locale_provider.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:provider/provider.dart';
@@ -18,8 +18,8 @@ class ProgramContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<LocaleProvider>(
-      create: (BuildContext context) =>LocaleProvider(),
+    return ChangeNotifierProvider<PreferenceService>(
+      create: (BuildContext context) =>PreferenceService(),
       child: AnimatedBuilder(
         animation: animationController,
         builder: (BuildContext context, Widget? child) {
@@ -42,8 +42,8 @@ class ProgramContainer extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topLeft: const Radius.circular(15),
                     topRight: const Radius.circular(15),
-                    bottomRight: (Provider.of<LocaleProvider>(context).locale.languageCode)=='en'? Radius.circular(75):Radius.circular(15),
-                    bottomLeft: (Provider.of<LocaleProvider>(context).locale.languageCode)=='en'? Radius.circular(15):Radius.circular(75),),
+                    bottomRight: (Provider.of<PreferenceService>(context).locale.languageCode)=='en'? Radius.circular(75):Radius.circular(15),
+                    bottomLeft: (Provider.of<PreferenceService>(context).locale.languageCode)=='en'? Radius.circular(15):Radius.circular(75),),
                 color: Colors.white),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
