@@ -1,4 +1,6 @@
 {
-    "image": "cirrusci/flutter:beta",
-    "forwardPorts": [3000]
+    "name": "Flutter",
+    "image": "matspfeiffer/flutter",
+    "forwardPorts": [3000, 8090],
+    "extensions": ["dart-code.dart-code", "dart-code.flutter"]
 }
