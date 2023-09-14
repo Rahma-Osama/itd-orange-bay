@@ -1,6 +1,6 @@
 {
     "name": "Flutter",
-    "image": "matspfeiffer/flutter",
+    "image": "mobiledevops/flutter-sdk-image:3.10.1",
     "forwardPorts": [3000, 8090],
     "extensions": ["dart-code.dart-code", "dart-code.flutter"]
 }
