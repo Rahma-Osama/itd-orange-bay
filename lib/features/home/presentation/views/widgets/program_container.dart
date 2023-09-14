@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
@@ -18,6 +19,7 @@ class ProgramContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return ChangeNotifierProvider<PreferenceService>(
       create: (BuildContext context) =>PreferenceService(),
       child: AnimatedBuilder(
@@ -36,7 +38,6 @@ class ProgramContainer extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            height: MediaQuery.of(context).size.height * .55,
             width: MediaQuery.of(context).size.width * .7,
             decoration:  BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -64,7 +65,7 @@ class ProgramContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Go Island",
+                        locale.goIsland,
                         style: TextStyles.textStyle16,
                       ),
                       Row(
@@ -93,28 +94,28 @@ class ProgramContainer extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        "Starting from ",
+                        locale.start,
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "1000 EGP per person",
+                        locale.personPrice,
                         style: TextStyles.textStyle14,
                       )
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 12.0, bottom: 8),
+                  padding: const EdgeInsets.only(left: 12.0,right: 12, bottom: 8),
                   child: Row(
                     children: [
                       Text(
-                        "Starting from ",
+                       locale.start,
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        "700 EGP per child",
+                        locale.childPrice,
                         style: TextStyles.textStyle14,
                       )
                     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/timeline_model.dart';
 
@@ -6,20 +7,22 @@ import 'package:timeline_list/timeline_model.dart';
 import 'package:timeline_list/timeline.dart';
 
 class ProgramsDetails extends StatelessWidget {
-  ProgramsDetails({Key? key}) : super(key: key);
-  final List<TimelineModel> items = [
-    customTimelineModel(time: '8 AM ', event: '- Leaving the marina'),
-    customTimelineModel(time: '9 AM ', event: '- Island taxi departure'),
-    customTimelineModel(time: '9.30 AM ', event: '- Arriving to the island'),
-    customTimelineModel(time: '9.45 AM ', event: '- Stops at reef'),
-    customTimelineModel(time: '10 AM ', event: '- Arrive Snack canyan'),
-    customTimelineModel(time: '10.15 AM ', event: '- Arrive Snack canyan'),
-    customTimelineModel(time: '10.30 AM ', event: '- Arrive Snack canyan'),
-    customTimelineModel(time: '11 AM ', event: '- Arrive Snack canyan'),
-  ];
+  const ProgramsDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
+    final List<TimelineModel> items = [
+      customTimelineModel(time: '8 AM ', event: locale.leaveMarina),
+      customTimelineModel(time: '9 AM ', event: locale.taxi),
+      customTimelineModel(time: '9.30 AM ', event: locale.arriveIsland),
+      customTimelineModel(time: '9.45 AM ', event: locale.stopsReef),
+      customTimelineModel(time: '10 AM ', event: locale.arriveSnack),
+      customTimelineModel(time: '10.15 AM ', event: locale.arriveSnack),
+      customTimelineModel(time: '10.30 AM ', event: locale.arriveSnack),
+      customTimelineModel(time: '11 AM ', event: locale.arriveSnack),
+    ];
+
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -27,7 +30,6 @@ class ProgramsDetails extends StatelessWidget {
         child: Container(
           color: Colors.white,
           alignment: Alignment.center,
-          // height: MediaQuery.of(context).size.height*.4,
           child: Timeline(
             lineWidth: 2,
             children: items,

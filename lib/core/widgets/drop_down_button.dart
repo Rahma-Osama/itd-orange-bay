@@ -25,17 +25,16 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
       onChanged: (String? value) {
         setState(() {
           dropdownValue = value!;
-          value == "english"
-              ? preferenceServices.setLocale('en')
-              : preferenceServices.setLocale('ar');
         });
+        preferenceServices.setLocale(value!.toLowerCase().contains("en") ? "en" : "ar");
+        print(preferenceServices.locale.languageCode);
       },
       items: list.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(
             value,
-            style: TextStyle(color: AppColors.BLACK),
+            style: TextStyle(color: AppColors.BLACK,fontSize: 16),
           ),
         );
       }).toList(),

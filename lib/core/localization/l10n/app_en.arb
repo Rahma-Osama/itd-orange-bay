@@ -1,17 +1,41 @@
 {
-  "language" : "English",
+  "language": "English",
   "@language": {
-    "description" : "the current language"
+    "description": "the current language"
   },
-  "splashWelcome" : "Welcome To Orange Bay",
-  "splashDesc" : "Planning your next journey with us",
-
-  "explore" : "Explore",
-  "beautiful" : "The Beautiful",
-  "withUs" : "With Us",
-
-  "ourPrograms" : "Our Programs",
-  "@ourPrograms" : {
-    "description" : "programs"
-  }
+  "splashWelcome": "Welcome To Orange Bay",
+  "splashDesc": "Planning your next journey with us",
+  "explore": "Explore",
+  "beautiful": "The Beautiful",
+  "withUs": "With Us",
+  "eg": "EG",
+  "dollar": "Dollar",
+  "english": "English",
+  "arabic": "Arabic",
+  "hintSearch": "Where would you go?",
+  "search": "Search",
+  "ourPrograms": "Our Programs",
+  "goIsland": "Go Island",
+  "start": "Starts From",
+  "personPrice": "100 EGP per person",
+  "childPrice": "100 EGP per child",
+  "home": "Home",
+  "bookHistory": "Booking History",
+  "services": "Services",
+  "more": "More",
+  "goIslandProg": "Go Island Program",
+  "overview": "Overview",
+  "programs": "Programs",
+  "reviews": "Reviews",
+  "duration": "Duration",
+  "h12": "12 Hours",
+  "location": "Location",
+  "country": "Country, City",
+  "overviewTxt": "Orange bay is a dream come true,you will feel as if you are a part of these portraits on the travel magazines. The old looking long wooden pier that leads you to the white soft sandy beaches, the gradual changing of water from dark blue to light turquoise, the swing stands in the middle of the shallow water, all in one big frame. Capture the moment, pick your beanbag, and relax on this magical beach.",
+  "book" : "Book Now",
+  "leaveMarina" : "- Leaving the marina",
+  "taxi" : "- Island taxi departure",
+  "arriveIsland" : "- Arriving to the island",
+  "stopsReef" : "- Stops at reef",
+  "arriveSnack" : "Arrive Snack canyan"
 }

@@ -6,7 +6,6 @@ import 'package:orange_bay_new/core/widgets/drop_down_button.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:provider/provider.dart';
 
-
 List<String> list = <String>['ُEG', 'Dollar'];
 
 class AppBarNew extends StatefulWidget implements PreferredSizeWidget {
@@ -26,115 +25,116 @@ class _AppBarNewState extends State<AppBarNew> {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<PreferenceService>(
         create: (context) => PreferenceService(),
-        builder: (context,child) {
+        builder: (context, child) {
           return AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          flexibleSpace: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0, left: 8.0,right: 8),
-                child: Image.asset(
-                  AssetsData.logo,
-                  height: MediaQuery.of(context).size.height / 20,
-                  width: MediaQuery.of(context).size.width / 4,
-                ),
-              ),
-             const Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width / 60,
-                    vertical: 0, // Adjust this value to align vertically as needed
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(
-                        MediaQuery.of(context).size.width / 50),
-                  ),
-                  child: DropdownButton<String>(
-                    value: dropdownValue,
-                    icon: const Icon(Icons.keyboard_arrow_down_outlined),
-
-                    // style: const TextStyle(color: Colors.deepPurple),
-                    underline: const SizedBox(),
-                    onChanged: (String? value) {
-                      // This is called when the user selects an item.
-                      setState(() {
-                        dropdownValue = value!;
-                      });
-                    },
-                    items: list.map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(color: AppColors.BLACK),
-                        ),
-                      );
-                    }).toList(),
-
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            flexibleSpace: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 5,
+                  child: Image.asset(
+                    AssetsData.logo,
+                    height: MediaQuery.of(context).size.height / 20,
+                    width: MediaQuery.of(context).size.width / 4,
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 0, // Adjust this value to align vertically as needed
-                  ),
-                  decoration: BoxDecoration(
+                const Expanded(flex:1,child: SizedBox()),
+
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    margin: const EdgeInsets.all(4),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(
-                          MediaQuery.of(context).size.width / 50)),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.language,
-                        color: AppColors.MAIN_ORANGE,
+                          8),
+                    ),
+                    child: Expanded(
+                      child: DropdownButton<String>(
+                        value: dropdownValue,
+                        
+                        icon: const Expanded(child: Icon(Icons.keyboard_arrow_down_outlined)),
+                        underline: const SizedBox(),
+                        onChanged: (String? value) {
+                          setState(() {
+                            dropdownValue = value!;
+                          });
+                        },
+                        items: list.map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: TextStyle(color: AppColors.BLACK,fontSize: 14),
+                            ),
+                          );
+                        }).toList(),
                       ),
-                      const SizedBox(
-                        width: 4,
-                      ),
-                      const CustomDropdownButton()
-                    ],
+                    ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(
-                          MediaQuery.of(context).size.width / 50)),
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width / 60),
-                  alignment: Alignment.center,
-                  child: Stack(
-                    children: [
-                      Align(
-                          alignment: Alignment.center,
+                Expanded(
+                  flex: 6,
+                  child: Container(
+                    margin: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                            8)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          flex: 1,
                           child: Icon(
-                            Icons.notifications_none_outlined,
-                            color: AppColors.BLACK,
-                          )),
-                      Positioned(
-                          top: MediaQuery.of(context).size.height / 50,
-                          right: MediaQuery.of(context).size.width / 200,
-                          child: CircleAvatar(
-                            backgroundColor: const Color(0XFFFF4747),
-                            radius: MediaQuery.of(context).size.height / 200,
-                          )),
-                    ],
+                            Icons.language,
+                            color: AppColors.MAIN_ORANGE,
+                          ),
+                        ),
+                        // const Spacer(),
+                        const Expanded(flex:2,child: CustomDropdownButton())
+                      ],
+                    ),
                   ),
                 ),
-              )
-            ],
-          ),
-        );
-      }
-    );
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    margin: const EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(
+                            MediaQuery.of(context).size.width / 50)),
+                    alignment: Alignment.center,
+                    child: Stack(
+                      children: [
+                        Align(
+                            alignment: Alignment.center,
+                            child: Icon(
+                                Icons.notifications_none_outlined,
+                                color: AppColors.BLACK,
+                              ),
+                            ),
+                        Align(
+                          alignment: Alignment.center,
+
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+                              child: CircleAvatar(
+                                backgroundColor: const Color(0XFFFF4747),
+                                radius: MediaQuery.of(context).size.height / 200,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          );
+        });
   }
 }

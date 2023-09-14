@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 
 class AppBarButton extends StatefulWidget implements PreferredSizeWidget {
   const AppBarButton({Key? key}) : super(key: key);
@@ -15,6 +17,8 @@ class _AppBarButtonState extends State<AppBarButton> {
 
   @override
   Widget build(BuildContext context) {
+    final locale=getL10n(context);
+    final preference=getPreferenceService(context);
     return AppBar(
       leading: const SizedBox(),
       elevation: 0,
@@ -25,7 +29,7 @@ class _AppBarButtonState extends State<AppBarButton> {
           children: [
             Expanded(
               child: Align(
-                alignment: Alignment.centerLeft,
+                alignment: preference.isEn()?Alignment.centerLeft:Alignment.centerRight,
                 child: Container(
                   width: 40,
                   height: 40,
@@ -59,7 +63,7 @@ class _AppBarButtonState extends State<AppBarButton> {
             ),
             Expanded(
               child: Align(
-                alignment: Alignment.centerRight,
+                alignment: preference.isEn()?Alignment.centerRight:Alignment.centerLeft,
                 child: Container(
                   width: 40,
                   height: 40,
