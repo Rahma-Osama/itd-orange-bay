@@ -173,7 +173,7 @@ class PayBody extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: CustomButton(
               width: double.infinity,
-              backgroundColor: AppColors.MAIN_ORANGE,
+              backgroundColor: AppColors.deepOrange,
               text: 'Confirm',
               func: () {
                 Navigator.push(context,
@@ -184,7 +184,7 @@ class PayBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8),
             child: CustomButton(
-              textColor: AppColors.MAIN_ORANGE,
+              textColor: AppColors.deepOrange,
               backgroundColor: Colors.white,
               text: 'Back',
               func: () {

@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 width: double.infinity,
                 height: 50,
-                color: AppColors.MAIN_ORANGE,
+                color: AppColors.deepOrange,
                 child: MaterialButton(
                   onPressed: () {
                     Navigator.push(
@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       'SIGN UP ',
                       style: TextStyles.textStyle14
-                          .copyWith(color: AppColors.MAIN_ORANGE),
+                          .copyWith(color: AppColors.deepOrange),
                     ),
                   ),
                 ],

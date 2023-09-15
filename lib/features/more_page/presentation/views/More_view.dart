@@ -48,7 +48,7 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
                     index: index,
                   ),
               separatorBuilder: (context, index) => Divider(
-                    color: AppColors.GREY,
+                    color: AppColors.spanishGray,
                   ),
               itemCount: 5),
         ),

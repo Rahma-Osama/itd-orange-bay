@@ -37,7 +37,7 @@ class _HeaderTextState extends State<HeaderText> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         color: profileText[index]
-                            ? AppColors.MAIN_ORANGE
+                            ? AppColors.deepOrange
                             : Colors.white,
                       ),
                       alignment: Alignment.center,
@@ -60,7 +60,7 @@ class _HeaderTextState extends State<HeaderText> {
         Padding(
           padding: const EdgeInsets.all(30),
           child: CustomButton(
-            backgroundColor: AppColors.MAIN_ORANGE,
+            backgroundColor: AppColors.deepOrange,
             text: 'Update',
             func: () {
               // Navigator.push(context, MaterialPageRoute(builder: (context)=> BookView()));
