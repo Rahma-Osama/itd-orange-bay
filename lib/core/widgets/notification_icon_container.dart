@@ -20,7 +20,7 @@ class NotificationIconContainer extends StatelessWidget {
               alignment: Alignment.center,
               child: Icon(
                 Icons.notifications_none_outlined,
-                color: AppColors.BLACK,
+                color: AppColors.eerieBlack,
               )),
           Positioned(
               top: size.height / 50,

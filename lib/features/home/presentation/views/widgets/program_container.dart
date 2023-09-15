@@ -19,7 +19,7 @@ class ProgramContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<PreferenceService>(
-      create: (BuildContext context) =>PreferenceService(),
+      create: (BuildContext context) => PreferenceService(),
       child: AnimatedBuilder(
         animation: animationController,
         builder: (BuildContext context, Widget? child) {
@@ -38,12 +38,23 @@ class ProgramContainer extends StatelessWidget {
             clipBehavior: Clip.antiAliasWithSaveLayer,
             height: MediaQuery.of(context).size.height * .55,
             width: MediaQuery.of(context).size.width * .7,
-            decoration:  BoxDecoration(
+            decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topLeft: const Radius.circular(15),
-                    topRight: const Radius.circular(15),
-                    bottomRight: (Provider.of<PreferenceService>(context).locale.languageCode)=='en'? Radius.circular(75):Radius.circular(15),
-                    bottomLeft: (Provider.of<PreferenceService>(context).locale.languageCode)=='en'? Radius.circular(15):Radius.circular(75),),
+                  topLeft: const Radius.circular(15),
+                  topRight: const Radius.circular(15),
+                  bottomRight: (Provider.of<PreferenceService>(context)
+                              .locale
+                              .languageCode) ==
+                          'en'
+                      ? const Radius.circular(75)
+                      : Radius.circular(15),
+                  bottomLeft: (Provider.of<PreferenceService>(context)
+                              .locale
+                              .languageCode) ==
+                          'en'
+                      ? const Radius.circular(15)
+                      : Radius.circular(75),
+                ),
                 color: Colors.white),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +82,7 @@ class ProgramContainer extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.star,
-                            color: AppColors.MAIN_ORANGE,
+                            color: AppColors.deepOrange,
                           ),
                           Text(
                             "4.7",
@@ -80,7 +91,7 @@ class ProgramContainer extends StatelessWidget {
                           Text(
                             '(92)',
                             style: TextStyles.textStyle12
-                                .copyWith(color: AppColors.GREY),
+                                .copyWith(color: AppColors.davyGrey),
                           )
                         ],
                       )

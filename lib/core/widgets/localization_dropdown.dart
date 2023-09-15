@@ -31,7 +31,7 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
             Expanded(
               child: Icon(
                 Icons.language,
-                color: AppColors.MAIN_ORANGE,
+                color: AppColors.deepOrange,
               ),
             ),
             const Spacer(),
@@ -50,7 +50,7 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
                   value: value,
                   child: Text(
                     value,
-                    style: TextStyle(color: AppColors.BLACK),
+                    style: TextStyle(color: AppColors.eerieBlack),
                   ),
                 );
               }).toList(),

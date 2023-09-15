@@ -35,7 +35,7 @@ class _CurrencyDropDownState extends State<CurrencyDropDown> {
               value: value,
               child: Text(
                 value,
-                style: TextStyle(color: AppColors.BLACK),
+                style: TextStyle(color: AppColors.eerieBlack),
               ),
             );
           }).toList(),
