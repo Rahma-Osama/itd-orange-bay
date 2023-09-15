@@ -141,7 +141,7 @@ class _UserBodyState extends State<UserBody> {
             Padding(
               padding: const EdgeInsets.all(15),
               child: CustomButton(
-                backgroundColor: AppColors.MAIN_ORANGE,
+                backgroundColor: AppColors.deepOrange,
                 text: 'Pay',
                 func: () {
                   Navigator.push(
@@ -155,7 +155,7 @@ class _UserBodyState extends State<UserBody> {
             Padding(
               padding: const EdgeInsets.all(8),
               child: CustomButton(
-                textColor: AppColors.MAIN_ORANGE,
+                textColor: AppColors.deepOrange,
                 backgroundColor: Colors.white,
                 text: 'Back',
                 func: () {

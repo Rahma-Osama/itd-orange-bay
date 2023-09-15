@@ -31,7 +31,8 @@ class _ReviewsState extends State<Reviews> {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
                   "Be the first to review",
-                  style: TextStyles.textStyle12.copyWith(color: AppColors.GREY),
+                  style: TextStyles.textStyle12
+                      .copyWith(color: AppColors.spanishGray),
                 ),
               ),
               Container(
@@ -43,10 +44,10 @@ class _ReviewsState extends State<Reviews> {
                   children: [
                     Text("share your thoughts",
                         style: TextStyles.textStyle16
-                            .copyWith(color: AppColors.GREY)),
+                            .copyWith(color: AppColors.spanishGray)),
                     Icon(
                       Icons.emoji_emotions_outlined,
-                      color: AppColors.GREY,
+                      color: AppColors.spanishGray,
                     )
                   ],
                 ),
@@ -93,7 +94,8 @@ class _ReviewsState extends State<Reviews> {
                                             "@Sam.Payne90",
                                             style: TextStyles.textStyle12
                                                 .copyWith(
-                                                    color: AppColors.GREY),
+                                                    color:
+                                                        AppColors.spanishGray),
                                           ),
                                         ),
                                       ],
@@ -105,7 +107,7 @@ class _ReviewsState extends State<Reviews> {
                                   rating: 4.5,
                                   itemBuilder: (context, index) => Icon(
                                     Icons.star,
-                                    color: AppColors.MAIN_ORANGE,
+                                    color: AppColors.deepOrange,
                                   ),
                                   itemCount: 5,
                                   itemSize:
@@ -120,7 +122,7 @@ class _ReviewsState extends State<Reviews> {
                               child: Text(
                                 "“The staff went above and beyond to ensure we had a comfortable stay and were kind enough to pack breakfast for us as we checked out really early in the morning. All little things, but truly unforgettable experience.”",
                                 style: TextStyles.textStyle14.copyWith(
-                                    color: AppColors.GREY,
+                                    color: AppColors.spanishGray,
                                     fontWeight: FontWeight.w400),
                                 maxLines:
                                     isMore[index].toString() == 'true' ? 10 : 3,
@@ -140,14 +142,14 @@ class _ReviewsState extends State<Reviews> {
                                         ? "Show less"
                                         : "Show more",
                                     style: TextStyles.textStyle12
-                                        .copyWith(color: AppColors.MAIN_ORANGE),
+                                        .copyWith(color: AppColors.deepOrange),
                                   ),
                                   Icon(
                                     isMore[index].toString() == 'true'
                                         ? Icons.keyboard_arrow_up_outlined
                                         : Icons.keyboard_arrow_down_outlined,
                                     size: 16,
-                                    color: AppColors.MAIN_ORANGE,
+                                    color: AppColors.deepOrange,
                                   )
                                 ],
                               ),
@@ -158,7 +160,7 @@ class _ReviewsState extends State<Reviews> {
                               child: Text(
                                 "23 Nov 2022",
                                 style: TextStyles.textStyle12
-                                    .copyWith(color: AppColors.GREY),
+                                    .copyWith(color: AppColors.spanishGray),
                               ),
                             )
                           ],

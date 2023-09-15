@@ -52,7 +52,7 @@ class OnBoarding extends StatelessWidget {
                         fontSize: 38,
                         fontFamily: 'SF UI Display',
                         fontWeight: FontWeight.w600,
-                        color: AppColors.MAIN_ORANGE,
+                        color: AppColors.deepOrange,
                         height: 1.32,
                       ),
                     ),
@@ -75,7 +75,7 @@ class OnBoarding extends StatelessWidget {
                             builder: (context) => const HomeView())),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: AppColors.MAIN_ORANGE,
+                          color: AppColors.deepOrange,
                           borderRadius: BorderRadius.circular(40)),
                       child: const Icon(
                         Icons.keyboard_arrow_right_outlined,

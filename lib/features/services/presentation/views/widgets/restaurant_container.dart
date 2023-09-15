@@ -37,7 +37,7 @@ class RestContainer extends StatelessWidget {
                         child: Text(
                           'Dolphin Restaurant',
                           style: TextStyles.textStyle16.copyWith(
-                              color: AppColors.BLACK,
+                              color: AppColors.eerieBlack,
                               fontWeight: FontWeight.w700),
                         ),
                       ),
@@ -45,17 +45,17 @@ class RestContainer extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.star,
-                            color: AppColors.MAIN_ORANGE,
+                            color: AppColors.deepOrange,
                           ),
                           Text(
                             "4.7",
                             style: TextStyles.textStyle12
-                                .copyWith(color: AppColors.MAIN_ORANGE),
+                                .copyWith(color: AppColors.deepOrange),
                           ),
                           Text(
                             '(92)',
                             style: TextStyles.textStyle12
-                                .copyWith(color: AppColors.GREY),
+                                .copyWith(color: AppColors.spanishGray),
                           )
                         ],
                       ),
@@ -65,7 +65,7 @@ class RestContainer extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.access_time_filled,
-                        color: AppColors.Blue,
+                        color: AppColors.blue,
                       ),
                       const Text('12:00 PM'),
                       SizedBox(
@@ -73,7 +73,7 @@ class RestContainer extends StatelessWidget {
                       ),
                       Icon(
                         Icons.arrow_forward,
-                        color: AppColors.Blue,
+                        color: AppColors.blue,
                       ),
                       const Text('3:00 PM'),
                       SizedBox(
@@ -81,7 +81,7 @@ class RestContainer extends StatelessWidget {
                       ),
                       Icon(
                         Icons.restaurant,
-                        color: AppColors.MAIN_ORANGE,
+                        color: AppColors.deepOrange,
                       ),
                       const Text('3:00 PM'),
                     ],
@@ -91,7 +91,8 @@ class RestContainer extends StatelessWidget {
                     child: Text(
                       "Dolphin Restaurant is located on the ground floor to your right hand side once you enter the island. This restaurant consists of a buffet style dining experience. ",
                       style: TextStyles.textStyle12.copyWith(
-                          color: AppColors.GREY, fontWeight: FontWeight.w400),
+                          color: AppColors.spanishGray,
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                   Row(

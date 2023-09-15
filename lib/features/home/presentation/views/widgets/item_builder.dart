@@ -61,7 +61,7 @@ class ItemBuilder extends StatelessWidget {
                         children: [
                           Icon(
                             Icons.star,
-                            color: AppColors.MAIN_ORANGE,
+                            color: AppColors.deepOrange,
                           ),
                           Text(
                             "4.7",
@@ -70,7 +70,7 @@ class ItemBuilder extends StatelessWidget {
                           Text(
                             '(92)',
                             style: TextStyles.textStyle12
-                                .copyWith(color: AppColors.GREY),
+                                .copyWith(color: AppColors.spanishGray),
                           )
                         ],
                       )
