@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/data/constants.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/core/widgets/app_bar2.dart';
@@ -123,7 +123,7 @@ class _ProBodyState extends State<ProBody> {
           programDetailsIsSelected[0]
               ? const Overview()
               : programDetailsIsSelected[1]
-                  ? ProgramsDetails()
+                  ? const ProgramsDetails()
                   : const Reviews(),
           Padding(
             padding: const EdgeInsets.all(8),
