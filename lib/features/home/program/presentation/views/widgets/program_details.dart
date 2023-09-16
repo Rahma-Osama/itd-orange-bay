@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/timeline_model.dart';
 
@@ -11,6 +12,7 @@ class ProgramsDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final preferenceService=getPreferenceService(context);
     final locale = getL10n(context);
     final List<TimelineModel> items = [
       customTimelineModel(time: '8 AM ', event: locale.leaveMarina),
@@ -33,7 +35,7 @@ class ProgramsDetails extends StatelessWidget {
           child: Timeline(
             lineWidth: 2,
             children: items,
-            position: TimelinePosition.Left,
+            position: preferenceService.isEn()?TimelinePosition.Left : TimelinePosition.Right,
             lineColor: AppColors.deepOrange,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
