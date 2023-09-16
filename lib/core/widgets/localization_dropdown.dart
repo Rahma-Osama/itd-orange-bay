@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
@@ -9,21 +10,22 @@ class LocalizationDropDown extends StatefulWidget {
   @override
   State<LocalizationDropDown> createState() => LocalizationDropDownState();
 }
-final List<String> availableLang = <String>['english', 'العربيه'];
+late List<String> availableLang;
 String selectedLang = availableLang.first;
 class LocalizationDropDownState extends State<LocalizationDropDown> {
 
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     final preferenceServices = getPreferenceService(context);
+    final locale = getL10n(context);
+    availableLang = <String>[locale.english, locale.arabic];
 
     return Container(
+      height: kToolbarHeight,
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(
-              size.width / 50)),
+          borderRadius: BorderRadius.circular(15)),
       child: Expanded(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,13 +38,13 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
             ),
             const Spacer(),
             DropdownButton<String>(
-              value: selectedLang,
+              value: locale.language,
               icon: const Icon(Icons.keyboard_arrow_down_outlined),
               underline: Container(),
               onChanged: (String? value) {
                 setState(() {
                   selectedLang = value!;
-                  preferenceServices.setLocale(value.toLowerCase().contains('english')?'en':'ar');
+                  preferenceServices.setLocale(value.toLowerCase().contains('english') || value.contains('الانجليزيه') ?'en':'ar');
                 });
               },
               items: availableLang.map<DropdownMenuItem<String>>((String value) {

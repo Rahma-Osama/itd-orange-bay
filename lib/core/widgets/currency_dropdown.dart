@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
 class CurrencyDropDown extends StatefulWidget {
@@ -8,17 +9,17 @@ class CurrencyDropDown extends StatefulWidget {
   State<CurrencyDropDown> createState() => _CurrencyDropDownState();
 }
 
-final List<String> currentCurrency = <String>['ُEG', 'Dollar'];
+List<String> currentCurrency = <String>['ُEG', 'Dollar'];
 String selectedCurrency = currentCurrency.first;
 
 class _CurrencyDropDownState extends State<CurrencyDropDown> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
+      height: kToolbarHeight,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(size.width / 50),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: Expanded(
         child: DropdownButton<String>(
