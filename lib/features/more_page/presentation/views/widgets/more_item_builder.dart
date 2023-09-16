@@ -65,11 +65,12 @@ class _MoreItemBuilderState extends State<MoreItemBuilder>
               Text(
                 headers[widget.index],
                 style: TextStyle(
-                    color: widget.index == 4 ? Colors.red : AppColors.BLACK),
+                    color:
+                        widget.index == 4 ? Colors.red : AppColors.eerieBlack),
               ),
               Icon(
                 Icons.arrow_forward_ios,
-                color: AppColors.GREY,
+                color: AppColors.spanishGray,
               )
             ],
           )),

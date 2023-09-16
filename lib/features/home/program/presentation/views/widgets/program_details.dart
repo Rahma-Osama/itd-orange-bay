@@ -34,7 +34,7 @@ class ProgramsDetails extends StatelessWidget {
             lineWidth: 2,
             children: items,
             position: TimelinePosition.Left,
-            lineColor: AppColors.MAIN_ORANGE,
+            lineColor: AppColors.deepOrange,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
           ),

@@ -36,15 +36,15 @@ class UpcomingBody extends StatelessWidget {
                     children: [
                       upcomingButton(
                           label: "Edit",
-                          bgcolor: AppColors.MAIN_ORANGE,
-                          borderColor: AppColors.MAIN_ORANGE,
+                          bgcolor: AppColors.deepOrange,
+                          borderColor: AppColors.deepOrange,
                           txtcolor: Colors.white,
                           context: context),
                       upcomingButton(
                           label: "Print",
                           bgcolor: Colors.white,
-                          borderColor: AppColors.MAIN_ORANGE,
-                          txtcolor: AppColors.MAIN_ORANGE,
+                          borderColor: AppColors.deepOrange,
+                          txtcolor: AppColors.deepOrange,
                           context: context),
                       upcomingButton(
                           label: "Cancel",
@@ -84,7 +84,7 @@ class UpcomingBody extends StatelessWidget {
                       children: [
                         Expanded(
                           child: CustomButton(
-                            backgroundColor: AppColors.MAIN_ORANGE,
+                            backgroundColor: AppColors.deepOrange,
                             text: 'Edit',
                             func: () {},
                           ),
@@ -92,7 +92,7 @@ class UpcomingBody extends StatelessWidget {
                         Expanded(
                           child: CustomButton(
                             backgroundColor: Colors.white,
-                            textColor: AppColors.MAIN_ORANGE,
+                            textColor: AppColors.deepOrange,
                             text: 'Print',
                             func: () {},
                           ),

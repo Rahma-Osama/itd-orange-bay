@@ -36,7 +36,7 @@ class _BookBodyState extends State<BookBody> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: bookText[index]
-                                ? AppColors.MAIN_ORANGE
+                                ? AppColors.deepOrange
                                 : Colors.white,
                           ),
                           alignment: Alignment.center,

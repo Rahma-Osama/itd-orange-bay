@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
-import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/features/onboarding/onboarding.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});

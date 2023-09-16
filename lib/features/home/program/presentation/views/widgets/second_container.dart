@@ -201,7 +201,7 @@ class _SecondContainerState extends State<SecondContainer> {
             width: 24, // Set the desired width of the button
             height: 24, // Set the desired height of the button
             child: FloatingActionButton(
-              backgroundColor: count > 0 ? AppColors.MAIN_ORANGE : Colors.grey,
+              backgroundColor: count > 0 ? AppColors.deepOrange : Colors.grey,
               heroTag: '$type--',
               onPressed: decrement,
               mini: true,
@@ -222,7 +222,7 @@ class _SecondContainerState extends State<SecondContainer> {
             width: 24, // Set the desired width of the button
             height: 24, // Set the desired height of the button
             child: FloatingActionButton(
-              backgroundColor: count > 0 ? AppColors.MAIN_ORANGE : Colors.grey,
+              backgroundColor: count > 0 ? AppColors.deepOrange : Colors.grey,
               heroTag: '$type++',
               onPressed: increment,
               mini: true,

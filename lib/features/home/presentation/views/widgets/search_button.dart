@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/localization/l10n.dart';
-import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 

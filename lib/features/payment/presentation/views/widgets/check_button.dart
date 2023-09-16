@@ -20,7 +20,7 @@ class _CheckButtonState extends State<CheckButton> {
       children: [
         Checkbox(
             value: isChecked,
-            activeColor: AppColors.MAIN_ORANGE,
+            activeColor: AppColors.deepOrange,
             onChanged: (newBool) {
               setState(() {
                 isChecked = newBool!;

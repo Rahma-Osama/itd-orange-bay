@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/localization/l10n.dart';
-import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
-import 'package:provider/provider.dart';
 
-class ProgramContainer extends StatelessWidget {
-  final bool whishScreen;
+class ItemBuilder extends StatelessWidget {
   final AnimationController animationController;
   final Animation<double> animation;
 
-  const ProgramContainer(
-      {Key? key,
-      this.whishScreen = false,
-      required this.animationController,
-      required this.animation})
+  const ItemBuilder(
+      {Key? key, required this.animationController, required this.animation})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final locale = getL10n(context);
-    return ChangeNotifierProvider<PreferenceService>(
-      create: (BuildContext context) => PreferenceService(),
-      child: AnimatedBuilder(
+    return AnimatedBuilder(
         animation: animationController,
         builder: (BuildContext context, Widget? child) {
           return FadeTransition(
@@ -38,25 +28,15 @@ class ProgramContainer extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            width: MediaQuery.of(context).size.width * .7,
-            decoration: BoxDecoration(
+            height: MediaQuery.of(context).size.height * .5,
+            width: MediaQuery.of(context).size.width * .5,
+            decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(15),
-                  topRight: const Radius.circular(15),
-                  bottomRight: (Provider.of<PreferenceService>(context)
-                              .locale
-                              .languageCode) ==
-                          'en'
-                      ? const Radius.circular(75)
-                      : const Radius.circular(15),
-                  bottomLeft: (Provider.of<PreferenceService>(context)
-                              .locale
-                              .languageCode) ==
-                          'en'
-                      ? const Radius.circular(15)
-                      : const Radius.circular(75),
-                ),
-                color: Colors.white),
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
+                    bottomRight: Radius.circular(15),
+                    bottomLeft: Radius.circular(75)),
+                color: Colors.grey),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -69,14 +49,12 @@ class ProgramContainer extends StatelessWidget {
                     )),
                 Padding(
                   padding: EdgeInsets.only(
-                      top: MediaQuery.of(context).size.height / 60,
-                      left: 8,
-                      right: 8),
+                      top: MediaQuery.of(context).size.height / 60, left: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        locale.goIsland,
+                        "Go Island",
                         style: TextStyles.textStyle16,
                       ),
                       Row(
@@ -92,7 +70,7 @@ class ProgramContainer extends StatelessWidget {
                           Text(
                             '(92)',
                             style: TextStyles.textStyle12
-                                .copyWith(color: AppColors.davyGrey),
+                                .copyWith(color: AppColors.spanishGray),
                           )
                         ],
                       )
@@ -101,32 +79,32 @@ class ProgramContainer extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                   child: Row(
                     children: [
                       Text(
-                        locale.start,
+                        "Starting from ",
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        locale.personPrice,
+                        "1000 EGP per person",
                         style: TextStyles.textStyle14,
                       )
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 12.0,right: 12, bottom: 8),
+                  padding: const EdgeInsets.only(left: 8.0, bottom: 8),
                   child: Row(
                     children: [
                       Text(
-                       locale.start,
+                        "Starting from ",
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                       Text(
-                        locale.childPrice,
+                        "700 EGP per child",
                         style: TextStyles.textStyle14,
                       )
                     ],
@@ -135,8 +113,6 @@ class ProgramContainer extends StatelessWidget {
               ],
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

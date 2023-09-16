@@ -49,7 +49,7 @@ class _PickDateState extends State<PickDate> {
                 borderSide: BorderSide.none,
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.MAIN_ORANGE),
+                borderSide: BorderSide(color: AppColors.deepOrange),
               ),
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 0, horizontal: 16),

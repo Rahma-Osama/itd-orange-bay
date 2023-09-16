@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:orange_bay_new/core/widgets/bottom_nav_bar.dart';
+import 'package:orange_bay_new/core/widgets/home_app_bar.dart';
+import 'package:orange_bay_new/features/home/presentation/manager/layout_cubit/layout_cubit.dart';
+import 'package:orange_bay_new/features/home/presentation/manager/layout_cubit/layout_states.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/new_appbar.dart';

@@ -37,7 +37,8 @@ class ActivitiesContainr extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'From 150 EGB',
-                style: TextStyles.textStyle12.copyWith(color: AppColors.GREY),
+                style: TextStyles.textStyle12
+                    .copyWith(color: AppColors.spanishGray),
               ),
             )
           ],
