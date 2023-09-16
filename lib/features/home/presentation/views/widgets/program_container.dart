@@ -47,13 +47,13 @@ class ProgramContainer extends StatelessWidget {
                               .languageCode) ==
                           'en'
                       ? const Radius.circular(75)
-                      : Radius.circular(15),
+                      : const Radius.circular(15),
                   bottomLeft: (Provider.of<PreferenceService>(context)
                               .locale
                               .languageCode) ==
                           'en'
                       ? const Radius.circular(15)
-                      : Radius.circular(75),
+                      : const Radius.circular(75),
                 ),
                 color: Colors.white),
             child: Column(

@@ -17,7 +17,6 @@ class HomeAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _HomeAppBarState extends State<HomeAppBar> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
