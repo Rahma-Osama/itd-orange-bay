@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 
@@ -12,15 +13,12 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    final preferenceServices = getPreferenceService(context);
     final locale = getL10n(context);
     return CustomButton(
       width: double.infinity,
-      backgroundColor: AppColors.MAIN_ORANGE,
+      backgroundColor: AppColors.deepOrange,
       text: locale.search,
-      func: () {
-        preferenceServices.setLocale(preferenceServices.isEn() ? "ar" : "en");
-      },
+      func: () {},
     );
   }
 }
