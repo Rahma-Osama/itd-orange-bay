@@ -54,7 +54,7 @@ class _GalleryBodyState extends State<GalleryBody> {
           ),
           Expanded(
             child: GridView.builder(
-                itemCount: AssetsData.gallery.length,
+                itemCount: photoTypeIsselected[0]?AssetsData.gallery.length : 5,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   mainAxisSpacing: MediaQuery.of(context).size.height / 40,
                   crossAxisSpacing: MediaQuery.of(context).size.height / 40,
@@ -62,7 +62,7 @@ class _GalleryBodyState extends State<GalleryBody> {
                   crossAxisCount: 2,
                 ),
                 itemBuilder: (context, index) => Image.asset(
-                      AssetsData.gallery[index],
+                      AssetsData.gallery[photoTypeIsselected[0]?index :photoTypeIsselected[1]?index+4 : index],
                       fit: BoxFit.cover,
                     )),
           )
