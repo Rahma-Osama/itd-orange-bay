@@ -14,6 +14,7 @@ class GalleryBody extends StatefulWidget {
 class _GalleryBodyState extends State<GalleryBody> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
@@ -42,7 +43,7 @@ class _GalleryBodyState extends State<GalleryBody> {
                                 : Colors.white,
                           ),
                           alignment: Alignment.center,
-                          width: MediaQuery.of(context).size.width * .3,
+                          width: size.width * .3,
                           child: Text(
                             photoType[index],
                             style: TextStyle(
@@ -56,8 +57,8 @@ class _GalleryBodyState extends State<GalleryBody> {
             child: GridView.builder(
                 itemCount: AssetsData.gallery.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: MediaQuery.of(context).size.height / 40,
-                  crossAxisSpacing: MediaQuery.of(context).size.height / 40,
+                  mainAxisSpacing: size.height / 40,
+                  crossAxisSpacing: size.height / 40,
                   childAspectRatio: .9,
                   crossAxisCount: 2,
                 ),

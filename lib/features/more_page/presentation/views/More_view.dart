@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/more_item_builder.dart';
@@ -34,23 +35,26 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return BottomTopMoveAnimationView(
       animationController: widget.animationController,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
           color: Colors.white,
-          height: MediaQuery.of(context).size.height * .45,
           padding: const EdgeInsets.all(18),
-          child: ListView.separated(
-              itemBuilder: (context, index) => MoreItemBuilder(
-                    animationController: tabAnimationController,
-                    index: index,
-                  ),
-              separatorBuilder: (context, index) => Divider(
-                    color: AppColors.spanishGray,
-                  ),
-              itemCount: 5),
+          child: Expanded(
+            child: ListView.separated(
+              shrinkWrap: true,
+                itemBuilder: (context, index) => MoreItemBuilder(
+                      animationController: tabAnimationController,
+                      index: index,
+                    ),
+                separatorBuilder: (context, index) => Divider(
+                      color: AppColors.spanishGray,
+                    ),
+                itemCount: 5),
+          ),
         ),
       ),
     );
