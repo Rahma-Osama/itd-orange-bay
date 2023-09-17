@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/services/api/api_service.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
+import 'package:orange_bay_new/features/splash/presentation/views/splash_view.dart';
 import 'package:provider/provider.dart';
-import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
   final apiService = ApiService();
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
         locale: preference.locale,
         supportedLocales: L10n.supportedLocales,
         localizationsDelegates: L10n.localizationsDelegates,
-        home: const HomeView(),
+        home: const SplashScreen(),
       ),
     );
   }

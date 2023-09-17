@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/widgets/more_item_builder.dart';
@@ -35,7 +34,6 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final locale = getL10n(context);
     return BottomTopMoveAnimationView(
       animationController: widget.animationController,
       child: Padding(

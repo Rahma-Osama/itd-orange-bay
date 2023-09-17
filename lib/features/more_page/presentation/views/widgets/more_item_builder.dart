@@ -87,11 +87,4 @@ class _MoreItemBuilderState extends State<MoreItemBuilder>
     );
   }
 
-
-// List screens=[
-//   ProfileView(),
-//   WishListView(
-//     animationController: _animationController,
-//   ),
-// ];
 }
