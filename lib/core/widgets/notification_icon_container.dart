@@ -11,8 +11,7 @@ class NotificationIconContainer extends StatelessWidget {
     final preference = getPreferenceService(context);
 
     return Container(
-      height: kToolbarHeight,
-      // margin: EdgeInsets.all(8),
+      height: kToolbarHeight*.8,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15)),

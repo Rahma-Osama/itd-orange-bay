@@ -22,22 +22,24 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
     availableLang = <String>[locale.english, locale.arabic];
 
     return Container(
-      height: kToolbarHeight,
+      height: kToolbarHeight*.8,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15)),
-      child: Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Icon(
-                Icons.language,
-                color: AppColors.deepOrange,
-              ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 1,
+            child: Icon(
+              Icons.language,
+              color: AppColors.deepOrange,
             ),
-            const Spacer(),
-            DropdownButton<String>(
+          ),
+          const Spacer(),
+          Expanded(
+            flex:4,
+            child: DropdownButton<String>(
               value: locale.language,
               icon: const Icon(Icons.keyboard_arrow_down_outlined),
               underline: Container(),
@@ -56,9 +58,9 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
                   ),
                 );
               }).toList(),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

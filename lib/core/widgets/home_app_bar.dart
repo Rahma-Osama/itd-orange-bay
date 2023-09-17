@@ -22,22 +22,21 @@ class _HomeAppBarState extends State<HomeAppBar> {
       elevation: 0,
       actions: [
         Expanded(
-          flex: 3,
+          flex: 2,
           child: Image.asset(
             AssetsData.logo,
-            fit: BoxFit.fill,
           ),
         ),
         const Spacer(),
-        const Expanded(flex: 2, child: CurrencyDropDown()),
+        const CurrencyDropDown(),
         const SizedBox(
           width: 2,
         ),
-        const Expanded(flex: 3, child: LocalizationDropDown()),
+        const Expanded(flex: 4, child: LocalizationDropDown()),
         const SizedBox(
           width: 2,
         ),
-        const Expanded(flex: 2, child: NotificationIconContainer())
+        const Expanded(flex: 1, child: NotificationIconContainer())
       ],
     );
   }

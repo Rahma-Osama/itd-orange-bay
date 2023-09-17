@@ -8,10 +8,9 @@ import 'package:orange_bay_new/features/home/presentation/views/widgets/search_b
 List<String> list = <String>['ُEG', 'Dollar'];
 
 class HomeBody extends StatefulWidget {
-  final AnimationController animationController;
 
 
-  HomeBody({Key? key, required this.animationController}) : super(key: key);
+  HomeBody({Key? key}) : super(key: key);
   final String dropdownValue = list.first;
 
   @override
@@ -20,11 +19,14 @@ class HomeBody extends StatefulWidget {
 
 class _HomeBodyState extends State<HomeBody>
     with SingleTickerProviderStateMixin {
+  late AnimationController animationController;
   late ScrollController controller;
 
   @override
   void initState() {
-    widget.animationController.forward();
+    animationController = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: this);
+    animationController.forward();
     controller = ScrollController(initialScrollOffset: 0.0);
     controller.addListener(() {});
     super.initState();
@@ -35,7 +37,7 @@ class _HomeBodyState extends State<HomeBody>
     final locale = getL10n(context);
     return SingleChildScrollView(
       child: BottomTopMoveAnimationView(
-        animationController: widget.animationController,
+        animationController: animationController,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -51,7 +53,7 @@ class _HomeBodyState extends State<HomeBody>
                 ),
               ),
               Programs(
-                animationController: widget.animationController,
+                animationController:animationController,
               ),
             ],
           ),
