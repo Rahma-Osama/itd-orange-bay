@@ -16,7 +16,7 @@ class ProgramsDetails extends StatelessWidget {
     final locale = getL10n(context);
     final List<TimelineModel> items = [
       customTimelineModel(time: '8 AM ', event: locale.leaveMarina),
-      customTimelineModel(time: '9 AM ', event: locale.taxi),
+      customTimelineModel(time: '9 AM ', event: locale.taxiDeparture),
       customTimelineModel(time: '9.30 AM ', event: locale.arriveIsland),
       customTimelineModel(time: '9.45 AM ', event: locale.stopsReef),
       customTimelineModel(time: '10 AM ', event: locale.arriveSnack),

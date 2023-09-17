@@ -122,7 +122,7 @@ class _ReviewsState extends State<Reviews> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 8.0),
                               child: Text(
-                                locale.reviewTxt,
+                                locale.reviewDescription,
                                 style: TextStyles.textStyle14.copyWith(
                                     color: AppColors.spanishGray,
                                     fontWeight: FontWeight.w400),
@@ -141,8 +141,8 @@ class _ReviewsState extends State<Reviews> {
                                 children: [
                                   Text(
                                     isMore[index].toString() == 'true'
-                                        ? locale.less
-                                        : locale.more,
+                                        ? locale.showLess
+                                        : locale.showMore,
                                     style: TextStyles.textStyle12
                                         .copyWith(color: AppColors.deepOrange),
                                   ),

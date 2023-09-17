@@ -108,7 +108,7 @@ class FirstContainer extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  locale.overviewTxt,
+                  locale.overviewDescription,
                   style: const TextStyle(
                     color: Color(0xFF585757),
                     fontSize: 14,

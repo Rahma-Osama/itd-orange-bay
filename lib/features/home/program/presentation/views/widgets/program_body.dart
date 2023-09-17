@@ -129,7 +129,7 @@ class _ProBodyState extends State<ProBody> {
             padding: const EdgeInsets.all(8),
             child: CustomButton(
               backgroundColor: AppColors.deepOrange,
-              text: locale.book,
+              text: locale.bookNow,
               func: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const LoginView()));

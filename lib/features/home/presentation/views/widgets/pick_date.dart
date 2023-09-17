@@ -43,7 +43,7 @@ class _PickDateState extends State<PickDate> {
               }
             },
             decoration: InputDecoration(
-              hintText: locale.hintSearch,
+              hintText: locale.whereWouldYouGo,
               prefixIcon: const Icon(Icons.calendar_today_rounded),
               enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide.none,

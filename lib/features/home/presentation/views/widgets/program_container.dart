@@ -105,7 +105,7 @@ class ProgramContainer extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                        locale.start,
+                        locale.startsFrom,
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
@@ -121,7 +121,7 @@ class ProgramContainer extends StatelessWidget {
                   child: Row(
                     children: [
                       Text(
-                       locale.start,
+                       locale.startsFrom,
                         style: TextStyles.textStyle12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),

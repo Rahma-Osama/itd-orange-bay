@@ -69,7 +69,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               ),
               SalomonBottomBarItem(
                 icon: const Icon(Icons.calendar_today_rounded),
-                title:  Text(locale.bookHistory),
+                title:  Text(locale.history),
                 selectedColor: AppColors.deepOrange,
               ),
               SalomonBottomBarItem(
