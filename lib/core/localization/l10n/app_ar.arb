@@ -2,10 +2,9 @@
   "language" : "العربيه",
   "splashWelcome" : "مرحبا بك في Orange Bay",
   "splashDesc" : "استعد معنا لرحلتك القادمه",
-
-   "explore" : "استكشف",
-   "beautiful" : "الجمال",
-   "withUs" : "معنا",
+  "explore" : "استكشف",
+  "beautiful" : "الجمال",
+  "withUs" : "معنا",
   "ourPrograms" : "برامجنا"
 
 }
