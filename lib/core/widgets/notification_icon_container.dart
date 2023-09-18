@@ -10,30 +10,37 @@ class NotificationIconContainer extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final preference = getPreferenceService(context);
 
-    return Container(
-      height: kToolbarHeight*.8,
-      decoration: BoxDecoration(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(15)),
-      alignment: Alignment.center,
-      child: Stack(
-        children: [
-          Align(
-              alignment: Alignment.center,
-              child: Icon(
-                Icons.notifications_none_outlined,
-                color: AppColors.eerieBlack,
-              )),
-          Padding(
-            padding:  EdgeInsets.only(bottom: 8.0 ,left: preference.isEn()?8 : 0,right: preference.isEn()?0 : 8),
-            child: Align(
+          borderRadius: BorderRadius.circular(15),
+        ),
+        alignment: Alignment.center,
+        child: Stack(
+          children: [
+            Align(
                 alignment: Alignment.center,
-                child: CircleAvatar(
-                  backgroundColor: const Color(0XFFFF4747),
-                  radius: size.height / 200,
+                child: Icon(
+                  Icons.notifications_none_outlined,
+                  color: AppColors.eerieBlack,
                 )),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.only(
+                  bottom: 8.0,
+                  left: preference.isEn() ? 8 : 0,
+                  right: preference.isEn() ? 0 : 8),
+              child: Align(
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    backgroundColor: const Color(0XFFFF4747),
+                    radius: size.height / 200,
+                  )),
+            ),
+          ],
+        ),
       ),
     );
   }
