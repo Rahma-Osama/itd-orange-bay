@@ -27,6 +27,7 @@ class _PickDateState extends State<PickDate> {
         ),
         child: Center(
           child: TextField(
+            autofocus: true,
             controller: _fromDateController,
             onTap: () async {
               DateTime? pickedDate = await showDatePicker(
@@ -43,6 +44,8 @@ class _PickDateState extends State<PickDate> {
               }
             },
             decoration: InputDecoration(
+              prefixIconColor: AppColors.deepOrange,
+              iconColor: AppColors.deepOrange,
               hintText: locale.whereWouldYouGo,
               prefixIcon: const Icon(Icons.calendar_today_rounded),
               enabledBorder: const OutlineInputBorder(
