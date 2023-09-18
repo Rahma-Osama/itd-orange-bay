@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 
@@ -16,6 +17,7 @@ class ProgramContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final prefernceService = getPreferenceService(context);
     return AnimatedBuilder(
       animation: animationController,
       builder: (BuildContext context, Widget? child) {
@@ -29,17 +31,18 @@ class ProgramContainer extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: const EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
           clipBehavior: Clip.antiAliasWithSaveLayer,
           height: MediaQuery.of(context).size.height * .55,
-          width: MediaQuery.of(context).size.width * .6,
-          decoration: const BoxDecoration(
+          width: MediaQuery.of(context).size.width * .7,
+          decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15),
-                  topRight: Radius.circular(15),
-                  bottomRight: Radius.circular(15),
-                  bottomLeft: Radius.circular(75)),
+                topLeft: const Radius.circular(15),
+                topRight: const Radius.circular(15),
+                bottomRight: Radius.circular(prefernceService.isEn() ? 75 : 15),
+                bottomLeft: Radius.circular(prefernceService.isEn() ? 15 : 75),
+              ),
               color: Colors.white),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +79,7 @@ class ProgramContainer extends StatelessWidget {
                         Text(
                           '(92)',
                           style: TextStyles.textStyle12
-                              .copyWith(color: AppColors.spanishGray),
+                              .copyWith(color: AppColors.davyGrey),
                         )
                       ],
                     )

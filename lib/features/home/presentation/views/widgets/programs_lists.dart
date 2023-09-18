@@ -39,7 +39,7 @@ class _ProgramsState extends State<Programs> with TickerProviderStateMixin {
           child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: 3,
               itemBuilder: (context, index) {
                 var count = 10;
                 var animation = Tween(begin: 0.0, end: 1.0).animate(

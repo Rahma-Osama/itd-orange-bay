@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/core/widgets/app_bar.dart';
+import 'package:orange_bay_new/core/widgets/home_app_bar.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/book_body.dart';
 
 class BookingView extends StatelessWidget {
@@ -10,7 +10,7 @@ class BookingView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[100],
-        appBar: customAppBar(context: context),
+        appBar: const HomeAppBar(),
         body: const BookBody(),
       ),
     );

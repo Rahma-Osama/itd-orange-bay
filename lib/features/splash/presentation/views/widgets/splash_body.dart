@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/features/onboarding/onboarding.dart';
 
 class SplashBody extends StatefulWidget {
@@ -34,6 +35,7 @@ class _SplashBodyState extends State<SplashBody> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return Stack(
       children: <Widget>[
         SizedBox(
@@ -65,10 +67,10 @@ class _SplashBodyState extends State<SplashBody> {
                   AnimatedOpacity(
                     opacity: _showContent ? 1.0 : 0.0, // Animate opacity
                     duration: const Duration(milliseconds: 420),
-                    child: const Text(
-                      "Welcome to Orange Bay",
+                    child: Text(
+                      locale.splashWelcome,
                       textAlign: TextAlign.left,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
                           color: Colors.white),
@@ -80,10 +82,10 @@ class _SplashBodyState extends State<SplashBody> {
                   AnimatedOpacity(
                     opacity: _showContent ? 1.0 : 0.0, // Animate opacity
                     duration: const Duration(milliseconds: 420),
-                    child: const Text(
-                      ("Planning your next journey with us "),
+                    child: Text(
+                      (locale.splashDesc),
                       textAlign: TextAlign.left,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
