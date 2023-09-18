@@ -8,8 +8,6 @@ import 'package:orange_bay_new/features/home/presentation/views/widgets/search_b
 List<String> list = <String>['ُEG', 'Dollar'];
 
 class HomeBody extends StatefulWidget {
-
-
   HomeBody({Key? key}) : super(key: key);
   final String dropdownValue = list.first;
 
@@ -45,15 +43,16 @@ class _HomeBodyState extends State<HomeBody>
             children: [
               const PickDate(),
               const Search(),
-               Padding(
+              Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
                   "${locale.ourPrograms}\n",
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
               Programs(
-                animationController:animationController,
+                animationController: animationController,
               ),
             ],
           ),

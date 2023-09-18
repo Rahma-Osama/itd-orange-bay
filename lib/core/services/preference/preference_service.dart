@@ -15,5 +15,5 @@ class PreferenceService extends ChangeNotifier {
   bool isEn() => _locale == "en";
 }
 
-PreferenceService getPreferenceService(BuildContext context) =>
-    Provider.of<PreferenceService>(context, listen: false);
+PreferenceService getPreferenceService(BuildContext context,{bool listen = true}) =>
+    Provider.of<PreferenceService>(context, listen:listen);
