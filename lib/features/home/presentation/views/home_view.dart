@@ -4,8 +4,8 @@ import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/home_app_bar.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/home_body.dart';
-import 'package:orange_bay_new/features/more_page/presentation/views/more_view.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/book_body.dart';
+import 'package:orange_bay_new/features/more_page/presentation/views/more_view.dart';
 import 'package:orange_bay_new/features/services/presentation/views/services_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -36,16 +36,10 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final List<Widget> screens = [
-      HomeBody(
-        animationController: AnimationController(
-            duration: const Duration(milliseconds: 400), vsync: this),
-      ),
+       HomeBody(),
       const BookBody(),
       const ServicesView(),
-      MoreView(
-        animationController: AnimationController(
-            duration: const Duration(milliseconds: 400), vsync: this),
-      ),
+      const MoreView(),
     ];
     final locale=getL10n(context);
     return SafeArea(
@@ -70,7 +64,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               ),
               SalomonBottomBarItem(
                 icon: const Icon(Icons.calendar_today_rounded),
-                title:  Text(locale.bookHistory),
+                title:  Text(locale.history),
                 selectedColor: AppColors.deepOrange,
               ),
               SalomonBottomBarItem(

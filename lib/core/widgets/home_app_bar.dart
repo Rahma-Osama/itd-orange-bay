@@ -20,24 +20,14 @@ class _HomeAppBarState extends State<HomeAppBar> {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      actions: [
-        Expanded(
-          flex: 3,
-          child: Image.asset(
-            AssetsData.logo,
-            fit: BoxFit.fill,
-          ),
-        ),
-        const Spacer(),
-        const Expanded(flex: 2, child: CurrencyDropDown()),
-        const SizedBox(
-          width: 2,
-        ),
-        const Expanded(flex: 3, child: LocalizationDropDown()),
-        const SizedBox(
-          width: 2,
-        ),
-        const Expanded(flex: 2, child: NotificationIconContainer())
+      title: Image.asset(AssetsData.logo),
+      actions: const [
+        CurrencyDropDown(),
+        SizedBox(width: 2),
+        LocalizationDropDown(),
+        SizedBox(width: 2),
+        NotificationIconContainer(),
+        SizedBox(width: 4),
       ],
     );
   }

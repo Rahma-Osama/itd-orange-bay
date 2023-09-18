@@ -25,15 +25,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<PreferenceService>(
-      builder: (context, preference, _) => MaterialApp(
+    final preferenceService=getPreferenceService(context);
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: preference.isEn() ? "Orange Bay" : "أورانج باي",
-        locale: preference.locale,
+        title: preferenceService.isEn() ? "Orange Bay" : "أورانج باي",
+        locale: preferenceService.locale,
         supportedLocales: L10n.supportedLocales,
         localizationsDelegates: L10n.localizationsDelegates,
         home: const SplashScreen(),
-      ),
-    );
+      );
   }
 }
