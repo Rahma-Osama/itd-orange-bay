@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/services/api/api_service.dart';
-import 'package:orange_bay_new/features/splash/presentation/views/splash_view.dart';
+import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -25,14 +25,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final preferenceService=getPreferenceService(context);
+    final preferenceService = getPreferenceService(context);
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: preferenceService.isEn() ? "Orange Bay" : "أورانج باي",
-        locale: preferenceService.locale,
-        supportedLocales: L10n.supportedLocales,
-        localizationsDelegates: L10n.localizationsDelegates,
-        home: const SplashScreen(),
-      );
+      debugShowCheckedModeBanner: false,
+      title: preferenceService.isEn() ? "Orange Bay" : "أورانج باي",
+      locale: preferenceService.locale,
+      supportedLocales: L10n.supportedLocales,
+      localizationsDelegates: L10n.localizationsDelegates,
+      theme: ThemeData(
+        colorScheme: const ColorScheme.light(
+          primary: Colors.orange, // header background color
+        ),
+      ),
+      home: const HomeView(),
+    );
   }
 }
