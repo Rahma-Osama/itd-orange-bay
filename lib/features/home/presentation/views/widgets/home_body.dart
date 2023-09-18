@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/pick_date.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_lists.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/search_button.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 List<String> list = <String>['ُEG', 'Dollar'];
 
@@ -31,6 +31,7 @@ class _HomeBodyState extends State<HomeBody>
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return SingleChildScrollView(
       child: BottomTopMoveAnimationView(
         animationController: widget.animationController,
@@ -41,11 +42,12 @@ class _HomeBodyState extends State<HomeBody>
             children: [
               const PickDate(),
               const Search(),
-               Padding(
+              Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "${AppLocalizations.of(context)?.ourPrograms}\n",
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  "${locale.ourPrograms}\n",
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
               Programs(
