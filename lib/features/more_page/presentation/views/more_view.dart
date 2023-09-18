@@ -40,9 +40,10 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
         padding: const EdgeInsets.all(16.0),
         child: Container(
           color: Colors.white,
-          height: MediaQuery.of(context).size.height * .45,
           padding: const EdgeInsets.all(18),
           child: ListView.separated(
+            shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) => MoreItemBuilder(
                 animationController: animationController,
                 index: index,
