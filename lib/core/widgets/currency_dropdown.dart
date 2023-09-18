@@ -14,30 +14,33 @@ String selectedCurrency = currentCurrency.first;
 class _CurrencyDropDownState extends State<CurrencyDropDown> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: kToolbarHeight*.8,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: DropdownButton<String>(
-        value: selectedCurrency,
-        icon: const Icon(Icons.keyboard_arrow_down_outlined),
-        underline: const SizedBox(),
-        onChanged: (String? value) {
-          setState(() {
-            selectedCurrency = value!;
-          });
-        },
-        items: currentCurrency.map<DropdownMenuItem<String>>((String value) {
-          return DropdownMenuItem<String>(
-            value: value,
-            child: Text(
-              value,
-              style: TextStyle(color: AppColors.eerieBlack),
-            ),
-          );
-        }).toList(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: DropdownButton<String>(
+          value: selectedCurrency,
+          icon: const Icon(Icons.keyboard_arrow_down_outlined),
+          underline: const SizedBox(),
+          onChanged: (String? value) {
+            setState(() {
+              selectedCurrency = value!;
+            });
+          },
+          items: currentCurrency.map<DropdownMenuItem<String>>((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(
+                value,
+                style: TextStyle(color: AppColors.eerieBlack),
+              ),
+            );
+          }).toList(),
+        ),
       ),
     );
   }
