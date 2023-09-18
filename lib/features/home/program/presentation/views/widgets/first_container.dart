@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class FirstContainer extends StatelessWidget {
@@ -6,6 +7,7 @@ class FirstContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -22,7 +24,7 @@ class FirstContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Overview',
+                  locale.overview,
                   style: TextStyles.textStyle14,
                 ),
                 const SizedBox(height: 16),
@@ -43,9 +45,9 @@ class FirstContainer extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        const Text(
-                          'Duration',
-                          style: TextStyle(
+                        Text(
+                          locale.duration,
+                          style: const TextStyle(
                             color: Color(0xFF969696),
                             fontSize: 12,
                             fontFamily: 'Montserrat',
@@ -57,7 +59,7 @@ class FirstContainer extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          '12 Hours',
+                          locale.h12,
                           style: TextStyles.textStyle14
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
@@ -82,9 +84,9 @@ class FirstContainer extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        const Text(
-                          'Location',
-                          style: TextStyle(
+                        Text(
+                          locale.location,
+                          style: const TextStyle(
                             color: Color(0xFF969696),
                             fontSize: 12,
                             fontFamily: 'Montserrat',
@@ -96,7 +98,7 @@ class FirstContainer extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          'Country, city',
+                          locale.country,
                           style: TextStyles.textStyle14
                               .copyWith(fontWeight: FontWeight.w600),
                         ),
@@ -105,9 +107,9 @@ class FirstContainer extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  "Orange bay is a dream come true,you will feel as if you are a part of these portraits on the travel magazines. The old looking long wooden pier that leads you to the white soft sandy beaches, the gradual changing of water from dark blue to light turquoise, the swing stands in the middle of the shallow water, all in one big frame. Capture the moment, pick your beanbag, and relax on this magical beach.",
-                  style: TextStyle(
+                Text(
+                  locale.overviewDescription,
+                  style: const TextStyle(
                     color: Color(0xFF585757),
                     fontSize: 14,
                     fontFamily: 'Montserrat',

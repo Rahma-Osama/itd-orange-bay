@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 
@@ -15,6 +16,7 @@ class _ReviewsState extends State<Reviews> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return SingleChildScrollView(
       child: SizedBox(
         width: double.infinity,
@@ -24,13 +26,13 @@ class _ReviewsState extends State<Reviews> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Add a review",
+                locale.addReview,
                 style: TextStyles.textStyle14,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "Be the first to review",
+                  locale.firstToReview,
                   style: TextStyles.textStyle12
                       .copyWith(color: AppColors.spanishGray),
                 ),
@@ -42,7 +44,7 @@ class _ReviewsState extends State<Reviews> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("share your thoughts",
+                    Text(locale.shareThoughts,
                         style: TextStyles.textStyle16
                             .copyWith(color: AppColors.spanishGray)),
                     Icon(
@@ -120,7 +122,7 @@ class _ReviewsState extends State<Reviews> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 8.0),
                               child: Text(
-                                "“The staff went above and beyond to ensure we had a comfortable stay and were kind enough to pack breakfast for us as we checked out really early in the morning. All little things, but truly unforgettable experience.”",
+                                locale.reviewDescription,
                                 style: TextStyles.textStyle14.copyWith(
                                     color: AppColors.spanishGray,
                                     fontWeight: FontWeight.w400),
@@ -139,8 +141,8 @@ class _ReviewsState extends State<Reviews> {
                                 children: [
                                   Text(
                                     isMore[index].toString() == 'true'
-                                        ? "Show less"
-                                        : "Show more",
+                                        ? locale.showLess
+                                        : locale.showMore,
                                     style: TextStyles.textStyle12
                                         .copyWith(color: AppColors.deepOrange),
                                   ),

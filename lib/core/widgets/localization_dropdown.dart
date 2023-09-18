@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LocalizationDropDown extends StatefulWidget {
   const LocalizationDropDown({super.key});
@@ -9,41 +11,44 @@ class LocalizationDropDown extends StatefulWidget {
   State<LocalizationDropDown> createState() => LocalizationDropDownState();
 }
 
-final List<String> availableLang = <String>['english', 'العربيه'];
-String selectedLang = availableLang.first;
-
 class LocalizationDropDownState extends State<LocalizationDropDown> {
+  late AppLocalizations locale;
+  late List<String> availableLang;
+  late String selectedLang;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _initLocale();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     final preferenceServices = getPreferenceService(context);
 
-    return Container(
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(size.width / 50)),
-      child: Expanded(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(15)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              child: Icon(
-                Icons.language,
-                color: AppColors.deepOrange,
-              ),
+            Icon(
+              Icons.language,
+              color: AppColors.deepOrange,
             ),
-            const Spacer(),
             DropdownButton<String>(
-              value: selectedLang,
+              value: locale.language,
               icon: const Icon(Icons.keyboard_arrow_down_outlined),
               underline: Container(),
               onChanged: (String? value) {
                 setState(() {
                   selectedLang = value!;
                 });
-                preferenceServices.setLocale(
-                  value!.toLowerCase().contains('en') ? 'en' : 'ar',
-                );
+                preferenceServices
+                    .setLocale(value == locale.english ? 'en' : 'ar');
               },
               items:
                   availableLang.map<DropdownMenuItem<String>>((String value) {
@@ -60,5 +65,11 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
         ),
       ),
     );
+  }
+
+  void _initLocale() {
+    locale = getL10n(context);
+    availableLang = [locale.english, locale.arabic];
+    selectedLang = availableLang.first;
   }
 }

@@ -8,22 +8,23 @@ class CurrencyDropDown extends StatefulWidget {
   State<CurrencyDropDown> createState() => _CurrencyDropDownState();
 }
 
-final List<String> currentCurrency = <String>['ُEG', 'Dollar'];
+List<String> currentCurrency = <String>['ُEG', 'Dollar'];
 String selectedCurrency = currentCurrency.first;
 
 class _CurrencyDropDownState extends State<CurrencyDropDown> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(size.width / 50),
-      ),
-      child: Expanded(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Container(
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+        ),
         child: DropdownButton<String>(
           value: selectedCurrency,
-          icon: const Expanded(child: Icon(Icons.keyboard_arrow_down_outlined)),
+          icon: const Icon(Icons.keyboard_arrow_down_outlined),
           underline: const SizedBox(),
           onChanged: (String? value) {
             setState(() {
