@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
-
 class LocalizationDropDown extends StatefulWidget {
   const LocalizationDropDown({super.key});
 
   @override
   State<LocalizationDropDown> createState() => LocalizationDropDownState();
 }
+
 final List<String> availableLang = <String>['english', 'العربيه'];
 String selectedLang = availableLang.first;
+
 class LocalizationDropDownState extends State<LocalizationDropDown> {
-
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -22,8 +21,7 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(
-              size.width / 50)),
+          borderRadius: BorderRadius.circular(size.width / 50)),
       child: Expanded(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -42,10 +40,13 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
               onChanged: (String? value) {
                 setState(() {
                   selectedLang = value!;
-                  preferenceServices.setLocale(value.toLowerCase().contains('english')?'en':'ar');
                 });
+                preferenceServices.setLocale(
+                  value!.toLowerCase().contains('en') ? 'en' : 'ar',
+                );
               },
-              items: availableLang.map<DropdownMenuItem<String>>((String value) {
+              items:
+                  availableLang.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(
