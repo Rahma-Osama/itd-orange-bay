@@ -10,7 +10,6 @@ class RestContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
@@ -67,13 +66,13 @@ class RestContainer extends StatelessWidget {
                         color: AppColors.blue,
                       ),
                       const Text('12:00 PM'),
-                      Spacer(),
+                      const Spacer(),
                       Icon(
                         Icons.arrow_forward,
                         color: AppColors.blue,
                       ),
                       const Text('3:00 PM'),
-                      Spacer(),
+                      const Spacer(),
                       Icon(
                         Icons.restaurant,
                         color: AppColors.deepOrange,
