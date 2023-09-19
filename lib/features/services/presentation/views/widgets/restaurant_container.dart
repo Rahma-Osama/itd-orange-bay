@@ -67,17 +67,13 @@ class RestContainer extends StatelessWidget {
                         color: AppColors.blue,
                       ),
                       const Text('12:00 PM'),
-                      SizedBox(
-                        width: size.width / 10,
-                      ),
+                      Spacer(),
                       Icon(
                         Icons.arrow_forward,
                         color: AppColors.blue,
                       ),
                       const Text('3:00 PM'),
-                      SizedBox(
-                        width: size.width / 10,
-                      ),
+                      Spacer(),
                       Icon(
                         Icons.restaurant,
                         color: AppColors.deepOrange,
