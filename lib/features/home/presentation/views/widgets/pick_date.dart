@@ -16,6 +16,7 @@ class _PickDateState extends State<PickDate> {
   @override
   Widget build(BuildContext context) {
     final locale = getL10n(context);
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: Container(
@@ -28,7 +29,6 @@ class _PickDateState extends State<PickDate> {
         child: Center(
           child: TextField(
             readOnly: true,
-            autofocus: true,
             controller: _fromDateController,
             onTap: () async {
               DateTime? pickedDate = await showDatePicker(
