@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/pick_date.dart';
-import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_lists.dart';
+import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_list.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/search_button.dart';
 
 class HomeBody extends StatefulWidget {
@@ -27,6 +27,7 @@ class _HomeBodyState extends State<HomeBody>
   Widget build(BuildContext context) {
     final locale = getL10n(context);
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: BottomTopMoveAnimationView(
         animationController: animationController,
         child: Padding(
@@ -39,12 +40,12 @@ class _HomeBodyState extends State<HomeBody>
               Padding(
                 padding: const EdgeInsets.only(top: 16.0),
                 child: Text(
-                  "${locale.ourPrograms}\n",
+                  locale.ourPrograms,
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
-              Programs(
+              ProgramsList(
                 animationController: animationController,
               ),
             ],
