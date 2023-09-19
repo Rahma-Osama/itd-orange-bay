@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'list_images.dart';
 
@@ -15,21 +17,14 @@ class _SliderImgState extends State<SliderImg> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-
-    // Calculate the left position based on screen width
-    double leftPosition = screenWidth >= 600 ? 225 : 20;
-
-    // Calculate the top position based on screen width
-    double topPosition = screenWidth >= 600 ? 300 : 180;
-    // Calculate the container width based on screen width
+    Size size = MediaQuery.of(context).size;
     double containerWidth = screenWidth >= 600 ? 400 : screenWidth - 40;
-
-    // Calculate the container height based on screen width
     double containerHeight = screenWidth >= 600 ? 80 : 80;
 
     return Positioned(
-      left: leftPosition,
-      top: topPosition,
+      left: size.width*.08,
+      right: size.width*.08, 
+      bottom: 10,
       child: Opacity(
         opacity: 0.60,
         child: Container(
@@ -37,7 +32,8 @@ class _SliderImgState extends State<SliderImg> {
           height: containerHeight,
           decoration: ShapeDecoration(
             color: Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           ),
           child: Stack(
             children: [
@@ -46,7 +42,8 @@ class _SliderImgState extends State<SliderImg> {
                   setState(() {
                     selectedImage = imagePath; // Update selected image path
                   });
-                  widget.onImageSelected(imagePath); // Pass the selected image path to ProBody
+                  widget.onImageSelected(
+                      imagePath); // Pass the selected image path to ProBody
                 },
               ),
             ],

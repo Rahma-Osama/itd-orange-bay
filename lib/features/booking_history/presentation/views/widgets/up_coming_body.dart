@@ -76,39 +76,36 @@ class UpcomingBody extends StatelessWidget {
                 ],
               ),
               child: Column(
-                children: [
-                  const ContainerBody(),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: CustomButton(
-                            backgroundColor: AppColors.deepOrange,
-                            text: 'Edit',
-                            func: () {},
-                          ),
-                        ),
-                        Expanded(
-                          child: CustomButton(
-                            backgroundColor: Colors.white,
-                            textColor: AppColors.deepOrange,
-                            text: 'Print',
-                            func: () {},
-                          ),
-                        ),
-                        Expanded(
-                          child: CustomButton(
-                            backgroundColor: const Color(0xFFE72C2C),
-                            text: 'Cancel',
-                            func: () {},
-                          ),
-                        ),
-                      ],
-                    ),
+              children: [
+                const ContainerBody(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      upcomingButton(
+                          label: "Edit",
+                          bgcolor: AppColors.deepOrange,
+                          borderColor: AppColors.deepOrange,
+                          txtcolor: Colors.white,
+                          context: context),
+                      upcomingButton(
+                          label: "Print",
+                          bgcolor: Colors.white,
+                          borderColor: AppColors.deepOrange,
+                          txtcolor: AppColors.deepOrange,
+                          context: context),
+                      upcomingButton(
+                          label: "Cancel",
+                          bgcolor: const Color(0xFFE72C2C),
+                          borderColor: const Color(0xFFE72C2C),
+                          txtcolor: Colors.white,
+                          context: context),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
+            ),
             ),
           ),
         ],
