@@ -37,7 +37,7 @@ class _ProgramsListState extends State<ProgramsList>
     return BottomTopMoveAnimationView(
         animationController: animationController!,
         child: SizedBox(
-          height: 450,
+          height: 380,
           child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,

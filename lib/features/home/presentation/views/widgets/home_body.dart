@@ -38,7 +38,7 @@ class _HomeBodyState extends State<HomeBody>
               const PickDate(),
               const Search(),
               Padding(
-                padding: const EdgeInsets.only(top: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
                   locale.ourPrograms,
                   style: const TextStyle(
