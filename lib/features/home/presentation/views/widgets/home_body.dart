@@ -5,11 +5,11 @@ import 'package:orange_bay_new/features/home/presentation/views/widgets/pick_dat
 import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_lists.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/search_button.dart';
 
-List<String> list = <String>['ُEG', 'Dollar'];
+// List<String> list = <String>['ُEG', 'Dollar'];
 
 class HomeBody extends StatefulWidget {
   HomeBody({Key? key}) : super(key: key);
-  final String dropdownValue = list.first;
+  // final String dropdownValue = list.first;
 
   @override
   State<HomeBody> createState() => _HomeBodyState();

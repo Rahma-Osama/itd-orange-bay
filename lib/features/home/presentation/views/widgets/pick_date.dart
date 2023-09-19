@@ -27,6 +27,7 @@ class _PickDateState extends State<PickDate> {
         ),
         child: Center(
           child: TextField(
+            readOnly: true,
             autofocus: true,
             controller: _fromDateController,
             onTap: () async {
