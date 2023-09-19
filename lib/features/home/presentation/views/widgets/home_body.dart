@@ -5,11 +5,8 @@ import 'package:orange_bay_new/features/home/presentation/views/widgets/pick_dat
 import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_lists.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/search_button.dart';
 
-List<String> list = <String>['ُEG', 'Dollar'];
-
 class HomeBody extends StatefulWidget {
-  HomeBody({Key? key}) : super(key: key);
-  final String dropdownValue = list.first;
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
   State<HomeBody> createState() => _HomeBodyState();
@@ -18,15 +15,11 @@ class HomeBody extends StatefulWidget {
 class _HomeBodyState extends State<HomeBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late ScrollController controller;
+  late ScrollController scrollController;
 
   @override
   void initState() {
-    animationController = AnimationController(
-        duration: const Duration(milliseconds: 400), vsync: this);
-    animationController.forward();
-    controller = ScrollController(initialScrollOffset: 0.0);
-    controller.addListener(() {});
+    _initControllers();
     super.initState();
   }
 
@@ -59,5 +52,13 @@ class _HomeBodyState extends State<HomeBody>
         ),
       ),
     );
+  }
+
+  void _initControllers() {
+    animationController = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: this);
+    animationController.forward();
+    scrollController = ScrollController(initialScrollOffset: 0.0);
+    scrollController.addListener(() {});
   }
 }
