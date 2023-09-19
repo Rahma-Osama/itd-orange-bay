@@ -35,7 +35,7 @@ class _ProgramsState extends State<Programs> with TickerProviderStateMixin {
     return BottomTopMoveAnimationView(
         animationController: animationController!,
         child: SizedBox(
-          height: 350,
+          height: 450,
           child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
