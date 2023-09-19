@@ -59,17 +59,14 @@ class ProgramContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                  height: MediaQuery.of(context).size.height * .3,
+                  height: 250,
                   width: double.infinity,
                   child: Image.asset(
                     'assets/images/img_1.png',
                     fit: BoxFit.cover,
                   )),
               Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height / 60,
-                    left: 8,
-                    right: 8),
+                padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
