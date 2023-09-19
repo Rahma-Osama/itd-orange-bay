@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/services/api/api_service.dart';
-import 'package:orange_bay_new/features/home/presentation/views/home_view.dart';
+import 'package:orange_bay_new/features/splash/presentation/views/splash_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -33,11 +33,9 @@ class MyApp extends StatelessWidget {
       supportedLocales: L10n.supportedLocales,
       localizationsDelegates: L10n.localizationsDelegates,
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(
-          primary: Colors.orange, // header background color
-        ),
+        colorScheme: const ColorScheme.light(primary: Colors.orange),
       ),
-      home: const HomeView(),
+      home: const SplashView(),
     );
   }
 }
