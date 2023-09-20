@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/past_view.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/up_coming_view.dart';
@@ -13,6 +14,7 @@ class HistoryBody extends StatefulWidget {
 class _HistoryBodyState extends State<HistoryBody> {
   @override
   Widget build(BuildContext context) {
+    final locale=getL10n(context);
     return DefaultTabController(
       length: 3,
       child: Padding(
@@ -28,11 +30,11 @@ class _HistoryBodyState extends State<HistoryBody> {
                   indicatorColor: Colors.orange,
                   tabs: [
                     Tab(
-                      text: "Past",
+                      text: locale.past,
                     ),
                     Tab(
                       child: Text(
-                        "Upcoming",
+                        locale.upcoming,
                         textAlign: TextAlign.center,
                       ),
                     ),
