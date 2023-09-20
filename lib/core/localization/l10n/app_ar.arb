@@ -44,7 +44,11 @@
   "explore" : "استكشف",
   "beautiful" : "الجمال",
   "withUs" : "معنا",
-  "ourPrograms" : "برامجنا"
+  "ourPrograms" : "برامجنا",
+   "restaurants" : "مطاعم",
+    "activities": "أنشطة",
+    "photos" : "صور",
+    "videos" :"فيدوهات"
 
 
 }
