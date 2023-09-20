@@ -15,35 +15,23 @@ class GalleryBody extends StatefulWidget {
 class _GalleryBodyState extends State<GalleryBody> {
   @override
   Widget build(BuildContext context) {
-    final locale=getL10n(context);
+    final locale = getL10n(context);
     return DefaultTabController(
       length: 3,
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              SizedBox(
-                width: double.infinity,
-                height: 45,
-                child: TabBar(
-                  unselectedLabelColor: Colors.black,
-                  labelColor: AppColors.deepOrange,
-                  indicatorColor: Colors.orange,
-                  tabs: [
-                    Tab(
-                      text: locale.all,
-                    ),
-                    Tab(
-                      child: Text(
-                        locale.panoramicView,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Tab(
-                      text: locale.relax,
-                    ),
-                  ],
-                ),
+              TabBar(
+                unselectedLabelColor: Colors.black,
+                labelColor: AppColors.deepOrange,
+                indicatorColor: Colors.orange,
+                isScrollable: true,
+                tabs: [
+                  Tab(text: locale.all),
+                  Tab(text: locale.panoramicView),
+                  Tab(text: locale.relax),
+                ],
               ),
               const Expanded(
                 child: Padding(
