@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/services/presentation/views/gallery_all_view.dart';
 import 'package:orange_bay_new/features/services/presentation/views/gallery_panoramic_view.dart';
@@ -14,6 +15,7 @@ class GalleryBody extends StatefulWidget {
 class _GalleryBodyState extends State<GalleryBody> {
   @override
   Widget build(BuildContext context) {
+    final locale=getL10n(context);
     return DefaultTabController(
       length: 3,
       child: Padding(
@@ -27,18 +29,18 @@ class _GalleryBodyState extends State<GalleryBody> {
                   unselectedLabelColor: Colors.black,
                   labelColor: AppColors.deepOrange,
                   indicatorColor: Colors.orange,
-                  tabs: const [
+                  tabs: [
                     Tab(
-                      text: "All",
+                      text: locale.all,
                     ),
                     Tab(
                       child: Text(
-                        "Panoramic view",
+                        locale.panoramicView,
                         textAlign: TextAlign.center,
                       ),
                     ),
                     Tab(
-                      text: "Relax",
+                      text: locale.relax,
                     ),
                   ],
                 ),

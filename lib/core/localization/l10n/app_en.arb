@@ -46,7 +46,10 @@
   "whishlist" : "My Whishlist",
   "aboutUs" : "About Us",
   "contactUs" : "Contact Us",
-  "logout" : "Logout"
+  "logout" : "Logout",
+  "all": "All",
+  "panoramicView" :"Panoramic View",
+  "relax" : "Relax"
 
 
 }
