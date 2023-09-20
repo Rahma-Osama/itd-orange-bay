@@ -34,10 +34,12 @@ class _ProgramsListState extends State<ProgramsList>
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return BottomTopMoveAnimationView(
         animationController: animationController!,
         child: SizedBox(
-          height: 380,
+          height: size.height * 0.65,
           child: ListView.builder(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
