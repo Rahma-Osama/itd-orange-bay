@@ -12,7 +12,7 @@ class ProgramsDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final preferenceService=getPreferenceService(context);
+    final preferenceService = getPreferenceService(context, listen: false);
     final locale = getL10n(context);
     final List<TimelineModel> items = [
       customTimelineModel(time: '8 AM ', event: locale.leaveMarina),
@@ -35,7 +35,9 @@ class ProgramsDetails extends StatelessWidget {
           child: Timeline(
             lineWidth: 2,
             children: items,
-            position: preferenceService.isEn()?TimelinePosition.Left : TimelinePosition.Right,
+            position: preferenceService.isEn()
+                ? TimelinePosition.Left
+                : TimelinePosition.Right,
             lineColor: AppColors.deepOrange,
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
