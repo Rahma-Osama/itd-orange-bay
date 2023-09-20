@@ -5,6 +5,7 @@ import 'package:orange_bay_new/features/more_page/presentation/views/widgets/mor
 
 class MoreView extends StatefulWidget {
 
+
   const MoreView({Key? key}) : super(key: key);
 
   @override
@@ -12,6 +13,7 @@ class MoreView extends StatefulWidget {
 }
 
 class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
+
   late AnimationController animationController;
 
   @override
@@ -24,6 +26,7 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
 
   @override
   void dispose() {
+
     animationController.dispose();
     super.dispose();
   }
@@ -31,14 +34,16 @@ class _MoreViewState extends State<MoreView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return BottomTopMoveAnimationView(
+
       animationController: animationController,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
           color: Colors.white,
-          height: MediaQuery.of(context).size.height * .45,
           padding: const EdgeInsets.all(18),
           child: ListView.separated(
+            shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) => MoreItemBuilder(
                 animationController: animationController,
                 index: index,

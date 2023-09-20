@@ -24,7 +24,7 @@ class LocalizationDropDownState extends State<LocalizationDropDown> {
 
   @override
   Widget build(BuildContext context) {
-    final preferenceServices = getPreferenceService(context);
+    final preferenceServices = getPreferenceService(context, listen: false);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),

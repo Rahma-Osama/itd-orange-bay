@@ -44,7 +44,15 @@
   "explore" : "استكشف",
   "beautiful" : "الجمال",
   "withUs" : "معنا",
-  "ourPrograms" : "برامجنا"
+  "ourPrograms" : "برامجنا",
+   "profile" : "الملف الشخصي",
+   "whishlist" : "قائمه أمنياتي",
+   "aboutUs" : "عننا",
+   "contactUs" : "تواصل معنا",
+   "logout" : "تسجيل خروج",
+   "all": "الجميع",
+   "panoramicView" :"مناظر بانورامية",
+   "relax" : "استرخاء"
 
 
 }
