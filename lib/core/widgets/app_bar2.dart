@@ -16,7 +16,7 @@ class _AppBarButtonState extends State<AppBarButton> {
 
   @override
   Widget build(BuildContext context) {
-    final preference = getPreferenceService(context);
+    final preference = getPreferenceService(context, listen: false);
     return AppBar(
       leading: const SizedBox(),
       elevation: 0,

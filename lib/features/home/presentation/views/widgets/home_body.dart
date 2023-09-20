@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/widgets/bottom_top_move_animation.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/pick_date.dart';
-import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_lists.dart';
+import 'package:orange_bay_new/features/home/presentation/views/widgets/programs_list.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/search_button.dart';
 
-List<String> list = <String>['ُEG', 'Dollar'];
-
 class HomeBody extends StatefulWidget {
-  HomeBody({Key? key}) : super(key: key);
-  final String dropdownValue = list.first;
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
   State<HomeBody> createState() => _HomeBodyState();
@@ -18,15 +15,11 @@ class HomeBody extends StatefulWidget {
 class _HomeBodyState extends State<HomeBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late ScrollController controller;
+  late ScrollController scrollController;
 
   @override
   void initState() {
-    animationController = AnimationController(
-        duration: const Duration(milliseconds: 400), vsync: this);
-    animationController.forward();
-    controller = ScrollController(initialScrollOffset: 0.0);
-    controller.addListener(() {});
+    _initControllers();
     super.initState();
   }
 
@@ -34,6 +27,7 @@ class _HomeBodyState extends State<HomeBody>
   Widget build(BuildContext context) {
     final locale = getL10n(context);
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: BottomTopMoveAnimationView(
         animationController: animationController,
         child: Padding(
@@ -44,14 +38,14 @@ class _HomeBodyState extends State<HomeBody>
               const PickDate(),
               const Search(),
               Padding(
-                padding: const EdgeInsets.only(top: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Text(
-                  "${locale.ourPrograms}\n",
+                  locale.ourPrograms,
                   style: const TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
-              Programs(
+              ProgramsList(
                 animationController: animationController,
               ),
             ],
@@ -59,5 +53,13 @@ class _HomeBodyState extends State<HomeBody>
         ),
       ),
     );
+  }
+
+  void _initControllers() {
+    animationController = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: this);
+    animationController.forward();
+    scrollController = ScrollController(initialScrollOffset: 0.0);
+    scrollController.addListener(() {});
   }
 }

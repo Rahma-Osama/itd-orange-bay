@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/home_app_bar.dart';
@@ -17,20 +16,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
-  late AnimationController _animationController;
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {});
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
-  int currentIndx=0;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +26,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
       const ServicesView(),
       const MoreView(),
     ];
-    final locale=getL10n(context);
+    final locale = getL10n(context);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[100],
@@ -51,19 +37,19 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(
                   MediaQuery.of(context).size.width / 40)),
-          child:  SalomonBottomBar(
+          child: SalomonBottomBar(
             backgroundColor: Colors.white,
-            currentIndex: currentIndx,
-            onTap: (i) => setState(() => currentIndx = i) ,
+            currentIndex: currentIndex,
+            onTap: (i) => setState(() => currentIndex = i),
             items: [
               SalomonBottomBarItem(
                 icon: const Icon(Icons.home),
-                title:  Text(locale.home),
+                title: Text(locale.home),
                 selectedColor: AppColors.deepOrange,
               ),
               SalomonBottomBarItem(
                 icon: const Icon(Icons.calendar_today_rounded),
-                title:  Text(locale.history),
+                title: Text(locale.history),
                 selectedColor: AppColors.deepOrange,
               ),
               SalomonBottomBarItem(
@@ -73,13 +59,13 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               ),
               SalomonBottomBarItem(
                 icon: const Icon(Icons.more_horiz),
-                title:Text(locale.more),
+                title: Text(locale.more),
                 selectedColor: AppColors.deepOrange,
               ),
             ],
           ),
         ),
-        body: screens[currentIndx],
+        body: screens[currentIndex],
       ),
     );
   }

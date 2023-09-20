@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
-
-import '../../../../../core/theme/text_styles.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 
 class RestContainer extends StatelessWidget {
   final int index;
@@ -17,7 +16,6 @@ class RestContainer extends StatelessWidget {
         clipBehavior: Clip.antiAliasWithSaveLayer,
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(10)),
-        height: MediaQuery.of(context).size.height * .45,
         child: Column(
           children: [
             Image.asset(
@@ -68,17 +66,13 @@ class RestContainer extends StatelessWidget {
                         color: AppColors.blue,
                       ),
                       const Text('12:00 PM'),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width / 10,
-                      ),
+                      const Spacer(),
                       Icon(
                         Icons.arrow_forward,
                         color: AppColors.blue,
                       ),
                       const Text('3:00 PM'),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width / 10,
-                      ),
+                      const Spacer(),
                       Icon(
                         Icons.restaurant,
                         color: AppColors.deepOrange,
@@ -95,21 +89,16 @@ class RestContainer extends StatelessWidget {
                           fontWeight: FontWeight.w400),
                     ),
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "Start for 150.66 EGP / Person",
                         style: TextStyle(
                             color: Color(0xFF333333),
                             fontWeight: FontWeight.w500,
                             fontSize: 14),
                       ),
-                      Text("[Map]",
-                          style: TextStyles.textStyle14.copyWith(
-                            color: const Color(0XFF007489),
-                            fontWeight: FontWeight.w400,
-                          ))
                     ],
                   )
                 ],

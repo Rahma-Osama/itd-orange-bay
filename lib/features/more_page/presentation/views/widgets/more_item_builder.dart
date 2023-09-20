@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/profile_view.dart';
 
@@ -51,6 +52,15 @@ class _MoreItemBuilderState extends State<MoreItemBuilder>
 
   @override
   Widget build(BuildContext context) {
+    final locale= getL10n(context);
+    final List headers = [
+      locale.profile,
+      locale.whishlist,
+      locale.aboutUs,
+      locale.contactUs,
+      locale.contactUs
+    ];
+
     return GestureDetector(
       onTap: () => widget.index < 2
           ? Navigator.push(context,
@@ -77,18 +87,4 @@ class _MoreItemBuilderState extends State<MoreItemBuilder>
     );
   }
 
-  List headers = [
-    "My PROFILE",
-    "My WISHLIST",
-    "About Us",
-    "Contact US",
-    "Logout"
-  ];
-
-// List screens=[
-//   ProfileView(),
-//   WishListView(
-//     animationController: _animationController,
-//   ),
-// ];
 }

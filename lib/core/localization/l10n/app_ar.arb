@@ -47,6 +47,14 @@
   "ourPrograms" : "برامجنا",
   "past": "السابق",
   "upcoming" : "القادم"
+   "profile" : "الملف الشخصي",
+   "whishlist" : "قائمه أمنياتي",
+   "aboutUs" : "عننا",
+   "contactUs" : "تواصل معنا",
+   "logout" : "تسجيل خروج",
+   "all": "الجميع",
+   "panoramicView" :"مناظر بانورامية",
+   "relax" : "استرخاء"
 
 
 }
