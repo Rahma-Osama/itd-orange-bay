@@ -16,7 +16,7 @@ class _HistoryBodyState extends State<HistoryBody> {
   Widget build(BuildContext context) {
     final locale=getL10n(context);
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
