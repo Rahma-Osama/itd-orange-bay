@@ -25,6 +25,7 @@ class _HistoryBodyState extends State<HistoryBody> {
                 width: double.infinity,
                 height: 45,
                 child: TabBar(
+                  isScrollable: true,
                   unselectedLabelColor: Colors.black,
                   labelColor: AppColors.deepOrange,
                   indicatorColor: Colors.orange,
