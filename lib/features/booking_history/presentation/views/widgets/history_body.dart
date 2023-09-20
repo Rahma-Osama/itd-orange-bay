@@ -14,33 +14,25 @@ class HistoryBody extends StatefulWidget {
 class _HistoryBodyState extends State<HistoryBody> {
   @override
   Widget build(BuildContext context) {
-    final locale=getL10n(context);
+    final locale = getL10n(context);
     return DefaultTabController(
       length: 2,
       child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              SizedBox(
-                width: double.infinity,
-                height: 45,
-                child: TabBar(
-                  isScrollable: true,
-                  unselectedLabelColor: Colors.black,
-                  labelColor: AppColors.deepOrange,
-                  indicatorColor: Colors.orange,
-                  tabs: [
-                    Tab(
-                      text: locale.past,
-                    ),
-                    Tab(
-                      child: Text(
-                        locale.upcoming,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
+              TabBar(
+                unselectedLabelColor: Colors.black,
+                labelColor: AppColors.deepOrange,
+                indicatorColor: Colors.orange,
+                tabs: [
+                  Tab(
+                    text: locale.past,
+                  ),
+                  Tab(
+                    text: locale.upcoming,
+                  ),
+                ],
               ),
               const Expanded(
                 child: Padding(
@@ -56,7 +48,6 @@ class _HistoryBodyState extends State<HistoryBody> {
             ],
           )),
     );
-
   }
 }
 // SingleChildScrollView(
