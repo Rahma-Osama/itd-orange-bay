@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/services/presentation/views/gallery_view.dart';
 
-List<String> images = [
-  "assets/images/IMG_6451.jpg",
-  "assets/images/img5.png",
-  "assets/images/IMG_6479.jpg",
-  "assets/images/IMG_6479.jpg",
-  "assets/images/gallery/img.png",
-  "assets/images/gallery/img.png",
-  "assets/images/gallery/img_3.png",
-  "assets/images/gallery/img_3.png"
-];
+
 
 class ListImages extends StatelessWidget {
   final Function(String) onImageTap;
@@ -18,81 +10,54 @@ class ListImages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 2,
-          child: ListView.builder(
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return Image(
-                  image: AssetImage(
-                    images[index],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          GestureDetector(
+              onTap: () {
+                onImageTap('assets/images/IMG_6451.jpg');
+              },
+              child: const Image(image: AssetImage('assets/images/img5.png'))),
+         
+          GestureDetector(
+              onTap: () {
+                onImageTap('assets/images/gallery/img.png');
+              },
+              child: const Image(
+                  image: AssetImage('assets/images/gallery/img.png'))),
+          GestureDetector(
+              onTap: () {
+                onImageTap('assets/images/gallery/img_3.png');
+              },
+              child: const Image(
+                  image: AssetImage('assets/images/gallery/img_3.png'))),
+          GestureDetector(
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const GalleryView())),
+            child: Container(
+              width: 62,
+              height: 64,
+              decoration: ShapeDecoration(
+                color: const Color(0xFF0F4966),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text(
+                    '+12',
+                    style: TextStyles.textStyle20,
                   ),
-                );
-              }),
-        ),
-        IconButton(
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const GalleryView()));
-          },
-          icon: Text("+${images.length - 4}"),
-        ),
-      ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
-// Padding(
-//       padding: const EdgeInsets.all(8.0),
-    //   child: Row(
-    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //     children: [
-    //       GestureDetector(
-    //           onTap: () {
-    //             onImageTap('assets/images/IMG_6451.jpg');
-    //           },
-    //           child: const Image(image: AssetImage('assets/images/img5.png'))),
-    //       GestureDetector(
-    //           onTap: () {
-    //             onImageTap('assets/images/IMG_6479.jpg');
-    //           },
-    //           child:
-    //               const Image(image: AssetImage('assets/images/IMG_6479.jpg'))),
-    //       GestureDetector(
-    //           onTap: () {
-    //             onImageTap('assets/images/gallery/img.png');
-    //           },
-    //           child: const Image(
-    //               image: AssetImage('assets/images/gallery/img.png'))),
-    //       GestureDetector(
-    //           onTap: () {
-    //             onImageTap('assets/images/gallery/img_3.png');
-    //           },
-    //           child: const Image(
-    //               image: AssetImage('assets/images/gallery/img_3.png'))),
-    //       GestureDetector(
-    //         onTap: () => Navigator.push(context,
-    //             MaterialPageRoute(builder: (context) => const GalleryView())),
-    //         child: Container(
-    //           width: 62,
-    //           height: 64,
-    //           decoration: ShapeDecoration(
-    //             color: const Color(0xFF0F4966),
-    //             shape: RoundedRectangleBorder(
-    //                 borderRadius: BorderRadius.circular(8)),
-    //           ),
-    //           child: Padding(
-    //             padding: const EdgeInsets.all(8.0),
-    //             child: Center(
-    //               child: Text(
-    //                 '+12',
-    //                 style: TextStyles.textStyle20,
-    //               ),
-    //             ),
-    //           ),
-    //         ),
-    //       ),
-    //     ],
-    //   ),
-    // );
+
