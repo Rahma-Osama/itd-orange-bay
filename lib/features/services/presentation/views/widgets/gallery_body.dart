@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
-import 'package:orange_bay_new/data/constants.dart';
-import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
+import 'package:orange_bay_new/features/services/presentation/views/gallery_all_view.dart';
+import 'package:orange_bay_new/features/services/presentation/views/gallery_panoramic_view.dart';
+import 'package:orange_bay_new/features/services/presentation/views/gallery_relax_view.dart';
 
 class GalleryBody extends StatefulWidget {
   const GalleryBody({Key? key}) : super(key: key);
@@ -14,60 +15,38 @@ class GalleryBody extends StatefulWidget {
 class _GalleryBodyState extends State<GalleryBody> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Container(
-            height: 60,
-            padding: const EdgeInsets.all(8),
-            child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                itemCount: 3,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          photoTypeIsselected = [false, false, false];
-                          photoTypeIsselected[index] = true;
-                        });
-                      },
-                      child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: photoTypeIsselected[index]
-                                ? BorderRadius.circular(10)
-                                : BorderRadius.circular(0),
-                            color: photoTypeIsselected[index]
-                                ? AppColors.deepOrange
-                                : Colors.white,
-                          ),
-                          alignment: Alignment.center,
-                          width: MediaQuery.of(context).size.width * .3,
-                          child: Text(
-                            photoType[index],
-                            style: TextStyle(
-                                color: photoTypeIsselected[index]
-                                    ? Colors.white
-                                    : Colors.black),
-                          )),
-                    )),
-          ),
-          Expanded(
-            child: GridView.builder(
-                itemCount: AssetsData.gallery.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: MediaQuery.of(context).size.height / 40,
-                  crossAxisSpacing: MediaQuery.of(context).size.height / 40,
-                  childAspectRatio: .9,
-                  crossAxisCount: 2,
+    final locale = getL10n(context);
+    return DefaultTabController(
+      length: 3,
+      child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              TabBar(
+                unselectedLabelColor: Colors.black,
+                labelColor: AppColors.deepOrange,
+                indicatorColor: Colors.orange,
+                isScrollable: true,
+                tabs: [
+                  Tab(text: locale.all),
+                  Tab(text: locale.panoramicView),
+                  Tab(text: locale.relax),
+                ],
+              ),
+              const Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 8.0),
+                  child: TabBarView(
+                    children: [
+                      GalleryAllView(),
+                      GalleryPanoramicView(),
+                      GalleryRelaxView(),
+                    ],
+                  ),
                 ),
-                itemBuilder: (context, index) => Image.asset(
-                      AssetsData.gallery[index],
-                      fit: BoxFit.cover,
-                    )),
-          )
-        ],
-      ),
+              ),
+            ],
+          )),
     );
   }
 }

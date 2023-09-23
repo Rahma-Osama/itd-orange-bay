@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
+import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 
@@ -16,6 +18,9 @@ class ProgramContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
+    final preferenceService = getPreferenceService(context, listen: false);
+
     return AnimatedBuilder(
       animation: animationController,
       builder: (BuildContext context, Widget? child) {
@@ -29,38 +34,39 @@ class ProgramContainer extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: const EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
           clipBehavior: Clip.antiAliasWithSaveLayer,
-          height: MediaQuery.of(context).size.height * .55,
-          width: MediaQuery.of(context).size.width * .6,
-          decoration: const BoxDecoration(
+          width: MediaQuery.of(context).size.width * .7,
+          decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(15),
-                  topRight: Radius.circular(15),
-                  bottomRight: Radius.circular(15),
-                  bottomLeft: Radius.circular(75)),
+                topLeft: const Radius.circular(15),
+                topRight: const Radius.circular(15),
+                bottomRight: (preferenceService.locale.languageCode) == 'en'
+                    ? const Radius.circular(75)
+                    : const Radius.circular(15),
+                bottomLeft: (preferenceService.locale.languageCode) == 'en'
+                    ? const Radius.circular(15)
+                    : const Radius.circular(75),
+              ),
               color: Colors.white),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                  height: MediaQuery.of(context).size.height * .3,
+                  height: 250,
                   width: double.infinity,
                   child: Image.asset(
                     'assets/images/img_1.png',
                     fit: BoxFit.cover,
                   )),
               Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height / 60,
-                    left: 8,
-                    right: 8),
+                padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Go Island",
+                      locale.goIsland,
                       style: TextStyles.textStyle16,
                     ),
                     Row(
@@ -76,7 +82,7 @@ class ProgramContainer extends StatelessWidget {
                         Text(
                           '(92)',
                           style: TextStyles.textStyle12
-                              .copyWith(color: AppColors.spanishGray),
+                              .copyWith(color: AppColors.davyGrey),
                         )
                       ],
                     )

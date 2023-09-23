@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 
 class PickDate extends StatefulWidget {
@@ -14,6 +15,8 @@ class _PickDateState extends State<PickDate> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: Container(
@@ -25,6 +28,7 @@ class _PickDateState extends State<PickDate> {
         ),
         child: Center(
           child: TextField(
+            readOnly: true,
             controller: _fromDateController,
             onTap: () async {
               DateTime? pickedDate = await showDatePicker(
@@ -41,7 +45,9 @@ class _PickDateState extends State<PickDate> {
               }
             },
             decoration: InputDecoration(
-              hintText: 'when would you come?',
+              prefixIconColor: AppColors.deepOrange,
+              iconColor: AppColors.deepOrange,
+              hintText: locale.whereWouldYouGo,
               prefixIcon: const Icon(Icons.calendar_today_rounded),
               enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide.none,
