@@ -10,63 +10,48 @@ class AppBarButton3 extends StatefulWidget implements PreferredSizeWidget {
   State<AppBarButton3> createState() => _AppBarButton3State();
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight * .9);
 }
 
 class _AppBarButton3State extends State<AppBarButton3> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: const SizedBox(),
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      flexibleSpace: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                  shadows: const [
-                    BoxShadow(
-                      color: Color(0x4CA7AEC1),
-                      blurRadius: 80,
-                      offset: Offset(0, 4),
-                      spreadRadius: 0,
-                    ),
-                  ],
-                ),
-                child: IconButton(
-                  icon: const Icon(
-                    Icons.arrow_back_ios_new,
-                    size: 20,
-                    color: Colors.black,
-                    weight: 100.0,
-                  ),
-                  onPressed: () {
-                    Navigator.pop(
-                        context); // Replace with the desired navigation action
-                  },
-                ),
-              ),
-            ),
-            Expanded(
-              child: Center(
-                child: Text(
-                  widget.text,
-                  style: TextStyles.textStyle16.copyWith(
-                      fontWeight: FontWeight.w600, color: Colors.black),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+      leading: Container(
+        margin: const EdgeInsets.all(8),
+        decoration: ShapeDecoration(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shadows: const [
+            BoxShadow(
+              color: Color(0x4CA7AEC1),
+              blurRadius: 80,
+              offset: Offset(0, 4),
+              spreadRadius: 0,
             ),
           ],
+        ),
+        child: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            size: 20,
+            color: Colors.black,
+            weight: 100.0,
+          ),
+          onPressed: () {
+            Navigator.pop(
+                context); // Replace with the desired navigation action
+          },
+        ),
+      ),
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      title: Center(
+        child: Text(
+          widget.text,
+          style: TextStyles.textStyle16
+              .copyWith(fontWeight: FontWeight.w600, color: Colors.black),
+          textAlign: TextAlign.center,
         ),
       ),
     );
