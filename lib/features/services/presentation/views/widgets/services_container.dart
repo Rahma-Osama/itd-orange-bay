@@ -23,7 +23,9 @@ class ServicesContainer extends StatelessWidget {
 
     return GestureDetector(
       onTap: () => Navigator.push(
-          context, MaterialPageRoute(builder: (context) => screens[index])),
+        context,
+        MaterialPageRoute(builder: (context) => screens[index]),
+      ),
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
