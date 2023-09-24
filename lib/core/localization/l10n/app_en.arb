@@ -42,6 +42,10 @@
   "showMore": "Show more",
   "showLess" : "Show less",
   "ourPrograms": "Our Programs",
+  "restaurants" :"Restaurants",
+  "activities" :"Activities",
+  "photos" : "Photos",
+  "videos" :"Videos",
    "profile" : "My Profile",
   "whishlist" : "My Whishlist",
   "aboutUs" : "About Us",
@@ -50,6 +54,5 @@
   "all": "All",
   "panoramicView" :"Panoramic View",
   "relax" : "Relax"
-
 
 }

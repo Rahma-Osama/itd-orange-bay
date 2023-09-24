@@ -6,13 +6,14 @@ class ServicesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: GridView.builder(
         itemCount: 4,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisSpacing: MediaQuery.of(context).size.height / 40,
-          crossAxisSpacing: MediaQuery.of(context).size.height / 40,
+          mainAxisSpacing: size.height / 40,
+          crossAxisSpacing: size.height / 40,
           childAspectRatio: .9,
           crossAxisCount: 2,
         ),
