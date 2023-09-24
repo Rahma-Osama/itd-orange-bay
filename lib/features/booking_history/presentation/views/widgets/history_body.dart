@@ -21,18 +21,28 @@ class _HistoryBodyState extends State<HistoryBody> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              TabBar(
-                unselectedLabelColor: Colors.black,
-                labelColor: AppColors.deepOrange,
-                indicatorColor: Colors.orange,
-                tabs: [
-                  Tab(
-                    text: locale.past,
-                  ),
-                  Tab(
-                    text: locale.upcoming,
-                  ),
-                ],
+              Container(
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15), // Creates border
+                    color: Colors.white),
+                child: TabBar(
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicator: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15), // Creates border
+                      color: AppColors.deepOrange),
+                  unselectedLabelColor: Colors.black,
+                  labelColor: Colors.white,
+                  indicatorColor: Colors.orange,
+                  tabs: [
+                    Tab(
+                      text: locale.past,
+                    ),
+                    Tab(
+                      text: locale.upcoming,
+                    ),
+                  ],
+                ),
               ),
               const Expanded(
                 child: Padding(
