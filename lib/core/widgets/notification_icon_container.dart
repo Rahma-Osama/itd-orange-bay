@@ -8,7 +8,7 @@ class NotificationIconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final preference = getPreferenceService(context);
+    final preference = getPreferenceService(context, listen: false);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
@@ -30,8 +30,8 @@ class NotificationIconContainer extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                   bottom: 8.0,
-                  left: preference.isEn() ? 8 : 0,
-                  right: preference.isEn() ? 0 : 8),
+                  left: preference.isEn() ? 14 : 0,
+                  right: preference.isEn() ? 0 : 14),
               child: Align(
                   alignment: Alignment.center,
                   child: CircleAvatar(
