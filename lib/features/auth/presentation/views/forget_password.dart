@@ -12,9 +12,9 @@ class ForgetPasswordView extends StatefulWidget {
 class _ForgetPasswordViewState extends State<ForgetPasswordView> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
-        appBar: HomeAppBar(),
+        appBar: const HomeAppBar(),
         body: ForgetPasswordBody(),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/features/auth/presentation/views/forget_password.dart';
 import 'package:orange_bay_new/features/auth/presentation/views/signup_view.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/book_view.dart';
 
@@ -74,12 +75,18 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 20.0,
               ),
-              Container(
-                alignment: Alignment.centerRight,
-                child: const Text(
-                  'FORGET PASSWORD?',
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w300),
+              GestureDetector(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ForgetPasswordView())),
+                child: Container(
+                  alignment: Alignment.centerRight,
+                  child: const Text(
+                    'FORGET PASSWORD?',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w300),
+                  ),
                 ),
               ),
               const SizedBox(
