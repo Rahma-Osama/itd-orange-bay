@@ -31,14 +31,20 @@ class _ProBodyState extends State<ProBody> {
     selectedImage = widget
         .initialBackgroundImage; // Initialize selectedImage with initial value
   }
-  List<bool> programDetailsIsSelected=[true,false,false];
+
+  List<bool> programDetailsIsSelected = [true, false, false];
 
   @override
   Widget build(BuildContext context) {
     final locale = getL10n(context);
-    List<String> programDetails=[locale.overview,locale.programs,locale.reviews];
+    List<String> programDetails = [
+      locale.overview,
+      locale.programs,
+      locale.reviews
+    ];
 
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
           Stack(
@@ -87,7 +93,9 @@ class _ProBodyState extends State<ProBody> {
           Container(
             clipBehavior: Clip.antiAlias,
             margin: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height / 40, left: 16,right: 16),
+                top: MediaQuery.of(context).size.height / 40,
+                left: 16,
+                right: 16),
             height: MediaQuery.of(context).size.height / 20,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             child: ListView.builder(

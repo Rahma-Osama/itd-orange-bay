@@ -60,4 +60,9 @@
   "edit":"Edit",
   "print":"Print",
   "cancel":"Cancel"
+  "send" : "Send",
+  "goBack" : "Go back",
+  "resetPassword" : "Reset Password",
+  "enterEmail" : "Enter your email"
+
 }
