@@ -4,8 +4,8 @@ import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/core/utils/number_locale.dart';
 
-class ContainerBody extends StatelessWidget {
-  const ContainerBody({Key? key}) : super(key: key);
+class PastItem extends StatelessWidget {
+  const PastItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

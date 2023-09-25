@@ -59,7 +59,7 @@
   "total":"Total",
   "edit":"Edit",
   "print":"Print",
-  "cancel":"Cancel"
+  "cancel":"Cancel",
   "send" : "Send",
   "goBack" : "Go back",
   "resetPassword" : "Reset Password",

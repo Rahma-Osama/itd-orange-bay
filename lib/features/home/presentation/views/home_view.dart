@@ -35,7 +35,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           padding: const EdgeInsets.all(12),
           clipBehavior: Clip.antiAliasWithSaveLayer,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
+               borderRadius: BorderRadius.circular(
                   MediaQuery.of(context).size.width / 40)),
           child: SalomonBottomBar(
             backgroundColor: Colors.white,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/container_body.dart';
+import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/past_item.dart';
 
 class PastView extends StatelessWidget {
   const PastView({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class PastView extends StatelessWidget {
             ),
           ],
         ),
-        child: const ContainerBody(),
+        child: const PastItem(),
       ),
     );
   }
