@@ -53,6 +53,10 @@
   "logout" : "Logout",
   "all": "All",
   "panoramicView" :"Panoramic View",
-  "relax" : "Relax"
+  "relax" : "Relax",
+  "send" : "Send",
+  "goBack" : "Go back",
+  "resetPassword" : "Reset Password",
+  "enterEmail" : "Enter your email"
 
 }
