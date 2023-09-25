@@ -8,8 +8,7 @@ Widget upcomingButton({
   required context,
 }) {
   return Container(
-    width: MediaQuery.of(context).size.width / 5,
-    height: MediaQuery.of(context).size.height / 18,
+    width: MediaQuery.of(context).size.width/5,
     alignment: Alignment.center,
     decoration: BoxDecoration(
         color: bgcolor,
