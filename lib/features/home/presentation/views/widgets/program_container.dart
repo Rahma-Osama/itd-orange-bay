@@ -11,9 +11,9 @@ class ProgramContainer extends StatelessWidget {
 
   const ProgramContainer(
       {Key? key,
-      this.whishScreen = false,
-      required this.animationController,
-      required this.animation})
+        this.whishScreen = false,
+        required this.animationController,
+        required this.animation})
       : super(key: key);
 
   @override
@@ -54,20 +54,23 @@ class ProgramContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                  height: 250,
-                  width: double.infinity,
-                  child: Image.asset(
-                    'assets/images/img_1.png',
-                    fit: BoxFit.cover,
-                  )),
+                height: 250,
+                width: double.infinity,
+                child: Image.asset(
+                  'assets/images/img_1.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      locale.goIsland,
-                      style: TextStyles.textStyle16,
+                    Expanded(
+                      child: Text(
+                        locale.goIsland,
+                        style: TextStyles.textStyle16,
+                      ),
                     ),
                     Row(
                       children: [
@@ -81,49 +84,50 @@ class ProgramContainer extends StatelessWidget {
                         ),
                         Text(
                           '(92)',
-                          style: TextStyles.textStyle12
-                              .copyWith(color: AppColors.davyGrey),
+                          style: TextStyles.textStyle12.copyWith(color: AppColors.davyGrey),
                         )
                       ],
                     )
                   ],
                 ),
               ),
-            Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-    Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-      child: Row(
-        children: [
-          Text(
-            "Starting from ",
-            style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400),
-          ),
-          Text(
-            "1000 EGP per person",
-            style: TextStyles.textStyle14,
-          ),
-        ],
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsets.only(left: 16.0, bottom: 8),
-      child: Row(
-        children: [
-          Text(
-            "Starting from ",
-            style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400),
-          ),
-          Text(
-            "700 EGP per child",
-            style: TextStyles.textStyle14,
-          ),
-        ],
-      ),
-    ),
-  ],   
-            ), 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Starting from ",
+                          style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400 , fontSize: 10),
+                        ),
+                        Text(
+                          "1000 EGP per person",
+                          style: TextStyles.textStyle14.copyWith(fontSize: 12),
+
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, bottom: 8),
+                    child: Row(
+                      children: [
+                        Text(
+                          "Starting from ",
+                          style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400,fontSize: 10),
+                        ),
+                        Text(
+                          "700 EGP per child",
+                          style: TextStyles.textStyle14.copyWith(fontSize: 10),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
             ],
           ),
         ),
