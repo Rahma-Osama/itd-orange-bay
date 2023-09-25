@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/constants/assets_data.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 
@@ -9,6 +10,7 @@ class ForgetPasswordBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     final deviceSize = MediaQuery.of(context).size;
     return Container(
       alignment: Alignment.center,
@@ -34,51 +36,62 @@ class ForgetPasswordBody extends StatelessWidget {
                 width: deviceSize.width * .85,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Flexible(
-                      flex: deviceSize.width > 600 ? 2 : 1,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Reset Password",
-                              style: TextStyles.textStyle16
-                                  .copyWith(color: Colors.black)),
-                          const SizedBox(
-                            height: 40.0,
-                          ),
-                          TextFormField(
-                            controller: emailController,
-                            decoration: const InputDecoration(
-                              labelText: 'Enter your Email',
-                              prefixIcon: Icon(
-                                Icons.email_outlined,
-                              ),
-                              border: OutlineInputBorder(),
-                            ),
-                            onFieldSubmitted: (value) {
-                              debugPrint(value);
-                            },
-                          ),
-                          const SizedBox(
-                            height: 20.0,
-                          ),
-                          Container(
-                            width: double.infinity,
-                            height: 50,
-                            color: AppColors.deepOrange,
-                            child: MaterialButton(
-                              onPressed: () {},
-                              child: const Text(
-                                'Send',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
+                    Text(
+                      locale.resetPassword,
+                      style:
+                          TextStyles.textStyle16.copyWith(color: Colors.black),
+                    ),
+                    const SizedBox(
+                      height: 40.0,
+                    ),
+                    TextFormField(
+                      controller: emailController,
+                      decoration: InputDecoration(
+                        labelText: locale.enterEmail,
+                        prefixIcon: const Icon(
+                          Icons.email_outlined,
+                        ),
+                        border: const OutlineInputBorder(),
+                      ),
+                      onFieldSubmitted: (value) {
+                        debugPrint(value);
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Text(
+                            locale.goBack,
+                            style: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w300,
                             ),
                           ),
-                        ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      color: AppColors.deepOrange,
+                      child: MaterialButton(
+                        onPressed: () {},
+                        child: Text(
+                          locale.send,
+                          style: const TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ],
