@@ -55,6 +55,9 @@
   "logout" : "Logout",
   "all": "All",
   "panoramicView" :"Panoramic View",
-  "relax" : "Relax"
-
+  "relax" : "Relax",
+  "total":"Total",
+  "edit":"Edit",
+  "print":"Print",
+  "cancel":"Cancel"
 }
