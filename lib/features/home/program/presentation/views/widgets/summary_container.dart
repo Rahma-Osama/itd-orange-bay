@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
 
@@ -7,6 +8,7 @@ class SummaryContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     final bookServices = getBookServices(context);
     final size =MediaQuery.of(context).size;
     return Padding(
@@ -23,7 +25,7 @@ class SummaryContainer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Summary',
+              locale.summary,
               style: TextStyles.textStyle16
                   .copyWith(fontWeight: FontWeight.w600, color: Colors.black),
             ),
@@ -34,13 +36,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Adult x ${bookServices.adultCounter}',
+                  '${locale.adult} * ${bookServices.adultCounter} ',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Text(
-                  '${210* bookServices.adultCounter} EGP',
+                  '${210* bookServices.adultCounter} ${locale.eg}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
@@ -52,13 +54,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Children x ${bookServices.childCounter}',
+                  '${locale.child} * ${bookServices.childCounter}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
-                Text('${53.0 * bookServices.childCounter} EGP',
+                Text('${53.0 * bookServices.childCounter} ${locale.eg}',
                     style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
@@ -69,13 +71,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Boat x ${bookServices.boatCounter}',
+                  '${locale.boat} * ${bookServices.boatCounter}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
-                Text('${250.0 * bookServices.boatCounter} EGP',
+                Text('${250.0 * bookServices.boatCounter} ${locale.eg}',
                     style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
@@ -92,13 +94,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Total',
+                  locale.total,
                   style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),
                 const SizedBox(width: 35),
                 Text(
-                  '${(210* bookServices.adultCounter)+(53.0 * bookServices.childCounter)+(250.0 * bookServices.boatCounter)} EGP',
+                  '${(210* bookServices.adultCounter)+(53.0 * bookServices.childCounter)+(250.0 * bookServices.boatCounter)} ${locale.eg}',
                   style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),

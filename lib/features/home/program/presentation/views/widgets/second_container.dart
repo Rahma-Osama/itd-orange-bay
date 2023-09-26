@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
@@ -15,6 +16,7 @@ class SecondContainer extends StatefulWidget {
 class _SecondContainerState extends State<SecondContainer> {
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     final bookServices = getBookServices(context);
     return Padding(
       padding: const EdgeInsets.all(10.0),
@@ -31,7 +33,7 @@ class _SecondContainerState extends State<SecondContainer> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'When are you going?',
+                locale.whenUAreGoing,
                 style: TextStyles.textStyle14.copyWith(
                   fontWeight: FontWeight.w400,
                 ),
@@ -46,14 +48,14 @@ class _SecondContainerState extends State<SecondContainer> {
               const PickTime(),
               const SizedBox(height: 24),
               Text(
-                'How many tickets?',
+                locale.howManyTickets,
                 style: TextStyles.textStyle14
                     .copyWith(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 24),
               Row(
                 children: [
-                  Text('Adult (age 12-99)',
+                  Text('${locale.adult} (${locale.age} 12-99)',
                       style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
                   m2Expanded(context, 'adultCounter'),
@@ -63,7 +65,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 12,
               ),
               Text(
-                '${bookServices.adultCounter * 210.00} EGP',
+                '${bookServices.adultCounter * 210.00} ${locale.eg}',
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
@@ -71,7 +73,7 @@ class _SecondContainerState extends State<SecondContainer> {
               const SizedBox(height: 15),
               Row(
                 children: [
-                  Text('Child (age 5-11)',
+                  Text('${locale.child} (${locale.age} 5-11)',
                       style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
                   m2Expanded(context, 'childCounter'),
@@ -81,7 +83,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 12,
               ),
               Text(
-                '${bookServices.childCounter * 53.00} EGP',
+                '${bookServices.childCounter * 53.00} ${locale.eg}',
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
@@ -94,7 +96,7 @@ class _SecondContainerState extends State<SecondContainer> {
                     width: 10,
                   ),
                   Text(
-                    'Children under 4 are free',
+                    locale.childrenUnder4,
                     style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w400),
                   ),
@@ -109,7 +111,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   ),
                   Flexible(
                     child: Text(
-                      'For a full refund, cancel at least 24 hours in advance of the start date of the experience.',
+                      locale.refundStrategy,
                       style: TextStyles.textStyle14
                           .copyWith(fontWeight: FontWeight.w400),
                       softWrap: true,
@@ -126,7 +128,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 8,
               ),
               Text(
-                'Additional Services',
+                locale.additionalServices,
                 style: TextStyles.textStyle14
                     .copyWith(fontWeight: FontWeight.w600),
               ),
@@ -136,7 +138,7 @@ class _SecondContainerState extends State<SecondContainer> {
               Row(
                 children: [
                   Text(
-                    'Boat (${250 * bookServices.boatCounter} EGP)',
+                    '${locale.boat} ${250 * bookServices.boatCounter} ${locale.eg}',
                     style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
@@ -150,7 +152,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 12,
               ),
               Text(
-                'Boat cruise with a snorkeling stop',
+                locale.boatCruise,
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),

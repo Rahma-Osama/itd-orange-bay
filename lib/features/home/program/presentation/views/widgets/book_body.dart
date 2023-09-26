@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/custom_button.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/second_container.dart';
@@ -15,6 +16,7 @@ class BookBody extends StatefulWidget {
 class _BookBodyState extends State<BookBody> {
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
     return SingleChildScrollView(
         child: Column(
           children: [
@@ -24,7 +26,7 @@ class _BookBodyState extends State<BookBody> {
               padding: const EdgeInsets.all(8.0),
               child: CustomButton(
                 backgroundColor: AppColors.deepOrange,
-                text: 'Pay Now',
+                text: locale.payNow,
                 func: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const UserView()));

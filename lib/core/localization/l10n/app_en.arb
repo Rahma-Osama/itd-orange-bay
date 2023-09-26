@@ -57,6 +57,20 @@
   "send" : "Send",
   "goBack" : "Go back",
   "resetPassword" : "Reset Password",
-  "enterEmail" : "Enter your email"
+  "enterEmail" : "Enter your email",
+  "bookingDetails" : "Booking Details",
+  "whenUAreGoing" :"When are you going?",
+  "howManyTickets" : "How many tickets?" ,
+  "adult" : "adult" ,
+  "age" : "age",
+  "child" : "child" ,
+  "childrenUnder4" : "Children under 4 are free",
+  "refundStrategy" :"For a full refund, cancel at least 24 hours in advance of the start date of the experience.",
+  "additionalServices" : "Additional Services" ,
+  "boat" : "Boat",
+  "boatCruise" : "Boat Cruise with a snorkeling stop",
+  "summary" : "Summary",
+  "total": "Total",
+  "payNow" : "Pay Now"
 
 }
