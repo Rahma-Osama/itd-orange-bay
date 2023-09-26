@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
 
 class SummaryContainer extends StatelessWidget {
   const SummaryContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final bookServices = getBookServices(context);
+    final size =MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: 20, vertical: MediaQuery.of(context).size.height / 50),
+          horizontal: 10, vertical: size.height / 50),
       child: Container(
-        height: MediaQuery.of(context).size.height * .25,
         padding: const EdgeInsets.all(16),
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
@@ -32,13 +34,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Adult x2',
+                  'Adult x ${bookServices.adultCounter}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Text(
-                  '750 EGP',
+                  '${210* bookServices.adultCounter} EGP',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
@@ -50,13 +52,30 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Children x1',
+                  'Children x ${bookServices.childCounter}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
-                Text('Free',
+                Text('${53.0 * bookServices.childCounter} EGP',
+                    style: TextStyles.textStyle14.copyWith(
+                      fontWeight: FontWeight.w400,
+                    )),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Boat x ${bookServices.boatCounter}',
+                  style: TextStyles.textStyle14.copyWith(
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const SizedBox(width: 35),
+                Text('${250.0 * bookServices.boatCounter} EGP',
                     style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
@@ -79,7 +98,7 @@ class SummaryContainer extends StatelessWidget {
                 ),
                 const SizedBox(width: 35),
                 Text(
-                  '750 EGP',
+                  '${(210* bookServices.adultCounter)+(53.0 * bookServices.childCounter)+(250.0 * bookServices.boatCounter)} EGP',
                   style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),

@@ -16,24 +16,23 @@ class _BookBodyState extends State<BookBody> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          const SecondContainer(),
-          const SummaryContainer(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CustomButton(
-              backgroundColor: AppColors.deepOrange,
-              text: 'Pay Now',
-              func: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const UserView()));
-              },
-              width: MediaQuery.of(context).size.width * .48,
+        child: Column(
+          children: [
+            const SecondContainer(),
+            const SummaryContainer(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomButton(
+                backgroundColor: AppColors.deepOrange,
+                text: 'Pay Now',
+                func: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const UserView()));
+                },
+                width: MediaQuery.of(context).size.width * .48,
+              ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
+          ],
+        ),
+      );  }
 }
