@@ -17,6 +17,7 @@ class _PickTimeState extends State<PickTime> {
       width: 350,
       height: 55,
       child: defaultText(
+        readOnly: true,
         controller: timeController,
         type: TextInputType.datetime,
         prefix: Icons.watch_later_outlined,

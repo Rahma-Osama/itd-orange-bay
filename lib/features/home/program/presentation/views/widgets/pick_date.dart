@@ -18,6 +18,7 @@ class _PickDate2State extends State<PickDate2> {
       width: 350,
       height: 55,
       child: defaultText(
+        readOnly: true,
         controller: _fromDateController,
         type: TextInputType.datetime,
         prefix: Icons.calendar_today_rounded,

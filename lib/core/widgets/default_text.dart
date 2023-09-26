@@ -14,8 +14,10 @@ Widget defaultText({
   Function()? pressed,
   Function()? tap,
   bool? enable,
+  bool readOnly=false
 }) =>
     TextFormField(
+      readOnly: readOnly,
       onTap: tap,
       enabled: enable,
       controller: controller,
