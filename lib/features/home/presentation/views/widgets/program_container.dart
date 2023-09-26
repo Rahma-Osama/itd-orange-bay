@@ -11,9 +11,9 @@ class ProgramContainer extends StatelessWidget {
 
   const ProgramContainer(
       {Key? key,
-        this.whishScreen = false,
-        required this.animationController,
-        required this.animation})
+      this.whishScreen = false,
+      required this.animationController,
+      required this.animation})
       : super(key: key);
 
   @override
@@ -84,7 +84,8 @@ class ProgramContainer extends StatelessWidget {
                         ),
                         Text(
                           '(92)',
-                          style: TextStyles.textStyle12.copyWith(color: AppColors.davyGrey),
+                          style: TextStyles.textStyle12
+                              .copyWith(color: AppColors.davyGrey),
                         )
                       ],
                     )
@@ -95,17 +96,18 @@ class ProgramContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                     child: Row(
                       children: [
                         Text(
                           "Starting from ",
-                          style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400 , fontSize: 10),
+                          style: TextStyles.textStyle12.copyWith(
+                              fontWeight: FontWeight.w400, fontSize: 10),
                         ),
                         Text(
                           "1000 EGP per person",
                           style: TextStyles.textStyle14.copyWith(fontSize: 12),
-
                         ),
                       ],
                     ),
@@ -116,7 +118,8 @@ class ProgramContainer extends StatelessWidget {
                       children: [
                         Text(
                           "Starting from ",
-                          style: TextStyles.textStyle12.copyWith(fontWeight: FontWeight.w400,fontSize: 10),
+                          style: TextStyles.textStyle12.copyWith(
+                              fontWeight: FontWeight.w400, fontSize: 10),
                         ),
                         Text(
                           "700 EGP per child",
@@ -127,7 +130,6 @@ class ProgramContainer extends StatelessWidget {
                   ),
                 ],
               ),
-
             ],
           ),
         ),

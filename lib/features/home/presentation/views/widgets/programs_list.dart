@@ -37,31 +37,37 @@ class _ProgramsListState extends State<ProgramsList>
     final size = MediaQuery.of(context).size;
 
     return BottomTopMoveAnimationView(
-        animationController: animationController!,
-        child: SizedBox(
-          height: size.height * 0.65,
-          child: ListView.builder(
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              itemCount: 3,
-              itemBuilder: (context, index) {
-                var animation = Tween(begin: 0.0, end: 1.0).animate(
-                    CurvedAnimation(
-                        parent: animationController!,
-                        curve: Interval((1 / 10) * index, 1.0,
-                            curve: Curves.fastOutSlowIn)));
-                return GestureDetector(
-                    onTap: () => Navigator.push(
-                        context,
-                        PageTransition(
-                            child: const ProgramView(),
-                            type: PageTransitionType.rightToLeftWithFade,
-                            duration: const Duration(seconds: 1))),
-                    child: ProgramContainer(
-                      animation: animation,
-                      animationController: animationController!,
-                    ));
-              }),
-        ));
+      animationController: animationController!,
+      child: SizedBox(
+        height: size.height * 0.65,
+        child: ListView.builder(
+            physics: const BouncingScrollPhysics(),
+            scrollDirection: Axis.horizontal,
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              var animation = Tween(begin: 0.0, end: 1.0).animate(
+                CurvedAnimation(
+                  parent: animationController!,
+                  curve: Interval((1 / 10) * index, 1.0,
+                      curve: Curves.fastOutSlowIn),
+                ),
+              );
+              return GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const ProgramView(),
+                    type: PageTransitionType.rightToLeftWithFade,
+                    duration: const Duration(seconds: 1),
+                  ),
+                ),
+                child: ProgramContainer(
+                  animation: animation,
+                  animationController: animationController!,
+                ),
+              );
+            }),
+      ),
+    );
   }
 }
