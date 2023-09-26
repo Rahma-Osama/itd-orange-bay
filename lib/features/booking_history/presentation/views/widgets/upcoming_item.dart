@@ -2,17 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/core/utils/number_locale.dart';
 import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/upcoming_button.dart';
+
 class UpcomingItem extends StatelessWidget {
   const UpcomingItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final locale=getL10n(context);
+    final locale = getL10n(context);
+    final priceNumber = numberLocale(context, 100);
     final List buttonData = [
       [locale.edit, AppColors.deepOrange, AppColors.deepOrange, Colors.white],
       [locale.print, Colors.white, AppColors.deepOrange, AppColors.deepOrange],
-      [locale.cancel, const Color(0xFFE72C2C), const Color(0xFFE72C2C), Colors.white]
+      [
+        locale.cancel,
+        const Color(0xFFE72C2C),
+        const Color(0xFFE72C2C),
+        Colors.white
+      ]
     ];
     return Column(
       children: [
@@ -113,7 +121,7 @@ class UpcomingItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 35),
                         Text(
-                          '100 ${locale.eg}',
+                          '$priceNumber ${locale.eg}',
                           style: TextStyles.textStyle16.copyWith(
                               fontWeight: FontWeight.w600, color: Colors.black),
                         ),
@@ -135,12 +143,16 @@ class UpcomingItem extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 3,
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) =>  upcomingButton(
+                  itemBuilder: (context, index) => upcomingButton(
                       label: buttonData[index][0],
                       bgcolor: buttonData[index][1],
                       borderColor: buttonData[index][2],
                       txtcolor: buttonData[index][3],
-                      context: context), separatorBuilder: (BuildContext context, int index)=>SizedBox(width:  MediaQuery.of(context).size.width/12,),
+                      context: context),
+                  separatorBuilder: (BuildContext context, int index) =>
+                      SizedBox(
+                    width: MediaQuery.of(context).size.width / 12,
+                  ),
                 ),
               ),
             )),
