@@ -59,7 +59,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   Text('${locale.adult} (${locale.age} ${numberLocale(context, 12)} - ${numberLocale(context, 99)})',
                       style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
-                  m2Expanded(context, 'adultCounter'),
+                  counterBuilder(context, 'adultCounter'),
                 ],
               ),
               const SizedBox(
@@ -77,7 +77,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   Text('${locale.child} (${locale.age} ${numberLocale(context,5)}-${numberLocale(context,11)})',
                       style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
-                  m2Expanded(context, 'childCounter'),
+                  counterBuilder(context, 'childCounter'),
                 ],
               ),
               const SizedBox(
@@ -143,7 +143,7 @@ class _SecondContainerState extends State<SecondContainer> {
                     style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
-                  m2Expanded(context, 'boatCounter'),
+                  counterBuilder(context, 'boatCounter'),
                   const SizedBox(
                     width: 15.0,
                   ),
@@ -165,7 +165,7 @@ class _SecondContainerState extends State<SecondContainer> {
     );
   }
 
-  Expanded m2Expanded(BuildContext context, String type) {
+  Expanded counterBuilder(BuildContext context, String type) {
     final bookServices = getBookingServices(context);
     int count;
     Function() increment;
