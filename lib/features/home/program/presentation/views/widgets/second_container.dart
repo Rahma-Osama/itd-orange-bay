@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
-import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
+import 'package:orange_bay_new/features/home/program/presentation/manager/booking_services.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_date.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_time.dart';
 
@@ -17,7 +17,7 @@ class _SecondContainerState extends State<SecondContainer> {
   @override
   Widget build(BuildContext context) {
     final locale = getL10n(context);
-    final bookServices = getBookServices(context);
+    final bookServices = getBookingServices(context);
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
@@ -165,7 +165,7 @@ class _SecondContainerState extends State<SecondContainer> {
   }
 
   Expanded m2Expanded(BuildContext context, String type) {
-    final bookServices = getBookServices(context);
+    final bookServices = getBookingServices(context);
     int count;
     Function() increment;
     Function() decrement;

@@ -1,19 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-class BookServices extends ChangeNotifier{
+class BookingServices extends ChangeNotifier{
   int adultCounter = 0;
   int childCounter = 0;
   int boatCounter = 0;
-  //
-  // void counterIncrement(counter){
-  //   counter++;
-  //   notifyListeners();
-  // }
-  // void counterDecrement(counter){
-  //   counter>0?counter--: counter;
-  //   notifyListeners();
-  // }
 
   void counterIncrement(String counterType) {
     switch (counterType) {
@@ -50,5 +41,5 @@ class BookServices extends ChangeNotifier{
   }
 }
 
-BookServices getBookServices(BuildContext context,{bool listen = true}) =>
-    Provider.of<BookServices>(context, listen:listen);
+BookingServices getBookingServices(BuildContext context,{bool listen = true}) =>
+    Provider.of<BookingServices>(context, listen:listen);

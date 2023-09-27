@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
-import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
+import 'package:orange_bay_new/features/home/program/presentation/manager/booking_services.dart';
 
 class SummaryContainer extends StatelessWidget {
   const SummaryContainer({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class SummaryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locale = getL10n(context);
-    final bookServices = getBookServices(context);
+    final bookServices = getBookingServices(context);
     final size =MediaQuery.of(context).size;
     return Padding(
       padding: EdgeInsets.symmetric(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/services/preference/preference_service.dart';
 import 'package:orange_bay_new/core/services/api/api_service.dart';
-import 'package:orange_bay_new/features/home/program/presentation/manager/book_services.dart';
+import 'package:orange_bay_new/features/home/program/presentation/manager/booking_services.dart';
 import 'package:orange_bay_new/features/splash/presentation/views/splash_view.dart';
 import 'package:provider/provider.dart';
 
@@ -15,8 +15,8 @@ void main() {
         ChangeNotifierProvider<PreferenceService>(
           create: (context) => PreferenceService(),
         ),
-        ChangeNotifierProvider<BookServices>(
-            create: (context) => BookServices()),
+        ChangeNotifierProvider<BookingServices>(
+            create: (context) => BookingServices()),
       ],
       child: const MyApp(),
     ),
