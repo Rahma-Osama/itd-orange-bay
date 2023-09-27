@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/core/utils/number_locale.dart';
 import 'package:orange_bay_new/features/home/program/presentation/manager/booking_services.dart';
 
 class SummaryContainer extends StatelessWidget {
@@ -36,13 +37,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '${locale.adult} * ${bookServices.adultCounter} ',
+                  '${locale.adult} * ${numberLocale(context,bookServices.adultCounter)} ',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Text(
-                  '${210* bookServices.adultCounter} ${locale.eg}',
+                  '${numberLocale(context,210* bookServices.adultCounter)} ${locale.eg}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
@@ -54,13 +55,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '${locale.child} * ${bookServices.childCounter}',
+                  '${locale.child} * ${numberLocale(context,bookServices.childCounter)}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
-                Text('${53.0 * bookServices.childCounter} ${locale.eg}',
+                Text('${numberLocale(context,53.0 * bookServices.childCounter)} ${locale.eg}',
                     style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
@@ -71,13 +72,13 @@ class SummaryContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '${locale.boat} * ${bookServices.boatCounter}',
+                  '${locale.boat} * ${numberLocale(context,bookServices.boatCounter)}',
                   style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 const SizedBox(width: 35),
-                Text('${250.0 * bookServices.boatCounter} ${locale.eg}',
+                Text('${numberLocale(context,250.0 * bookServices.boatCounter)} ${locale.eg}',
                     style: TextStyles.textStyle14.copyWith(
                       fontWeight: FontWeight.w400,
                     )),
@@ -100,7 +101,7 @@ class SummaryContainer extends StatelessWidget {
                 ),
                 const SizedBox(width: 35),
                 Text(
-                  '${(210* bookServices.adultCounter)+(53.0 * bookServices.childCounter)+(250.0 * bookServices.boatCounter)} ${locale.eg}',
+                  '${numberLocale(context,(210* bookServices.adultCounter)+(53.0 * bookServices.childCounter)+(250.0 * bookServices.boatCounter))} ${locale.eg}',
                   style: TextStyles.textStyle16.copyWith(
                       fontWeight: FontWeight.w600, color: Colors.black),
                 ),
