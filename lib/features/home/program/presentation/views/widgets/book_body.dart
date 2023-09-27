@@ -18,23 +18,25 @@ class _BookBodyState extends State<BookBody> {
   Widget build(BuildContext context) {
     final locale = getL10n(context);
     return SingleChildScrollView(
-        child: Column(
-          children: [
-            const SecondContainer(),
-            const SummaryContainer(),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CustomButton(
-                backgroundColor: AppColors.deepOrange,
-                text: locale.payNow,
-                func: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const UserView()));
-                },
-                width: MediaQuery.of(context).size.width * .48,
-              ),
+      physics: const BouncingScrollPhysics(),
+      child: Column(
+        children: [
+          const SecondContainer(),
+          const SummaryContainer(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CustomButton(
+              backgroundColor: AppColors.deepOrange,
+              text: locale.payNow,
+              func: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const UserView()));
+              },
+              width: MediaQuery.of(context).size.width * .48,
             ),
-          ],
-        ),
-      );  }
+          ),
+        ],
+      ),
+    );
+  }
 }
