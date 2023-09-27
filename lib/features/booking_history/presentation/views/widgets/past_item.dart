@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/core/utils/number_locale.dart';
 
-class ContainerBody extends StatelessWidget {
-  const ContainerBody({Key? key}) : super(key: key);
+class PastItem extends StatelessWidget {
+  const PastItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
+    final priceNumber = numberLocale(context, 750);
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -98,13 +102,13 @@ class ContainerBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Total',
+                        locale.total,
                         style: TextStyles.textStyle16.copyWith(
                             fontWeight: FontWeight.w600, color: Colors.black),
                       ),
                       const SizedBox(width: 35),
                       Text(
-                        '750 EGP',
+                        '$priceNumber ${locale.eg}',
                         style: TextStyles.textStyle16.copyWith(
                             fontWeight: FontWeight.w600, color: Colors.black),
                       ),

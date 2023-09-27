@@ -42,6 +42,8 @@
   "showMore": "عرض المزيد",
   "showLess" : "عرض أقل",
   "ourPrograms" : "برامجنا",
+  "past": "السابق",
+  "upcoming" : "القادم",
    "restaurants" : "مطاعم",
     "activities": "أنشطة",
     "photos" : "صور",
@@ -53,8 +55,14 @@
    "logout" : "تسجيل خروج",
    "all": "الجميع",
    "panoramicView" :"مناظر بانورامية",
-   "relax" : "استرخاء"
-
-
+   "relax" : "استرخاء",
+   "total":"الإجمالي",
+    "edit":"تعديل",
+    "print":"طباعة",
+    "cancel":"إلغاء",
+    "send" : "إرسال",
+    "goBack" : "رجوع",
+    "resetPassword" : "إعادة تعيين كلمة المرور",
+    "enterEmail" : "أدخل بريدك الإلكتروني"
 
 }

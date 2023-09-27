@@ -3,7 +3,7 @@ import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/widgets/home_app_bar.dart';
 import 'package:orange_bay_new/features/home/presentation/views/widgets/home_body.dart';
-import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/book_body.dart';
+import 'package:orange_bay_new/features/booking_history/presentation/views/widgets/history_body.dart';
 import 'package:orange_bay_new/features/more_page/presentation/views/more_view.dart';
 import 'package:orange_bay_new/features/services/presentation/views/Services_view.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -21,8 +21,8 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final List<Widget> screens = [
-      const HomeBody(),
-      const BookBody(),
+       HomeBody(),
+      const HistoryBody(),
       const ServicesView(),
       const MoreView(),
     ];
@@ -35,7 +35,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           padding: const EdgeInsets.all(12),
           clipBehavior: Clip.antiAliasWithSaveLayer,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
+               borderRadius: BorderRadius.circular(
                   MediaQuery.of(context).size.width / 40)),
           child: SalomonBottomBar(
             backgroundColor: Colors.white,
