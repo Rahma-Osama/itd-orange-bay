@@ -27,8 +27,8 @@ class _PickTimeState extends State<PickTime> {
             context: context,
             initialTime: TimeOfDay.now(),
           ).then((value) {
-            timeController.text = dateTimeFormatter(context,value as DateTime,format: 'jm');
-            // debugPrint(value.format(context));
+            timeController.text = dateTimeFormatter(context,DateTime(0,0 ,0, value!.hour, value!.minute),format: 'jm');
+            debugPrint(value.format(context));
           });
         },
         validate: (value) {

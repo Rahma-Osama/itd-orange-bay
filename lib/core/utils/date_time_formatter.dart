@@ -11,7 +11,7 @@ import 'package:orange_bay_new/core/services/preference/preference_service.dart'
 /// * "jm" => 6:00PM
 String dateTimeFormatter(BuildContext context, DateTime dateTime,
     {String format = "yMMMd"}) {
-  final preferenceService = getPreferenceService(context);
+  final preferenceService = getPreferenceService(context,listen: false);
   var formatter = DateFormat(format, preferenceService.locale.languageCode);
   return formatter.format(dateTime);
 }
