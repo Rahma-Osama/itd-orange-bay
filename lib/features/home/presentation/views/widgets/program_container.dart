@@ -61,6 +61,7 @@ class ProgramContainer extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Row(
@@ -113,7 +114,7 @@ class ProgramContainer extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, bottom: 8),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                     child: Row(
                       children: [
                         Text(
@@ -123,7 +124,7 @@ class ProgramContainer extends StatelessWidget {
                         ),
                         Text(
                           "700 EGP per child",
-                          style: TextStyles.textStyle14.copyWith(fontSize: 10),
+                          style: TextStyles.textStyle14.copyWith(fontSize: 12),
                         ),
                       ],
                     ),
