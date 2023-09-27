@@ -93,43 +93,39 @@ class ProgramContainer extends StatelessWidget {
                   ],
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Starting from ",
-                          style: TextStyles.textStyle12.copyWith(
-                              fontWeight: FontWeight.w400, fontSize: 10),
-                        ),
-                        Text(
-                          "1000 EGP per person",
-                          style: TextStyles.textStyle14.copyWith(fontSize: 12),
-                        ),
-                      ],
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                child: Row(
+                  children: [
+                    Text(
+                      locale.startsFrom,
+                      style: TextStyles.textStyle12
+                          .copyWith(fontWeight: FontWeight.w400),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                    child: Row(
-                      children: [
-                        Text(
-                          "Starting from ",
-                          style: TextStyles.textStyle12.copyWith(
-                              fontWeight: FontWeight.w400, fontSize: 10),
-                        ),
-                        Text(
-                          "700 EGP per child",
-                          style: TextStyles.textStyle14.copyWith(fontSize: 12),
-                        ),
-                      ],
+                    Text(
+                      locale.personPrice,
+                      style: TextStyles.textStyle14,
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 12.0, right: 12, bottom: 8),
+                child: Row(
+                  children: [
+                    Text(
+                      locale.startsFrom,
+                      style: TextStyles.textStyle12
+                          .copyWith(fontWeight: FontWeight.w400),
                     ),
-                  ),
-                ],
+                    Text(
+                      locale.childPrice,
+                      style: TextStyles.textStyle14,
+                    )
+                  ],
+                ),
               ),
             ],
           ),
