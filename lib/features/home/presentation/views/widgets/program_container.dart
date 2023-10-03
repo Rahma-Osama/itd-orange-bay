@@ -54,20 +54,24 @@ class ProgramContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                  height: 250,
-                  width: double.infinity,
-                  child: Image.asset(
-                    'assets/images/img_1.png',
-                    fit: BoxFit.cover,
-                  )),
+                height: 250,
+                width: double.infinity,
+                child: Image.asset(
+                  'assets/images/img_1.png',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      locale.goIsland,
-                      style: TextStyles.textStyle16,
+                    Expanded(
+                      child: Text(
+                        locale.goIsland,
+                        style: TextStyles.textStyle16,
+                      ),
                     ),
                     Row(
                       children: [
@@ -122,7 +126,7 @@ class ProgramContainer extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

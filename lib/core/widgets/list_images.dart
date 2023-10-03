@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/features/services/presentation/views/gallery_view.dart';
 
+
+
 class ListImages extends StatelessWidget {
   final Function(String) onImageTap;
-
   const ListImages({Key? key, required this.onImageTap}) : super(key: key);
 
   @override
@@ -12,19 +13,14 @@ class ListImages extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           GestureDetector(
               onTap: () {
                 onImageTap('assets/images/IMG_6451.jpg');
               },
               child: const Image(image: AssetImage('assets/images/img5.png'))),
-          GestureDetector(
-              onTap: () {
-                onImageTap('assets/images/IMG_6479.jpg');
-              },
-              child:
-                  const Image(image: AssetImage('assets/images/IMG_6479.jpg'))),
+         
           GestureDetector(
               onTap: () {
                 onImageTap('assets/images/gallery/img.png');
@@ -64,3 +60,4 @@ class ListImages extends StatelessWidget {
     );
   }
 }
+

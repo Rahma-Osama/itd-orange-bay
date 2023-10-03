@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:orange_bay_new/core/localization/l10n.dart';
-
 import 'package:orange_bay_new/core/theme/text_styles.dart';
 import 'package:orange_bay_new/core/utils/number_locale.dart';
 
