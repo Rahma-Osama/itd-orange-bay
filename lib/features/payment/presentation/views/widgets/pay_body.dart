@@ -9,191 +9,194 @@ class PayBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Center(
-                child: Image(
-                    image: AssetImage(
-              'assets/images/step3.png',
-            ))),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // Set the shadow color
-                  spreadRadius: 2, // Set the spread radius of the shadow
-                  blurRadius: 6, // Set the blur radius of the shadow
-                  offset: const Offset(0, 3), // Set the offset of the shadow
-                ),
-              ],
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Center(
+                  child: Image(
+                      image: AssetImage(
+                'assets/images/step3.png',
+              ))),
             ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: MediaQuery.of(context).size.height / 90),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Center(
-                      child: Image(
-                          image: AssetImage('assets/images/pngegg (81).png'))),
-                  const SizedBox(
-                    height: 20,
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5), // Set the shadow color
+                    spreadRadius: 2, // Set the spread radius of the shadow
+                    blurRadius: 6, // Set the blur radius of the shadow
+                    offset: const Offset(0, 3), // Set the offset of the shadow
                   ),
-                  Text(
-                    'Classic Program',
-                    style: TextStyles.textStyle16.copyWith(
-                        fontWeight: FontWeight.w700, color: Colors.black),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const Text(
-                    'Cancellation Deadline: 10/3/2023',
-                    style: TextStyle(
-                      color: Color(0xFFE20D0D),
-                      fontSize: 13.37,
-                      fontFamily: 'Montserrat',
-                      fontWeight: FontWeight.w400,
+                ],
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: MediaQuery.of(context).size.height / 90),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Center(
+                        child: Image(
+                            image: AssetImage('assets/images/pngegg (81).png'))),
+                    const SizedBox(
+                      height: 20,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Date',
-                        style: TextStyles.textStyleNormal14,
+                    Text(
+                      'Classic Program',
+                      style: TextStyles.textStyle16.copyWith(
+                          fontWeight: FontWeight.w700, color: Colors.black),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Text(
+                      'Cancellation Deadline: 10/3/2023',
+                      style: TextStyle(
+                        color: Color(0xFFE20D0D),
+                        fontSize: 13.37,
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w400,
                       ),
-                      Text(
-                        '2/3/2022 at 18:00',
-                        style: TextStyles.textStyleNormal14,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Adults x2',
-                        style: TextStyles.textStyleNormal14,
-                      ),
-                      Text(
-                        '750 EGP',
-                        style: TextStyles.textStyleNormal14,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Children x1',
-                        style: TextStyles.textStyleNormal14,
-                      ),
-                      Text(
-                        'Free',
-                        style: TextStyles.textStyleNormal14,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Additional Services',
-                    style: TextStyles.textStyle14
-                        .copyWith(fontWeight: FontWeight.w600),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Boot X2',
-                        style: TextStyles.textStyle16.copyWith(
-                            fontWeight: FontWeight.w600, color: Colors.black),
-                      ),
-                      const SizedBox(width: 35),
-                      Text(
-                        '500 EGP',
-                        style: TextStyles.textStyle16.copyWith(
-                            fontWeight: FontWeight.w600, color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Divider(),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Total',
+                          'Date',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                        Text(
+                          '2/3/2022 at 18:00',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Adults x2',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                        Text(
+                          '750 EGP',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Children x1',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                        Text(
+                          'Free',
+                          style: TextStyles.textStyleNormal14,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Additional Services',
+                      style: TextStyles.textStyle14
+                          .copyWith(fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Boot X2',
                           style: TextStyles.textStyle16.copyWith(
                               fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                         const SizedBox(width: 35),
                         Text(
-                          '750 EGP',
+                          '500 EGP',
                           style: TextStyles.textStyle16.copyWith(
                               fontWeight: FontWeight.w600, color: Colors.black),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const Divider(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Total',
+                            style: TextStyles.textStyle16.copyWith(
+                                fontWeight: FontWeight.w600, color: Colors.black),
+                          ),
+                          const SizedBox(width: 35),
+                          Text(
+                            '750 EGP',
+                            style: TextStyles.textStyle16.copyWith(
+                                fontWeight: FontWeight.w600, color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: CustomButton(
-              width: double.infinity,
-              backgroundColor: AppColors.deepOrange,
-              text: 'Confirm',
-              func: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomeView()));
-              },
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: CustomButton(
+                width: double.infinity,
+                backgroundColor: AppColors.deepOrange,
+                text: 'Confirm',
+                func: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const HomeView()));
+                },
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: CustomButton(
-              textColor: AppColors.deepOrange,
-              backgroundColor: Colors.white,
-              text: 'Back',
-              func: () {
-                Navigator.pop(context);
-              },
-              width: double.infinity,
+            Padding(
+              padding: const EdgeInsets.all(8),
+              child: CustomButton(
+                textColor: AppColors.deepOrange,
+                backgroundColor: Colors.white,
+                text: 'Back',
+                func: () {
+                  Navigator.pop(context);
+                },
+                width: double.infinity,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

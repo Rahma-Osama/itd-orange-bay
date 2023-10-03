@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+import 'package:orange_bay_new/core/utils/date_time_formatter.dart';
 import 'package:orange_bay_new/core/widgets/default_text.dart';
 
 class PickDate2 extends StatefulWidget {
@@ -18,6 +18,7 @@ class _PickDate2State extends State<PickDate2> {
       width: 350,
       height: 55,
       child: defaultText(
+        readOnly: true,
         controller: _fromDateController,
         type: TextInputType.datetime,
         prefix: Icons.calendar_today_rounded,
@@ -30,8 +31,7 @@ class _PickDate2State extends State<PickDate2> {
           );
           if (pickedDate != null) {
             setState(() {
-              _fromDateController.text =
-                  DateFormat('yyyy/MM/dd').format(pickedDate);
+              _fromDateController.text = dateTimeFormatter(context, pickedDate);
             });
           }
         },

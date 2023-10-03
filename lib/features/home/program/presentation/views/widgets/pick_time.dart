@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/utils/date_time_formatter.dart';
 import 'package:orange_bay_new/core/widgets/default_text.dart';
 
 class PickTime extends StatefulWidget {
@@ -17,6 +18,7 @@ class _PickTimeState extends State<PickTime> {
       width: 350,
       height: 55,
       child: defaultText(
+        readOnly: true,
         controller: timeController,
         type: TextInputType.datetime,
         prefix: Icons.watch_later_outlined,
@@ -25,7 +27,7 @@ class _PickTimeState extends State<PickTime> {
             context: context,
             initialTime: TimeOfDay.now(),
           ).then((value) {
-            timeController.text = value!.format(context).toString();
+            timeController.text = dateTimeFormatter(context,DateTime(0,0 ,0, value!.hour, value.minute),format: 'jm');
             debugPrint(value.format(context));
           });
         },

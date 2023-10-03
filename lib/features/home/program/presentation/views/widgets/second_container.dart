@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:orange_bay_new/core/localization/l10n.dart';
 import 'package:orange_bay_new/core/theme/app_colors.dart';
 import 'package:orange_bay_new/core/theme/text_styles.dart';
+import 'package:orange_bay_new/core/utils/number_locale.dart';
+import 'package:orange_bay_new/features/home/program/presentation/manager/booking_services.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_date.dart';
 import 'package:orange_bay_new/features/home/program/presentation/views/widgets/pick_time.dart';
 
@@ -12,17 +15,13 @@ class SecondContainer extends StatefulWidget {
 }
 
 class _SecondContainerState extends State<SecondContainer> {
-  int count1 = 2;
-  int count2 = 0;
-  int count3 = 2;
-
   @override
   Widget build(BuildContext context) {
+    final locale = getL10n(context);
+    final bookServices = getBookingServices(context);
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-        // height: 400,
-        // padding: const EdgeInsets.all(16),
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -35,7 +34,7 @@ class _SecondContainerState extends State<SecondContainer> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'When are you going?',
+                locale.whenUAreGoing,
                 style: TextStyles.textStyle14.copyWith(
                   fontWeight: FontWeight.w400,
                 ),
@@ -50,24 +49,26 @@ class _SecondContainerState extends State<SecondContainer> {
               const PickTime(),
               const SizedBox(height: 24),
               Text(
-                'How many tickets?',
+                locale.howManyTickets,
                 style: TextStyles.textStyle14
                     .copyWith(fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 24),
               Row(
                 children: [
-                  Text('Adult (age 12-99)',
-                      style: TextStyles.textStyle14.copyWith(
-                          fontWeight: FontWeight.w500, color: Colors.black)),
-                  m2Expanded(context, 'count1'),
+                  Text(
+                    '${locale.adult} (${locale.age} ${numberLocale(context, 12)} - ${numberLocale(context, 99)})',
+                    style: TextStyles.textStyle14.copyWith(
+                        fontWeight: FontWeight.w500, color: Colors.black),
+                  ),
+                  counterBuilder(context, 'adultCounter'),
                 ],
               ),
               const SizedBox(
                 height: 12,
               ),
               Text(
-                '210.00 EGP',
+                '${numberLocale(context, bookServices.adultCounter * 210.00)} ${locale.eg}',
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
@@ -75,17 +76,18 @@ class _SecondContainerState extends State<SecondContainer> {
               const SizedBox(height: 15),
               Row(
                 children: [
-                  Text('Child (age 5-11)',
+                  Text(
+                      '${locale.child} (${locale.age} ${numberLocale(context, 5)}-${numberLocale(context, 11)})',
                       style: TextStyles.textStyle14.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.black)),
-                  m2Expanded(context, 'count2'),
+                  counterBuilder(context, 'childCounter'),
                 ],
               ),
               const SizedBox(
                 height: 12,
               ),
               Text(
-                '53.00 EGP',
+                '${numberLocale(context, bookServices.childCounter * 53.00)} ${locale.eg}',
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
@@ -98,7 +100,7 @@ class _SecondContainerState extends State<SecondContainer> {
                     width: 10,
                   ),
                   Text(
-                    'Children under 4 are free',
+                    locale.childrenUnder4,
                     style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w400),
                   ),
@@ -113,7 +115,7 @@ class _SecondContainerState extends State<SecondContainer> {
                   ),
                   Flexible(
                     child: Text(
-                      'For a full refund, cancel at least 24 hours in advance of the start date of the experience.',
+                      locale.refundStrategy,
                       style: TextStyles.textStyle14
                           .copyWith(fontWeight: FontWeight.w400),
                       softWrap: true,
@@ -130,7 +132,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 8,
               ),
               Text(
-                'Additional Services',
+                locale.additionalServices,
                 style: TextStyles.textStyle14
                     .copyWith(fontWeight: FontWeight.w600),
               ),
@@ -140,11 +142,11 @@ class _SecondContainerState extends State<SecondContainer> {
               Row(
                 children: [
                   Text(
-                    'Boat (250 EGP)',
+                    '${locale.boat} ${numberLocale(context, 250 * bookServices.boatCounter)} ${locale.eg}',
                     style: TextStyles.textStyle14
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
-                  m2Expanded(context, 'count3'),
+                  counterBuilder(context, 'boatCounter'),
                   const SizedBox(
                     width: 15.0,
                   ),
@@ -154,7 +156,7 @@ class _SecondContainerState extends State<SecondContainer> {
                 height: 12,
               ),
               Text(
-                'Boat cruise with a snorkeling stop',
+                locale.boatCruise,
                 style: TextStyles.textStyle14.copyWith(
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFF585757)),
@@ -166,26 +168,27 @@ class _SecondContainerState extends State<SecondContainer> {
     );
   }
 
-  Expanded m2Expanded(BuildContext context, String type) {
+  Expanded counterBuilder(BuildContext context, String type) {
+    final bookServices = getBookingServices(context);
     int count;
     Function() increment;
     Function() decrement;
 
     switch (type) {
-      case 'count1':
-        count = count1;
-        increment = () => setState(() => count1++);
-        decrement = () => setState(() => count1--);
+      case 'adultCounter':
+        count = bookServices.adultCounter;
+        increment = () => bookServices.counterIncrement('adultCounter');
+        decrement = () => bookServices.counterDecrement('adultCounter');
         break;
-      case 'count2':
-        count = count2;
-        increment = () => setState(() => count2++);
-        decrement = () => setState(() => count2--);
+      case 'childCounter':
+        count = bookServices.childCounter;
+        increment = () => bookServices.counterIncrement('childCounter');
+        decrement = () => bookServices.counterDecrement('childCounter');
         break;
-      case 'count3':
-        count = count3;
-        increment = () => setState(() => count3++);
-        decrement = () => setState(() => count3--);
+      case 'boatCounter':
+        count = bookServices.boatCounter;
+        increment = () => bookServices.counterIncrement('boatCounter');
+        decrement = () => bookServices.counterDecrement('boatCounter');
         break;
       default:
         count = 0;
@@ -198,29 +201,28 @@ class _SecondContainerState extends State<SecondContainer> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(
-            width: 24, // Set the desired width of the button
-            height: 24, // Set the desired height of the button
+            width: 24,
+            height: 24,
             child: FloatingActionButton(
               backgroundColor: count > 0 ? AppColors.deepOrange : Colors.grey,
               heroTag: '$type--',
               onPressed: decrement,
               mini: true,
               shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(8.0), // Set the desired border radius
+                borderRadius: BorderRadius.circular(8.0),
               ),
               child: const Icon(Icons.remove),
             ),
           ),
           const SizedBox(width: 10.0),
           Text(
-            '$count',
+            numberLocale(context, count),
             style: TextStyles.textStyle18,
           ),
           const SizedBox(width: 10.0),
           SizedBox(
-            width: 24, // Set the desired width of the button
-            height: 24, // Set the desired height of the button
+            width: 24,
+            height: 24,
             child: FloatingActionButton(
               backgroundColor: count > 0 ? AppColors.deepOrange : Colors.grey,
               heroTag: '$type++',
